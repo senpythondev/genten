@@ -672,6 +672,54 @@
       "topics": ["nisa"],
       "role": "institution-current",
       "curationNote": "Feb 2022 broker notice: under the 2019 tax law revision, the lower age of adulthood applies to NISA and Junior NISA from 2023-01-01; during 2022 NISA still required age 20."
+    },
+    {
+      "id": "nta-nisa-qa-2019",
+      "url": "https://www.nta.go.jp/publication/pamph/pdf/nisa_qa01.pdf",
+      "title": "ＮＩＳＡ及びつみたてＮＩＳＡの手続に関するＱ＆Ａ（令和元年７月）",
+      "publisher": "国税庁 National Tax Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "official-history",
+      "curationNote": "NTA Q&A (July 2019) on NISA procedures: annual limit table (¥1,000,000 for 2014–2015, ¥1,200,000 from 2016); note that 平成31年法律第6号 lowers the age requirement from 20 to 18 from 2022-04-01, with transitional measures."
+    },
+    {
+      "id": "kindai-tsumitate-2017",
+      "url": "https://www.kindai-sales.co.jp/images/upload/files/FA03P08-09.pdf",
+      "title": "ここがこう変わる！平成29年度税制改正大綱の要点解説",
+      "publisher": "近代セールス社 Kindai Sales",
+      "publisherType": "media",
+      "authority": "secondary-institutional",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "institution-dated",
+      "curationNote": "FY2017 tax reform outline summary: tsumitate NISA created with a ¥400,000/yr limit and a 20-year exemption; chosen instead of the existing NISA (only one NISA type per year)."
+    },
+    {
+      "id": "yamada-h31-nisa",
+      "url": "https://www.yamada-partners.jp/reform/h31/i03-improving-the-convenience-of-nisa",
+      "title": "NISAの利便性向上等",
+      "publisher": "山田＆パートナーズ Yamada & Partners",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "institution-current",
+      "curationNote": "FY2019 reform explainer: NISA holdings can continue during a temporary transfer abroad (継続適用届出書, up to 5 years); people subject to the exit tax (国外転出時課税) cannot file it; the firm infers application from 2019-04-01 (not stated in the outline)."
+    },
+    {
+      "id": "retirejapan-forum-fsa-guideline",
+      "url": "https://retirejapan.com/forum/viewtopic.php?p=7655",
+      "title": "Continuing NISA contributions from abroad",
+      "publisher": "RetireJapan forum",
+      "publisherType": "forum",
+      "authority": "secondary-independent",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "secondary-current",
+      "curationNote": "Forum post quoting the FSA supervisory guideline (出国時の手続): continuation for temporary transfers from April 2019; no purchases while abroad; return notice within 5 years; people subject to the exit tax excluded."
     }
   ],
   "ruleVersions": [
@@ -689,9 +737,10 @@
       "supersedes": null,
       "evidence": [
         { "source": "fsa-nisa-know", "locator": "2024年からのNISA — 年間投資枠が拡大", "note": "States the new tsumitate quota is three times tsumitate NISA's limit (implies ¥400,000)." },
-        { "source": "fsa-nisa-pre2024", "locator": "購入（買付）について", "note": "No new purchases in tsumitate or general NISA from 2024." }
+        { "source": "fsa-nisa-pre2024", "locator": "購入（買付）について", "note": "No new purchases in tsumitate or general NISA from 2024." },
+        { "source": "kindai-tsumitate-2017", "locator": "積立NISA（新設）", "note": "年間投資上限額40万円; 非課税保有期間20年間." }
       ],
-      "checkFirst": "FSA states the old limit indirectly (new = 3x old). Confirm ¥400,000 is stated explicitly on an official page, or record the derivation in the locator."
+      "checkFirst": "Resolved: institutional source plus FSA's 3x statement."
     },
     {
       "id": "nisa-tsumitate-annual-limit-2024",
@@ -725,7 +774,8 @@
       "supersedes": null,
       "evidence": [
         { "source": "fsa-tax-reform-h27", "locator": "p.3 NISAの拡充・利便性向上【大綱の概要】", "note": "年間投資上限額を現行の100万円から120万円に引き上げる." },
-        { "source": "fsa-supervision-nisa-2015", "locator": "本件の概要 ３．その他", "note": "平成28年１月より年間投資上限額が100万円から120万円に引き上げられる." }
+        { "source": "fsa-supervision-nisa-2015", "locator": "本件の概要 ３．その他", "note": "平成28年１月より年間投資上限額が100万円から120万円に引き上げられる." },
+        { "source": "nta-nisa-qa-2019", "locator": "p.3 【制度の概要】非課税管理勘定の表", "note": "平成26年分・平成27年分 100万円; 平成28年分以降 120万円." }
       ],
       "checkFirst": "Owner-verified against official sources on 2026-10-03."
     },
@@ -743,7 +793,8 @@
       "supersedes": "nisa-general-annual-limit-2014",
       "evidence": [
         { "source": "fsa-nisa-know", "locator": "2024年からのNISA — 年間投資枠が拡大", "note": "States the growth quota is twice general NISA's limit (implies ¥1.2M)." },
-        { "source": "fsa-tax-reform-h27", "locator": "p.3 NISAの拡充・利便性向上【大綱の概要】", "note": "States the raise from ¥1,000,000 to ¥1,200,000 directly." }
+        { "source": "fsa-tax-reform-h27", "locator": "p.3 NISAの拡充・利便性向上【大綱の概要】", "note": "States the raise from ¥1,000,000 to ¥1,200,000 directly." },
+        { "source": "nta-nisa-qa-2019", "locator": "p.3 【制度の概要】非課税管理勘定の表", "note": "平成26年分・平成27年分 100万円; 平成28年分以降 120万円." }
       ],
       "checkFirst": "Owner-verified against official sources on 2026-10-03. The 2014–2015 limit is modeled as nisa-general-annual-limit-2014."
     },
@@ -778,9 +829,10 @@
       "status": "superseded",
       "supersedes": null,
       "evidence": [
-        { "source": "fsa-nisa-know", "locator": "2024年からのNISA — 併用", "note": "Says combined use became possible from 2024 (implies it was not before)." }
+        { "source": "fsa-nisa-know", "locator": "2024年からのNISA — 併用", "note": "Says combined use became possible from 2024 (implies it was not before)." },
+        { "source": "kindai-tsumitate-2017", "locator": "積立NISA（新設）", "note": "現行NISAとは選択して適用（いずれか１種類のNISAのみ適用）." }
       ],
-      "checkFirst": "Confirm the either/or rule, and whether switching between the two was allowed year by year, on an official page."
+      "checkFirst": "Resolved: institutional source plus FSA's 3x statement."
     },
     {
       "id": "nisa-combined-use-2024",
@@ -816,7 +868,7 @@
         { "source": "fsa-nisa-slides", "locator": "NISA制度の概要", "note": "¥18M total, ¥12M growth (内数)." },
         { "source": "mof-chugoku-nisa", "locator": "簿価残高で管理", "note": "Managed at book value; price rises do not reduce room." }
       ],
-      "checkFirst": "FSA states the ¥18M total and ¥12M growth cap. Confirm the reading that the tsumitate quota alone can use all ¥18M on an FSA page or FAQ (secondary sources state it explicitly)."
+      "checkFirst": "Accepted: stated or directly implied by primary sources (MOF bureau / FSA)."
     },
     {
       "id": "nisa-holding-period-pre2024",
@@ -867,7 +919,7 @@
       "evidence": [
         { "source": "mof-chugoku-nisa", "locator": "非課税枠の再利用", "note": "Book value of sold holdings reusable from the next year." }
       ],
-      "checkFirst": "Confirm 'from the following year' on an FSA page as well."
+      "checkFirst": "Accepted: stated or directly implied by primary sources (MOF bureau / FSA)."
     },
     {
       "id": "nisa-legacy-holdings-2024",
@@ -937,7 +989,7 @@
       "evidence": [
         { "source": "fsa-nisa-pre2024", "locator": "ジュニアNISAについて", "note": "Tax-free withdrawal regardless of age or reason; whole balance." }
       ],
-      "checkFirst": "Confirm the 'whole balance only' wording."
+      "checkFirst": "Resolved: fsa-nisa-pre2024 states partial withdrawal is not possible."
     },
     {
       "id": "nisa-minors-2027",
@@ -975,7 +1027,8 @@
       "evidence": [
         { "source": "tyton-nisa-english", "locator": "How Does a NISA Retirement Account Work?", "note": "States 20+; accurate for its time." },
         { "source": "fukushima-bank-age", "locator": "※NISA口座について", "note": "2023年1月1日以降、年齢要件は1月1日時点で18歳以上（2022年12月31日までは20歳以上）." },
-        { "source": "rakuten-sec-age", "locator": "NISA口座に関するご注意", "note": "2019年度改正税法の成立に伴い、NISAの成年年齢の引き下げは2023年1月1日から適用." }
+        { "source": "rakuten-sec-age", "locator": "NISA口座に関するご注意", "note": "2019年度改正税法の成立に伴い、NISAの成年年齢の引き下げは2023年1月1日から適用." },
+        { "source": "nta-nisa-qa-2019", "locator": "p.1 （注）２", "note": "平成31年法律第６号の施行に伴い、令和４年４月１日以後、年齢要件が20歳から18歳に引き下げ." }
       ],
       "checkFirst": "No government page found; institutional sources agree."
     },
@@ -984,7 +1037,7 @@
       "ruleKey": "nisa.eligibilityAge",
       "topic": "nisa",
       "title": "NISA minimum age 18 (2023–)",
-      "statementEn": "Residents of Japan aged 18 or older as of January 1 of the year can open a NISA account. The minimum age was lowered from 20 by the 2019 tax law revision, in line with the April 2022 change in the legal age of adulthood; for NISA it applies from January 1, 2023.",
+      "statementEn": "Residents of Japan aged 18 or older as of January 1 of the year can open a NISA account. The minimum age was lowered from 20 to 18 by the 2019 tax law revision (平成31年法律第6号). The law took effect in April 2022, but NISA eligibility is judged by age on January 1, so the change first applied to NISA accounts from January 1, 2023.",
       "value": { "amount": 18, "unit": "count", "qualifier": "minimum age in years, as of January 1" },
       "appliesTo": "Residents of Japan",
       "validFrom": "2023-01-01",
@@ -995,7 +1048,8 @@
         { "source": "maymoney-nisa-en", "locator": "New NISA Basic Information", "note": "18+ as of January 1." },
         { "source": "fsa-accessfsa-202602", "locator": "現行制度", "note": "Current tsumitate quota age requirement is 18+." },
         { "source": "fukushima-bank-age", "locator": "※NISA口座について", "note": "2023年1月1日以降、年齢要件は1月1日時点で18歳以上（2022年12月31日までは20歳以上）." },
-        { "source": "rakuten-sec-age", "locator": "NISA口座に関するご注意", "note": "2019年度改正税法の成立に伴い、NISAの成年年齢の引き下げは2023年1月1日から適用." }
+        { "source": "rakuten-sec-age", "locator": "NISA口座に関するご注意", "note": "2019年度改正税法の成立に伴い、NISAの成年年齢の引き下げは2023年1月1日から適用." },
+        { "source": "nta-nisa-qa-2019", "locator": "p.1 （注）２", "note": "平成31年法律第６号の施行に伴い、令和４年４月１日以後、年齢要件が20歳から18歳に引き下げ." }
       ],
       "checkFirst": "No government page found; institutional sources agree."
     },
@@ -1055,7 +1109,7 @@
       "ruleKey": "nisa.leavingJapan",
       "topic": "nisa",
       "title": "Keeping NISA when leaving Japan",
-      "statementEn": "Account holders who leave Japan because of an employer's transfer order (or a similar unavoidable reason, including a spouse accompanying the transferee) can keep existing NISA holdings tax-exempt by filing a continuation notice (継続適用届出書) with their financial institution by the day before departure. The exemption lasts until December 31 of the year in which five years have passed since the notice. No new purchases are allowed while abroad, and a return notice (帰国届出書) must be filed within that period, or the account is closed and the holdings move to a taxable account. People leaving for other reasons must file a departure notice, and their NISA account is closed. Not every financial institution supports the continuation procedure.",
+      "statementEn": "Account holders who leave Japan because of an employer's transfer order (or a similar unavoidable reason, including a spouse accompanying the transferee) can keep existing NISA holdings tax-exempt by filing a continuation notice (継続適用届出書) with their financial institution by the day before departure. The exemption lasts until December 31 of the year in which five years have passed since the notice. No new purchases are allowed while abroad, and a return notice (帰国届出書) must be filed within that period, or the account is closed and the holdings move to a taxable account. People subject to the exit tax on departure (国外転出時課税) cannot use the continuation notice. People leaving for other reasons must file a departure notice, and their NISA account is closed. Not every financial institution supports the continuation procedure.",
       "value": { "amount": 5, "unit": "years", "qualifier": "until Dec 31 of the year 5 years after the notice" },
       "appliesTo": "NISA account holders who become non-residents of Japan",
       "validFrom": "2019-04-01",
@@ -1065,9 +1119,11 @@
       "evidence": [
         { "source": "mizuho-faq-leaving", "locator": "回答", "note": "Conditions, period, no trading, return notice." },
         { "source": "mufg-faq-leaving", "locator": "回答", "note": "Same rule; Junior NISA excluded." },
-        { "source": "rangsit-nisa-expat", "locator": "証券会社ごとの対応差", "note": "Broker support differs; dates the framework to the FY2019 reform." }
+        { "source": "rangsit-nisa-expat", "locator": "証券会社ごとの対応差", "note": "Broker support differs; dates the framework to the FY2019 reform." },
+        { "source": "yamada-h31-nisa", "locator": "(1) 居住者等の一時的な出国におけるNISA口座の継続利用（注1）", "note": "国外転出時課税の対象者は継続適用届出書を提出できない; 2019年4月1日以後適用と考えられる（大綱に明記なし）." },
+        { "source": "retirejapan-forum-fsa-guideline", "locator": "（6）出国時の手続（監督指針の引用）", "note": "2019年４月以後、転任命令等による一時出国はNISA継続可; 国外転出時課税の対象者は対象外." }
       ],
-      "checkFirst": "1) The effective date is unverified: one blog dates it to the FY2019 tax reform, another frames it as part of the 2024 NISA. Find the official date or record the uncertainty. 2) Support differs by financial institution; the agent must say so."
+      "checkFirst": "Date from the FY2019 reform (secondary sources); FSA guideline text quoted on a forum."
     },
     {
       "id": "furusato-designation-2019",
@@ -1144,7 +1200,7 @@
         { "source": "mic-furusato-2015-reform", "locator": "本文", "note": "ワンストップ特例制度は平成27年4月1日以降に行うふるさと納税が対象." },
         { "source": "nta-1155", "locator": "ふるさと納税ワンストップ特例制度", "note": "平成27年4月1日以後、確定申告が不要な給与所得者はふるさと納税先が5団体以内の場合に限り適用; 確定申告を行うと申請は無効." }
       ],
-      "checkFirst": "1) Confirm on an official page that filing a return voids one-stop. 2) Check whether an application is needed for each donation even to the same municipality, and add it to the statement if so."
+      "checkFirst": "Resolved: nta-1155 confirms that filing a return voids one-stop applications; the per-donation application question is closed."
     },
     {
       "id": "furusato-portal-points-ban-2025",
