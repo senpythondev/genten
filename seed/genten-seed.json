@@ -7,7 +7,7 @@
       "sources[].role and sources[].curationNote are INTERNAL (evaluation answer key). Never write them into Knowledge Base files.",
       "ruleVersions are imported as DRAFTS. A human checks each one against the official source (see checkFirst) and publishes it. Knowledge Base dataset sources read published documents only.",
       "ids contain only lowercase letters, digits and hyphens (no dots), so documents stay readable on a public dataset.",
-      "sources[].draft: true imports that source as a draft (added but not yet reviewed). A null field clears that field in the dataset; a field that is missing is left alone."
+      "The seed owns only the fields it sets. A null field clears that field in the dataset; a field that is missing is left alone. Tool and reviewer fields (capturedAt, snapshotSha256, verification) are never written by the seed."
     ]
   },
   "topics": [
@@ -551,8 +551,7 @@
       "language": "ja",
       "topics": ["nisa"],
       "role": "official-history",
-      "curationNote": "Dec 2013 FY2014 tax reform summary. Until 2014: one NISA account per person, institution cannot be changed within the account period (up to 4 years), a closed account cannot be reopened in that period. From 2015: institution changeable once per year; reopening allowed.",
-      "draft": true
+      "curationNote": "Dec 2013 FY2014 tax reform summary. Until 2014: one NISA account per person, institution cannot be changed within the account period (up to 4 years), a closed account cannot be reopened in that period. From 2015: institution changeable once per year; reopening allowed."
     },
     {
       "id": "fsa-tax-reform-h27",
@@ -564,8 +563,7 @@
       "language": "ja",
       "topics": ["nisa"],
       "role": "official-history",
-      "curationNote": "Jan 2015 FY2015 tax reform summary: NISA annual limit raised from ¥1,000,000 to ¥1,200,000 (from 2016); Junior NISA created (investment from April 2016).",
-      "draft": true
+      "curationNote": "Jan 2015 FY2015 tax reform summary: NISA annual limit raised from ¥1,000,000 to ¥1,200,000 (from 2016); Junior NISA created (investment from April 2016)."
     },
     {
       "id": "fsa-supervision-nisa-2015",
@@ -577,8 +575,7 @@
       "language": "ja",
       "topics": ["nisa"],
       "role": "official-history",
-      "curationNote": "Oct 2015 supervisory guideline amendment. States the NISA annual limit rises from ¥1,000,000 to ¥1,200,000 from January 2016 and Junior NISA starts April 2016.",
-      "draft": true
+      "curationNote": "Oct 2015 supervisory guideline amendment. States the NISA annual limit rises from ¥1,000,000 to ¥1,200,000 from January 2016 and Junior NISA starts April 2016."
     },
     {
       "id": "nta-tax-reform-r8-securities",
@@ -590,8 +587,7 @@
       "language": "ja",
       "topics": ["nisa"],
       "role": "official-future",
-      "curationNote": "NTA outline (May 2026) of 所得税法等の一部を改正する法律 (令和8年法律第12号, promulgated 2026-03-31): from 2027-01-01, tsumitate quota for ages 0-17, ¥600,000/yr, ¥6,000,000 holding limit, automatic move at 18; from age 12, withdrawals only for the child's education or living costs.",
-      "draft": true
+      "curationNote": "NTA outline (May 2026) of 所得税法等の一部を改正する法律 (令和8年法律第12号, promulgated 2026-03-31): from 2027-01-01, tsumitate quota for ages 0-17, ¥600,000/yr, ¥6,000,000 holding limit, automatic move at 18; from age 12, withdrawals only for the child's education or living costs."
     },
     {
       "id": "mic-furusato-overview",
@@ -603,8 +599,7 @@
       "language": "ja",
       "topics": ["furusato-nozei"],
       "role": "official-history",
-      "curationNote": "MIC overview with reform history (p.3): FY2008 reform introduced the system (from FY2009 residence tax) and set the minimum at ¥5,000; FY2011 reform lowered it to ¥2,000; FY2015 reform raised the special-deduction cap from 10% to 20% of the income levy and added the one-stop exception.",
-      "draft": true
+      "curationNote": "MIC overview with reform history (p.3): FY2008 reform introduced the system (from FY2009 residence tax) and set the minimum at ¥5,000; FY2011 reform lowered it to ¥2,000; FY2015 reform raised the special-deduction cap from 10% to 20% of the income levy and added the one-stop exception."
     },
     {
       "id": "mic-furusato-2015-reform",
@@ -616,8 +611,7 @@
       "language": "ja",
       "topics": ["furusato-nozei"],
       "role": "official-history",
-      "curationNote": "April 2015 MIC topic page: the furusato nozei limit roughly doubled for donations from 2015-01-01 (FY2015 reform); one-stop exception for donations from 2015-04-01.",
-      "draft": true
+      "curationNote": "April 2015 MIC topic page: the furusato nozei limit roughly doubled for donations from 2015-01-01 (FY2015 reform); one-stop exception for donations from 2015-04-01."
     },
     {
       "id": "ndl-law-r8-local-tax",
@@ -629,8 +623,55 @@
       "language": "ja",
       "topics": ["furusato-nozei"],
       "role": "official-future",
-      "curationNote": "Japanese Law Index entry for 令和8年法律第2号: submitted 2026-02-20, passed and promulgated 2026-03-31. Confirms enactment; the content is described in the MIC PDF (001070694).",
-      "draft": true
+      "curationNote": "Japanese Law Index entry for 令和8年法律第2号: submitted 2026-02-20, passed and promulgated 2026-03-31. Confirms enactment; the content is described in the MIC PDF (001070694)."
+    },
+    {
+      "id": "takasaki-kifukin",
+      "url": "https://www.city.takasaki.gunma.jp/page/2422.html",
+      "title": "寄附金税額控除について",
+      "publisher": "高崎市 Takasaki City",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["furusato-nozei"],
+      "role": "official-current",
+      "curationNote": "Takasaki City residence-tax page. FY2011 (平成23年度) reform lowered the residence-tax donation minimum from ¥5,000 to ¥2,000 from FY2012 (平成24年度) residence tax, i.e. donations made in 2011. FY2015 reform raised the special-deduction cap from 10% to 20%."
+    },
+    {
+      "id": "nta-1155",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1155.htm",
+      "title": "No.1155 ふるさと納税(寄附金控除)",
+      "publisher": "国税庁 National Tax Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["furusato-nozei"],
+      "role": "official-current",
+      "curationNote": "NTA Tax Answer: from 2015-04-01, salaried people who do not need to file a return can use the one-stop exception if they donate to 5 or fewer municipalities. Filing a return voids one-stop applications."
+    },
+    {
+      "id": "fukushima-bank-age",
+      "url": "https://www.fukushimabank.co.jp/press/2021/img/20220401_seinen.pdf",
+      "title": "成年年齢引き下げに伴う対応について",
+      "publisher": "福島銀行 The Fukushima Bank",
+      "publisherType": "financial-institution",
+      "authority": "secondary-institutional",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "institution-current",
+      "curationNote": "April 2022 bank notice: NISA age requirement is 18+ as of January 1 from 2023-01-01 (20+ until 2022-12-31)."
+    },
+    {
+      "id": "rakuten-sec-age",
+      "url": "https://www.rakuten-sec.co.jp/web/info/info20220214-01.html",
+      "title": "【重要】成年年齢の引下げに伴う当社の対応について",
+      "publisher": "楽天証券 Rakuten Securities",
+      "publisherType": "financial-institution",
+      "authority": "secondary-institutional",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "institution-current",
+      "curationNote": "Feb 2022 broker notice: under the 2019 tax law revision, the lower age of adulthood applies to NISA and Junior NISA from 2023-01-01; during 2022 NISA still required age 20."
     }
   ],
   "ruleVersions": [
@@ -932,16 +973,18 @@
       "status": "superseded",
       "supersedes": null,
       "evidence": [
-        { "source": "tyton-nisa-english", "locator": "How Does a NISA Retirement Account Work?", "note": "States 20+; accurate for its time." }
+        { "source": "tyton-nisa-english", "locator": "How Does a NISA Retirement Account Work?", "note": "States 20+; accurate for its time." },
+        { "source": "fukushima-bank-age", "locator": "※NISA口座について", "note": "2023年1月1日以降、年齢要件は1月1日時点で18歳以上（2022年12月31日までは20歳以上）." },
+        { "source": "rakuten-sec-age", "locator": "NISA口座に関するご注意", "note": "2019年度改正税法の成立に伴い、NISAの成年年齢の引き下げは2023年1月1日から適用." }
       ],
-      "checkFirst": "Only secondary evidence so far. Find an FSA/NTA page or set verification.method to secondary-only. Note for the writeup: 'outdated' is not 'wrong' — this page was right when written."
+      "checkFirst": "No government page found; institutional sources agree."
     },
     {
       "id": "nisa-eligibility-age-2023",
       "ruleKey": "nisa.eligibilityAge",
       "topic": "nisa",
       "title": "NISA minimum age 18 (2023–)",
-      "statementEn": "Residents of Japan aged 18 or older as of January 1 of the year can open a NISA account. The minimum age was lowered from 20 following the 2022 change in the legal age of adulthood.",
+      "statementEn": "Residents of Japan aged 18 or older as of January 1 of the year can open a NISA account. The minimum age was lowered from 20 by the 2019 tax law revision, in line with the April 2022 change in the legal age of adulthood; for NISA it applies from January 1, 2023.",
       "value": { "amount": 18, "unit": "count", "qualifier": "minimum age in years, as of January 1" },
       "appliesTo": "Residents of Japan",
       "validFrom": "2023-01-01",
@@ -950,9 +993,11 @@
       "supersedes": "nisa-eligibility-age-2014",
       "evidence": [
         { "source": "maymoney-nisa-en", "locator": "New NISA Basic Information", "note": "18+ as of January 1." },
-        { "source": "fsa-accessfsa-202602", "locator": "現行制度", "note": "Current tsumitate quota age requirement is 18+." }
+        { "source": "fsa-accessfsa-202602", "locator": "現行制度", "note": "Current tsumitate quota age requirement is 18+." },
+        { "source": "fukushima-bank-age", "locator": "※NISA口座について", "note": "2023年1月1日以降、年齢要件は1月1日時点で18歳以上（2022年12月31日までは20歳以上）." },
+        { "source": "rakuten-sec-age", "locator": "NISA口座に関するご注意", "note": "2019年度改正税法の成立に伴い、NISAの成年年齢の引き下げは2023年1月1日から適用." }
       ],
-      "checkFirst": "Confirm the 2023 start date on an official page."
+      "checkFirst": "No government page found; institutional sources agree."
     },
     {
       "id": "nisa-one-account-2014",
@@ -1045,38 +1090,40 @@
       "id": "furusato-self-burden-2008",
       "ruleKey": "furusato.selfBurden",
       "topic": "furusato-nozei",
-      "title": "The ¥5,000 self-burden (from 2008)",
-      "statementEn": "When furusato nozei began (FY2008 tax reform), the deduction applied only to the part of donations above ¥5,000, so the donor's minimum self-burden was ¥5,000. The FY2011 (平成23年度) tax reform lowered it to ¥2,000.",
-      "value": { "amount": 5000, "unit": "JPY", "qualifier": "minimum self-burden (適用下限額)" },
+      "title": "The ¥5,000 residence-tax minimum (donations 2008–2010)",
+      "statementEn": "For donations made from 2008 through 2010, the residence-tax deduction applied only to the part of donations above ¥5,000 (the residence-tax minimum, 適用下限額). The FY2011 (平成23年度) tax reform lowered it to ¥2,000 from FY2012 (平成24年度) residence tax, i.e. for donations made from 2011.",
+      "value": { "amount": 5000, "unit": "JPY", "qualifier": "residence-tax deduction minimum (適用下限額)" },
       "appliesTo": "Furusato nozei donors",
       "validFrom": "2008-01-01",
-      "validTo": null,
+      "validTo": "2010-12-31",
       "status": "superseded",
       "supersedes": null,
       "evidence": [
         { "source": "mic-furusato-overview", "locator": "p.3 平成20年度税制改正", "note": "寄附金控除の適用下限額を10万円から５千円に引下げ." },
-        { "source": "mic-furusato-overview", "locator": "p.3 平成23年度税制改正", "note": "適用下限額を５千円から２千円に引下げ." }
+        { "source": "mic-furusato-overview", "locator": "p.3 平成23年度税制改正", "note": "適用下限額を５千円から２千円に引下げ." },
+        { "source": "takasaki-kifukin", "locator": "冒頭（税制改正の経過）", "note": "平成23年度税制改正において、平成24年度から市県民税における寄附金税額控除の適用下限額が5,000円から2,000円に引き下げ." }
       ],
-      "checkFirst": "End date not yet verified. Set validTo to the day before the FY2011 (平成23年度) reform's ¥2,000 minimum took effect."
+      "checkFirst": "Owner-verified against official sources on 2026-10-03."
     },
     {
       "id": "furusato-self-burden",
       "ruleKey": "furusato.selfBurden",
       "topic": "furusato-nozei",
-      "title": "The ¥2,000 self-burden",
-      "statementEn": "Within the donor's deduction limit, the amount donated minus ¥2,000 is deducted from income tax and residence tax. The ¥2,000 applies once to the calendar year's total donations, not to each donation.",
+      "title": "The ¥2,000 self-burden (donations from 2011)",
+      "statementEn": "Within the donor's deduction limit, the amount donated minus ¥2,000 is deducted from income tax and residence tax. The ¥2,000 applies once to the calendar year's total donations, not to each donation. The ¥2,000 residence-tax minimum applies to donations made from 2011 (FY2012 (平成24年度) residence tax onward); before that it was ¥5,000.",
       "value": { "amount": 2000, "unit": "JPY", "qualifier": "per calendar year, total" },
       "appliesTo": "Furusato nozei donors within their deduction limit",
-      "validFrom": null,
+      "validFrom": "2011-01-01",
       "validTo": null,
       "status": "in-force",
       "supersedes": "furusato-self-burden-2008",
       "evidence": [
         { "source": "mic-furusato-about", "locator": "ふるさと納税って何？", "note": "Donation minus ¥2,000 deducted in principle." },
         { "source": "mic-furusato-faq", "locator": "Q7付近", "note": "¥2,000 applies to the yearly total, not each donation." },
-        { "source": "mic-furusato-overview", "locator": "p.3 平成23年度税制改正", "note": "適用下限額を５千円から２千円に引下げ." }
+        { "source": "mic-furusato-overview", "locator": "p.3 平成23年度税制改正", "note": "適用下限額を５千円から２千円に引下げ." },
+        { "source": "takasaki-kifukin", "locator": "冒頭（税制改正の経過）", "note": "平成23年度税制改正において、平成24年度から市県民税における寄附金税額控除の適用下限額が5,000円から2,000円に引き下げ." }
       ],
-      "checkFirst": "Start date not yet verified (平成23年度 reform). The project owner will supply the exact date; then set validTo on furusato-self-burden-2008 to the day before."
+      "checkFirst": "Owner-verified against official sources on 2026-10-03."
     },
     {
       "id": "furusato-one-stop",
@@ -1093,9 +1140,11 @@
       "evidence": [
         { "source": "mic-furusato-faq", "locator": "Q7", "note": "Limited to 5 municipalities (5団体以内)." },
         { "source": "toolcalc-furusato-2026", "locator": "結論", "note": "5 municipalities and January 10 arrival unchanged in October 2026." },
-        { "source": "helloworldjapan-furusato", "locator": "One-stop is voided if you then file a tax return", "note": "Filing a return voids one-stop." }
+        { "source": "helloworldjapan-furusato", "locator": "One-stop is voided if you then file a tax return", "note": "Filing a return voids one-stop." },
+        { "source": "mic-furusato-2015-reform", "locator": "本文", "note": "ワンストップ特例制度は平成27年4月1日以降に行うふるさと納税が対象." },
+        { "source": "nta-1155", "locator": "ふるさと納税ワンストップ特例制度", "note": "平成27年4月1日以後、確定申告が不要な給与所得者はふるさと納税先が5団体以内の場合に限り適用; 確定申告を行うと申請は無効." }
       ],
-      "checkFirst": "1) The April 2015 start date is from memory; confirm it. 2) Confirm on an official page that filing a return voids one-stop. 3) Check whether an application is needed for each donation even to the same municipality, and add it to the statement if so."
+      "checkFirst": "1) Confirm on an official page that filing a return voids one-stop. 2) Check whether an application is needed for each donation even to the same municipality, and add it to the statement if so."
     },
     {
       "id": "furusato-portal-points-ban-2025",
