@@ -6,7 +6,8 @@
       "topics, sources and ruleVersions are imported into Sanity by studio/scripts/import-seed.ts.",
       "sources[].role and sources[].curationNote are INTERNAL (evaluation answer key). Never write them into Knowledge Base files.",
       "ruleVersions are imported as DRAFTS. A human checks each one against the official source (see checkFirst) and publishes it. Knowledge Base dataset sources read published documents only.",
-      "ids contain only lowercase letters, digits and hyphens (no dots), so documents stay readable on a public dataset."
+      "ids contain only lowercase letters, digits and hyphens (no dots), so documents stay readable on a public dataset.",
+      "sources[].draft: true imports that source as a draft (added but not yet reviewed). A null field clears that field in the dataset; a field that is missing is left alone."
     ]
   },
   "topics": [
@@ -539,6 +540,97 @@
       "topics": ["furusato-nozei"],
       "role": "secondary-current",
       "curationNote": "Point rewards ended October 2025; written early 2026, so no October 2026 changes."
+    },
+    {
+      "id": "fsa-tax-reform-h26",
+      "url": "https://www.fsa.go.jp/news/25/sonota/20131224-2/01.pdf",
+      "title": "平成26年度税制改正について－税制改正大綱における金融庁関係の主要項目－",
+      "publisher": "金融庁 Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "official-history",
+      "curationNote": "Dec 2013 FY2014 tax reform summary. Until 2014: one NISA account per person, institution cannot be changed within the account period (up to 4 years), a closed account cannot be reopened in that period. From 2015: institution changeable once per year; reopening allowed.",
+      "draft": true
+    },
+    {
+      "id": "fsa-tax-reform-h27",
+      "url": "https://www.fsa.go.jp/news/26/sonota/20150114-1/01.pdf",
+      "title": "平成27年度税制改正について－税制改正大綱における金融庁関係の主要項目－",
+      "publisher": "金融庁 Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "official-history",
+      "curationNote": "Jan 2015 FY2015 tax reform summary: NISA annual limit raised from ¥1,000,000 to ¥1,200,000 (from 2016); Junior NISA created (investment from April 2016).",
+      "draft": true
+    },
+    {
+      "id": "fsa-supervision-nisa-2015",
+      "url": "https://www.fsa.go.jp/news/27/syouken/20151030-2.html",
+      "title": "「金融商品取引業者等向けの総合的な監督指針」の一部改正（案）の公表について",
+      "publisher": "金融庁 Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "official-history",
+      "curationNote": "Oct 2015 supervisory guideline amendment. States the NISA annual limit rises from ¥1,000,000 to ¥1,200,000 from January 2016 and Junior NISA starts April 2016.",
+      "draft": true
+    },
+    {
+      "id": "nta-tax-reform-r8-securities",
+      "url": "https://www.nta.go.jp/publication/pamph/joto-sanrin/r08aramashi.pdf",
+      "title": "個人の方が株式等や土地・建物等を譲渡した場合の令和8年度税制改正のあらまし",
+      "publisher": "国税庁 National Tax Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "official-future",
+      "curationNote": "NTA outline (May 2026) of 所得税法等の一部を改正する法律 (令和8年法律第12号, promulgated 2026-03-31): from 2027-01-01, tsumitate quota for ages 0-17, ¥600,000/yr, ¥6,000,000 holding limit, automatic move at 18; from age 12, withdrawals only for the child's education or living costs.",
+      "draft": true
+    },
+    {
+      "id": "mic-furusato-overview",
+      "url": "https://www.soumu.go.jp/main_content/000448758.pdf",
+      "title": "ふるさと納税の概要について",
+      "publisher": "総務省 Ministry of Internal Affairs and Communications",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["furusato-nozei"],
+      "role": "official-history",
+      "curationNote": "MIC overview with reform history (p.3): FY2008 reform introduced the system (from FY2009 residence tax) and set the minimum at ¥5,000; FY2011 reform lowered it to ¥2,000; FY2015 reform raised the special-deduction cap from 10% to 20% of the income levy and added the one-stop exception.",
+      "draft": true
+    },
+    {
+      "id": "mic-furusato-2015-reform",
+      "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/topics/20150401.html",
+      "title": "ふるさと納税トピックス：制度改正について（2015年4月1日）",
+      "publisher": "総務省 Ministry of Internal Affairs and Communications",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["furusato-nozei"],
+      "role": "official-history",
+      "curationNote": "April 2015 MIC topic page: the furusato nozei limit roughly doubled for donations from 2015-01-01 (FY2015 reform); one-stop exception for donations from 2015-04-01.",
+      "draft": true
+    },
+    {
+      "id": "ndl-law-r8-local-tax",
+      "url": "https://hourei.ndl.go.jp/simple/detail?lawId=0000169958&current=-1",
+      "title": "地方税法等の一部を改正する法律（令和8年3月31日法律第2号）",
+      "publisher": "国立国会図書館 日本法令索引 National Diet Library",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["furusato-nozei"],
+      "role": "official-future",
+      "curationNote": "Japanese Law Index entry for 令和8年法律第2号: submitted 2026-02-20, passed and promulgated 2026-03-31. Confirms enactment; the content is described in the MIC PDF (001070694).",
+      "draft": true
     }
   ],
   "ruleVersions": [
@@ -579,6 +671,24 @@
       "checkFirst": "Straightforward. Confirm on fsa-nisa-know."
     },
     {
+      "id": "nisa-general-annual-limit-2014",
+      "ruleKey": "nisa.growth.annualLimit",
+      "topic": "nisa",
+      "title": "General NISA annual limit (2014–2015)",
+      "statementEn": "General NISA allowed up to ¥1,000,000 of new investment per calendar year in 2014 and 2015. The limit was raised to ¥1,200,000 from January 1, 2016.",
+      "value": { "amount": 1000000, "unit": "JPY/year", "qualifier": "general NISA (pre-2024 system)" },
+      "appliesTo": "Residents of Japan with a NISA account (general NISA was the only type)",
+      "validFrom": "2014-01-01",
+      "validTo": "2015-12-31",
+      "status": "superseded",
+      "supersedes": null,
+      "evidence": [
+        { "source": "fsa-tax-reform-h27", "locator": "p.3 NISAの拡充・利便性向上【大綱の概要】", "note": "年間投資上限額を現行の100万円から120万円に引き上げる." },
+        { "source": "fsa-supervision-nisa-2015", "locator": "本件の概要 ３．その他", "note": "平成28年１月より年間投資上限額が100万円から120万円に引き上げられる." }
+      ],
+      "checkFirst": "Owner-verified against official sources on 2026-10-03."
+    },
+    {
       "id": "nisa-general-annual-limit-2016",
       "ruleKey": "nisa.growth.annualLimit",
       "topic": "nisa",
@@ -589,11 +699,12 @@
       "validFrom": "2016-01-01",
       "validTo": "2023-12-31",
       "status": "superseded",
-      "supersedes": null,
+      "supersedes": "nisa-general-annual-limit-2014",
       "evidence": [
-        { "source": "fsa-nisa-know", "locator": "2024年からのNISA — 年間投資枠が拡大", "note": "States the growth quota is twice general NISA's limit (implies ¥1.2M)." }
+        { "source": "fsa-nisa-know", "locator": "2024年からのNISA — 年間投資枠が拡大", "note": "States the growth quota is twice general NISA's limit (implies ¥1.2M)." },
+        { "source": "fsa-tax-reform-h27", "locator": "p.3 NISAの拡充・利便性向上【大綱の概要】", "note": "States the raise from ¥1,000,000 to ¥1,200,000 directly." }
       ],
-      "checkFirst": "General NISA launched in 2014 with a lower annual limit (¥1,000,000 for 2014–2015, as far as I know). Confirm on an official source; add a separate 2014 version if you want the full history."
+      "checkFirst": "Owner-verified against official sources on 2026-10-03. The 2014–2015 limit is modeled as nisa-general-annual-limit-2014."
     },
     {
       "id": "nisa-growth-annual-limit-2024",
@@ -792,7 +903,7 @@
       "ruleKey": "nisa.minors",
       "topic": "nisa",
       "title": "NISA for ages 0–17 (from January 2027)",
-      "statementEn": "From January 2027, children aged 0–17 (as of January 1) can use the tsumitate quota only, up to ¥600,000 per year and ¥6,000,000 in total. From age 12, a parent or guardian can withdraw money only with the child's consent. The account becomes a regular adult NISA when the child turns 18.",
+      "statementEn": "From January 1, 2027, children aged 0–17 (as of January 1) can use the tsumitate quota only: up to ¥600,000 of new investment per year, with a holding limit of ¥6,000,000. From age 12, a parent or guardian can withdraw money only with the child's consent and only for the child's own purposes, such as education or living costs. At 18 the account moves automatically to the adult NISA. Enacted by 所得税法等の一部を改正する法律 (令和8年法律第12号), promulgated March 31, 2026.",
       "value": { "amount": 600000, "unit": "JPY/year", "qualifier": "holding limit ¥6,000,000; tsumitate quota only" },
       "appliesTo": "Residents of Japan aged 0–17 as of January 1",
       "validFrom": "2027-01-01",
@@ -800,12 +911,13 @@
       "status": "enacted-future",
       "supersedes": "nisa-minors-gap-2024",
       "evidence": [
-        { "source": "fsa-tax-reform-r8", "locator": "つみたて投資枠の対象年齢見直し", "note": "0–17: ¥600k/yr, ¥6M; withdrawals from 12 with consent." },
+        { "source": "fsa-tax-reform-r8", "locator": "つみたて投資枠の対象年齢見直し", "note": "0–17: ¥600k/yr, ¥6M holding limit; from 12, withdrawals only with the child's consent and for the child's purposes (p.2)." },
         { "source": "fsa-accessfsa-202602", "locator": "NISA", "note": "Effective January 2027." },
         { "source": "bank77-kodomo-nisa", "locator": "制度の概要", "note": "Automatic move to adult NISA." },
-        { "source": "fptax-nisa-2027", "locator": "冒頭", "note": "Says law promulgated 2026-03-31." }
+        { "source": "fptax-nisa-2027", "locator": "冒頭", "note": "Says law promulgated 2026-03-31." },
+        { "source": "nta-tax-reform-r8-securities", "locator": "１ ＮＩＳＡに関する改正 ⑴〜⑷・《適用時期》", "note": "0～17歳つみたて投資枠, 年60万円, 保有限度額600万円, 18歳で自動的に移行; 12歳以降は教育費・生活費に限り払出し; 令和9年1月1日から適用; 令和8年法律第12号." }
       ],
-      "checkFirst": "1) Confirm the law was enacted (a blog says promulgated 2026-03-31). If you cannot confirm it officially, set status to outline-only. 2) Confirm the automatic switch to adult NISA (currently from a bank page)."
+      "checkFirst": "Owner-verified against official sources on 2026-10-03. Enacted (令和8年法律第12号, promulgated 2026-03-31). Change status to in-force on 2027-01-01."
     },
     {
       "id": "nisa-eligibility-age-2014",
@@ -843,6 +955,40 @@
       "checkFirst": "Confirm the 2023 start date on an official page."
     },
     {
+      "id": "nisa-one-account-2014",
+      "ruleKey": "nisa.accountsPerPerson",
+      "topic": "nisa",
+      "title": "One NISA account per person, no change of institution (2014)",
+      "statementEn": "Each person could hold only one NISA account. The financial institution could not be changed within the account period (up to 4 years), and a closed NISA account could not be reopened within that period.",
+      "value": { "amount": 1, "unit": "count", "qualifier": "accounts per person" },
+      "appliesTo": "NISA account holders",
+      "validFrom": "2014-01-01",
+      "validTo": "2014-12-31",
+      "status": "superseded",
+      "supersedes": null,
+      "evidence": [
+        { "source": "fsa-tax-reform-h26", "locator": "p.2 NISAの利便性向上【現行】", "note": "同一勘定設定期間内（最長４年間）は金融機関の変更ができない; 廃止後の再開設ができない." }
+      ],
+      "checkFirst": "Owner-verified against official sources on 2026-10-03."
+    },
+    {
+      "id": "nisa-one-account-2015",
+      "ruleKey": "nisa.accountsPerPerson",
+      "topic": "nisa",
+      "title": "One NISA account per person, institution changeable yearly (2015–2023)",
+      "statementEn": "Each person could hold only one NISA account. From 2015 the financial institution could be changed once per year, and a closed NISA account could be reopened.",
+      "value": { "amount": 1, "unit": "count", "qualifier": "accounts per person" },
+      "appliesTo": "NISA account holders",
+      "validFrom": "2015-01-01",
+      "validTo": "2023-12-31",
+      "status": "superseded",
+      "supersedes": "nisa-one-account-2014",
+      "evidence": [
+        { "source": "fsa-tax-reform-h26", "locator": "p.2 NISAの利便性向上【大綱の概要】", "note": "金融機関について一年単位での変更を認める; 廃止した場合の再開設を認める." }
+      ],
+      "checkFirst": "Owner-verified against official sources on 2026-10-03."
+    },
+    {
       "id": "nisa-one-account-2024",
       "ruleKey": "nisa.accountsPerPerson",
       "topic": "nisa",
@@ -853,11 +999,11 @@
       "validFrom": "2024-01-01",
       "validTo": null,
       "status": "in-force",
-      "supersedes": null,
+      "supersedes": "nisa-one-account-2015",
       "evidence": [
         { "source": "mof-chugoku-nisa", "locator": "まとめ", "note": "One account per person; institution changeable yearly." }
       ],
-      "checkFirst": "The rule existed before 2024; only the current system is modeled here."
+      "checkFirst": "Check the evidence. Earlier versions are nisa-one-account-2014 and nisa-one-account-2015."
     },
     {
       "id": "nisa-leaving-japan",
@@ -896,6 +1042,24 @@
       "checkFirst": "Straightforward."
     },
     {
+      "id": "furusato-self-burden-2008",
+      "ruleKey": "furusato.selfBurden",
+      "topic": "furusato-nozei",
+      "title": "The ¥5,000 self-burden (from 2008)",
+      "statementEn": "When furusato nozei began (FY2008 tax reform), the deduction applied only to the part of donations above ¥5,000, so the donor's minimum self-burden was ¥5,000. The FY2011 (平成23年度) tax reform lowered it to ¥2,000.",
+      "value": { "amount": 5000, "unit": "JPY", "qualifier": "minimum self-burden (適用下限額)" },
+      "appliesTo": "Furusato nozei donors",
+      "validFrom": "2008-01-01",
+      "validTo": null,
+      "status": "superseded",
+      "supersedes": null,
+      "evidence": [
+        { "source": "mic-furusato-overview", "locator": "p.3 平成20年度税制改正", "note": "寄附金控除の適用下限額を10万円から５千円に引下げ." },
+        { "source": "mic-furusato-overview", "locator": "p.3 平成23年度税制改正", "note": "適用下限額を５千円から２千円に引下げ." }
+      ],
+      "checkFirst": "End date not yet verified. Set validTo to the day before the FY2011 (平成23年度) reform's ¥2,000 minimum took effect."
+    },
+    {
       "id": "furusato-self-burden",
       "ruleKey": "furusato.selfBurden",
       "topic": "furusato-nozei",
@@ -903,15 +1067,16 @@
       "statementEn": "Within the donor's deduction limit, the amount donated minus ¥2,000 is deducted from income tax and residence tax. The ¥2,000 applies once to the calendar year's total donations, not to each donation.",
       "value": { "amount": 2000, "unit": "JPY", "qualifier": "per calendar year, total" },
       "appliesTo": "Furusato nozei donors within their deduction limit",
-      "validFrom": "2008-01-01",
+      "validFrom": null,
       "validTo": null,
       "status": "in-force",
-      "supersedes": null,
+      "supersedes": "furusato-self-burden-2008",
       "evidence": [
         { "source": "mic-furusato-about", "locator": "ふるさと納税って何？", "note": "Donation minus ¥2,000 deducted in principle." },
-        { "source": "mic-furusato-faq", "locator": "Q7付近", "note": "¥2,000 applies to the yearly total, not each donation." }
+        { "source": "mic-furusato-faq", "locator": "Q7付近", "note": "¥2,000 applies to the yearly total, not each donation." },
+        { "source": "mic-furusato-overview", "locator": "p.3 平成23年度税制改正", "note": "適用下限額を５千円から２千円に引下げ." }
       ],
-      "checkFirst": "Start date is approximate (the system began in 2008). Keep it as approximate or find the exact date."
+      "checkFirst": "Start date not yet verified (平成23年度 reform). The project owner will supply the exact date; then set validTo on furusato-self-burden-2008 to the day before."
     },
     {
       "id": "furusato-one-stop",
@@ -956,7 +1121,7 @@
       "ruleKey": "furusato.fundraisingCostCap",
       "topic": "furusato-nozei",
       "title": "Fundraising cost cap 50% (2019–2026-09)",
-      "statementEn": "Municipalities had to keep total fundraising costs (gifts, shipping, portal fees and similar) at or below 50% of donations received.",
+      "statementEn": "Municipalities had to keep total fundraising costs (gifts, shipping, portal fees and similar) at or below 50% of donations received. This cap was set by MIC notice (総務省告示), not by the Local Tax Act.",
       "value": { "amount": 50, "unit": "percent", "qualifier": "maximum cost share" },
       "appliesTo": "Designated municipalities",
       "validFrom": "2019-06-01",
@@ -964,7 +1129,8 @@
       "status": "superseded",
       "supersedes": null,
       "evidence": [
-        { "source": "credo-furusato-2026", "locator": "まとめ", "note": "Cost cap shrinks from 50% to 47.5%." }
+        { "source": "credo-furusato-2026", "locator": "まとめ", "note": "Cost cap shrinks from 50% to 47.5%." },
+        { "source": "mic-furusato-criteria-2026", "locator": "p.10 地方団体財源と募集費用", "note": "募集費用 上限５割（総務省告示で規定）." }
       ],
       "checkFirst": "The start date assumes the 50% cap came with the 2019 designation system. Confirm it."
     },
@@ -972,40 +1138,135 @@
       "id": "furusato-cost-cap-2026",
       "ruleKey": "furusato.fundraisingCostCap",
       "topic": "furusato-nozei",
-      "title": "Usable share 52.5% / cost cap 47.5% (2026-10-01–)",
-      "statementEn": "For the designation period starting October 1, 2026, municipalities must keep at least 52.5% of donations for local use; equivalently, fundraising costs may be at most 47.5%. The required share rises in steps (55% from October 2027) to 60% by the 2029 designation. These are rules for municipalities; donors' deductions are unchanged.",
+      "title": "Usable share 52.5% / cost cap 47.5% (2026-10–2027-09)",
+      "statementEn": "For the designation period from October 1, 2026 to September 30, 2027, municipalities must keep at least 52.5% of donations for local use; equivalently, fundraising costs may be at most 47.5%. The required share rises each October to 60% from the 2029 designation. Legal basis: the 60% standard is in Local Tax Act (地方税法) article 37-2 as revised by 令和8年法律第2号, applied in stages by designation year (October to September); the calculation method is set by MIC notice (総務省告示). These are rules for municipalities; donors' deductions are unchanged.",
       "value": { "amount": 52.5, "unit": "percent", "qualifier": "minimum usable share (= cost cap 47.5%)" },
       "appliesTo": "Designated municipalities",
       "validFrom": "2026-10-01",
-      "validTo": null,
+      "validTo": "2027-09-30",
       "status": "in-force",
       "supersedes": "furusato-cost-cap-2019",
       "evidence": [
         { "source": "mic-furusato-criteria-2026", "locator": "寄附金活用可能額", "note": "Target 60%+." },
         { "source": "geisei-furusato-2026", "locator": "6割ルールへの移行", "note": "52.5% from Oct 2026, 55% from Oct 2027." },
         { "source": "credo-furusato-2026", "locator": "まとめ", "note": "Same rule framed as a 47.5% cost cap." },
-        { "source": "toolcalc-furusato-2026", "locator": "結論", "note": "Donor deductions unchanged." }
+        { "source": "toolcalc-furusato-2026", "locator": "結論", "note": "Donor deductions unchanged." },
+        { "source": "mic-furusato-criteria-2026", "locator": "p.11 寄附金活用可能額の設定及び使途の公表", "note": "R8：52.5％、R9：55％、R10：57.5％、R11：60％." }
       ],
-      "checkFirst": "Confirm the step schedule (52.5% → 55% → … → 60%) in the MIC PDF. '52.5% usable' and '47.5% cost cap' are the same rule: resolve that Knowledge Base issue as 'both correct'."
+      "checkFirst": "Owner-verified against official sources on 2026-10-03. Change status to superseded on 2027-10-01. '52.5% usable' and '47.5% cost cap' are the same rule: resolve that Knowledge Base issue as 'both correct'."
+    },
+    {
+      "id": "furusato-cost-cap-2027",
+      "ruleKey": "furusato.fundraisingCostCap",
+      "topic": "furusato-nozei",
+      "title": "Usable share 55.0% / cost cap 45.0% (2027-10–2028-09)",
+      "statementEn": "For the designation period from 2027-10-01 to 2028-09-30, municipalities must keep at least 55.0% of donations for local use; equivalently, fundraising costs may be at most 45.0%. Legal basis: the 60% standard is in Local Tax Act (地方税法) article 37-2 as revised by 令和8年法律第2号, applied in stages by designation year (October to September); the calculation method is set by MIC notice (総務省告示). These are rules for municipalities; donors' deductions are unchanged.",
+      "value": { "amount": 55, "unit": "percent", "qualifier": "minimum usable share (= cost cap 45.0%)" },
+      "appliesTo": "Designated municipalities",
+      "validFrom": "2027-10-01",
+      "validTo": "2028-09-30",
+      "status": "enacted-future",
+      "supersedes": "furusato-cost-cap-2026",
+      "evidence": [
+        { "source": "mic-furusato-criteria-2026", "locator": "p.11 寄附金活用可能額の設定及び使途の公表", "note": "R9：55％." },
+        { "source": "mic-furusato-criteria-2026", "locator": "p.14 税制改正後（案）第三十七条の二", "note": "寄附金活用可能額を６割以上とすること." },
+        { "source": "ndl-law-r8-local-tax", "locator": "法律番号・成立年月日", "note": "令和8年法律第2号; 成立・公布 2026-03-31." }
+      ],
+      "checkFirst": "Owner-verified against official sources on 2026-10-03. Change status to in-force on 2027-10-01."
+    },
+    {
+      "id": "furusato-cost-cap-2028",
+      "ruleKey": "furusato.fundraisingCostCap",
+      "topic": "furusato-nozei",
+      "title": "Usable share 57.5% / cost cap 42.5% (2028-10–2029-09)",
+      "statementEn": "For the designation period from 2028-10-01 to 2029-09-30, municipalities must keep at least 57.5% of donations for local use; equivalently, fundraising costs may be at most 42.5%. Legal basis: the 60% standard is in Local Tax Act (地方税法) article 37-2 as revised by 令和8年法律第2号, applied in stages by designation year (October to September); the calculation method is set by MIC notice (総務省告示). These are rules for municipalities; donors' deductions are unchanged.",
+      "value": { "amount": 57.5, "unit": "percent", "qualifier": "minimum usable share (= cost cap 42.5%)" },
+      "appliesTo": "Designated municipalities",
+      "validFrom": "2028-10-01",
+      "validTo": "2029-09-30",
+      "status": "enacted-future",
+      "supersedes": "furusato-cost-cap-2027",
+      "evidence": [
+        { "source": "mic-furusato-criteria-2026", "locator": "p.11 寄附金活用可能額の設定及び使途の公表", "note": "R10：57.5％." },
+        { "source": "mic-furusato-criteria-2026", "locator": "p.14 税制改正後（案）第三十七条の二", "note": "寄附金活用可能額を６割以上とすること." },
+        { "source": "ndl-law-r8-local-tax", "locator": "法律番号・成立年月日", "note": "令和8年法律第2号; 成立・公布 2026-03-31." }
+      ],
+      "checkFirst": "Owner-verified against official sources on 2026-10-03. Change status to in-force on 2028-10-01."
+    },
+    {
+      "id": "furusato-cost-cap-2029",
+      "ruleKey": "furusato.fundraisingCostCap",
+      "topic": "furusato-nozei",
+      "title": "Usable share 60.0% / cost cap 40.0% (2029-10–)",
+      "statementEn": "From the designation period starting 2029-10-01, municipalities must keep at least 60.0% of donations for local use; equivalently, fundraising costs may be at most 40.0%. Legal basis: the 60% standard is in Local Tax Act (地方税法) article 37-2 as revised by 令和8年法律第2号, applied in stages by designation year (October to September); the calculation method is set by MIC notice (総務省告示). These are rules for municipalities; donors' deductions are unchanged.",
+      "value": { "amount": 60, "unit": "percent", "qualifier": "minimum usable share (= cost cap 40.0%)" },
+      "appliesTo": "Designated municipalities",
+      "validFrom": "2029-10-01",
+      "validTo": null,
+      "status": "enacted-future",
+      "supersedes": "furusato-cost-cap-2028",
+      "evidence": [
+        { "source": "mic-furusato-criteria-2026", "locator": "p.11 寄附金活用可能額の設定及び使途の公表", "note": "R11：60％." },
+        { "source": "mic-furusato-criteria-2026", "locator": "p.14 税制改正後（案）第三十七条の二", "note": "寄附金活用可能額を６割以上とすること." },
+        { "source": "ndl-law-r8-local-tax", "locator": "法律番号・成立年月日", "note": "令和8年法律第2号; 成立・公布 2026-03-31." }
+      ],
+      "checkFirst": "Owner-verified against official sources on 2026-10-03. Change status to in-force on 2029-10-01."
+    },
+    {
+      "id": "furusato-deduction-cap-2008",
+      "ruleKey": "furusato.specialDeductionCap",
+      "topic": "furusato-nozei",
+      "title": "Special deduction capped at 10% of income levy (donations 2008–2014)",
+      "statementEn": "For donations made from 2008 through 2014, the residence-tax special deduction (特例控除額) was capped at 10% of the donor's residence-tax income levy (所得割額). The system was introduced by the FY2008 (平成20年度) tax reform and first applied to FY2009 (平成21年度) residence tax.",
+      "value": { "amount": 10, "unit": "percent", "qualifier": "of residence-tax income levy (所得割額)" },
+      "appliesTo": "Furusato nozei donors",
+      "validFrom": "2008-01-01",
+      "validTo": "2014-12-31",
+      "status": "superseded",
+      "supersedes": null,
+      "evidence": [
+        { "source": "mic-furusato-overview", "locator": "p.3 平成20年度税制改正・平成27年度税制改正", "note": "平成21年度分の個人住民税から導入; 平成27年度改正で上限を所得割額の１割から２割に引上げ." }
+      ],
+      "checkFirst": "Owner-verified against official sources on 2026-10-03. The PDF gives the 10% figure in the FY2015 entry (\"１割から２割\"), not in the FY2008 entry."
+    },
+    {
+      "id": "furusato-deduction-cap-2015",
+      "ruleKey": "furusato.specialDeductionCap",
+      "topic": "furusato-nozei",
+      "title": "Special deduction capped at 20% of income levy (donations 2015–2026)",
+      "statementEn": "For donations made from January 1, 2015, the residence-tax special deduction (特例控除額) is capped at 20% of the donor's residence-tax income levy (所得割額), up from 10%. This roughly doubled the amount most donors can give with only the ¥2,000 self-burden. For donations from 2027, a fixed cap of ¥1,930,000 also applies.",
+      "value": { "amount": 20, "unit": "percent", "qualifier": "of residence-tax income levy (所得割額)" },
+      "appliesTo": "Furusato nozei donors",
+      "validFrom": "2015-01-01",
+      "validTo": "2026-12-31",
+      "status": "in-force",
+      "supersedes": "furusato-deduction-cap-2008",
+      "evidence": [
+        { "source": "mic-furusato-2015-reform", "locator": "本文", "note": "ふるさと納税枠が平成27年1月1日以降、約2倍に拡充." },
+        { "source": "mic-furusato-overview", "locator": "p.3 平成27年度税制改正", "note": "特例控除額の上限を所得割額の１割から２割に引上げ." }
+      ],
+      "checkFirst": "Owner-verified against official sources on 2026-10-03. Change status to superseded on 2027-01-01."
     },
     {
       "id": "furusato-deduction-cap-2027",
       "ruleKey": "furusato.specialDeductionCap",
       "topic": "furusato-nozei",
       "title": "¥1.93M cap on the special deduction (donations from 2027)",
-      "statementEn": "For donations made in 2027 and later, the residence-tax special deduction (特例控除額) is capped at ¥1,930,000 (roughly the level of a ¥100 million salary), in addition to the existing cap of 20% of the residence-tax income levy. Because residence tax is assessed the following year, the cap first applies to fiscal 2028 residence tax. It affects only very high earners.",
-      "value": { "amount": 1930000, "unit": "JPY", "qualifier": "cap on residence-tax special deduction" },
+      "statementEn": "For donations made from January 1, 2027, the residence-tax special deduction (特例控除額) is capped at the lower of 20% of the donor's residence-tax income levy (所得割額) and ¥1,930,000 (prefectural and municipal combined). The ¥1,930,000 cap applies in addition to the 20% limit; the basic deduction still applies above it. Enacted by 地方税法等の一部を改正する法律 (令和8年法律第2号), passed March 31, 2026. Because residence tax is assessed the following year, the cap first affects fiscal 2028 residence tax. It affects only very high earners (roughly a ¥100 million salary).",
+      "value": { "amount": 1930000, "unit": "JPY", "qualifier": "cap on residence-tax special deduction (prefectural + municipal); 20% of income levy still applies" },
       "appliesTo": "Very high-income furusato nozei donors",
       "validFrom": "2027-01-01",
       "validTo": null,
       "status": "enacted-future",
-      "supersedes": null,
+      "supersedes": "furusato-deduction-cap-2015",
       "evidence": [
         { "source": "okane-furusato-2026", "locator": "2027年寄付分から変わること", "note": "Cap applies to donations from 2027." },
         { "source": "geisei-furusato-2026", "locator": "高額寄附の控除見直し", "note": "Cap applies from FY2028 residence tax." },
-        { "source": "toolcalc-furusato-2026", "locator": "結論", "note": "Cap from 2027 donations; October 2026 changes are municipal." }
+        { "source": "toolcalc-furusato-2026", "locator": "結論", "note": "Cap from 2027 donations; October 2026 changes are municipal." },
+        { "source": "mic-furusato-criteria-2026", "locator": "p.9 特例控除額の定額上限の設定", "note": "193万円（給与収入１億円相当）を上限; 上限を超えても基本分の控除あり; 令和９年寄附分から適用." },
+        { "source": "ndl-law-r8-local-tax", "locator": "法律番号・成立年月日", "note": "令和8年法律第2号; 成立・公布 2026-03-31." }
       ],
-      "checkFirst": "1) Confirm enactment (decided in the FY2026 tax reform outline). If you cannot confirm it, set status to outline-only. 2) 'From 2027 donations' and 'from FY2028 residence tax' describe the same change: resolve that Knowledge Base issue as 'both correct'."
+      "checkFirst": "Owner-verified against official sources on 2026-10-03. Enacted (令和8年法律第2号, passed 2026-03-31). Change status to in-force on 2027-01-01. 'From 2027 donations' and 'from FY2028 residence tax' describe the same change: resolve that Knowledge Base issue as 'both correct'."
     }
   ]
 }

@@ -23,4 +23,4 @@ eval/                   Python eval harness
    npm run seed
    ```
 
-The seed is idempotent. It writes only documents whose content changed, in one transaction. It never re-creates a draft for a rule that has already been published. Topics and sources are imported as published documents, and rule versions as drafts. Review them under **Needs review** in the Studio (`npm run dev` in `studio/`).
+The seed is idempotent. It writes only documents whose content changed, in one transaction. It never re-creates a draft for a document that has already been published. It patches only the fields the seed sets, so tool-written fields such as `capturedAt` and `snapshotSha256` are kept. Topics and sources are imported as published documents, except sources marked `"draft": true`. Rule versions are imported as drafts. Review them under **Needs review** in the Studio (`npm run dev` in `studio/`). Publish a draft source before any rule that cites it.

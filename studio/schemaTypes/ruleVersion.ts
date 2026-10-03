@@ -12,13 +12,15 @@ function today(): string {
 
 // Validity period for previews, e.g. "2018-01-01–2023-12-31", "2024-01-01–now",
 // or "from 2027-01-01 (not yet in force)" for a rule that has not started.
-function validity(validFrom?: string, validTo?: string): string {
+// Missing dates show as "start unknown" / "end unknown" (superseded rules only).
+function validity(validFrom?: string, validTo?: string, status?: string): string {
   if (validFrom && validFrom > today()) {
     return validTo
       ? `${validFrom}–${validTo} (not yet in force)`
       : `from ${validFrom} (not yet in force)`
   }
-  return `${validFrom}–${validTo ?? 'now'}`
+  const end = validTo ?? (status === 'superseded' ? 'end unknown' : 'now')
+  return `${validFrom ?? 'start unknown'}–${end}`
 }
 
 export const ruleVersion = defineType({
@@ -153,12 +155,22 @@ export const ruleVersion = defineType({
           .custom<EvidenceItem[]>(async (evidence, context) => {
             const ids = (evidence ?? []).map((item) => item.source?._ref).filter(Boolean)
             if (ids.length === 0) return true
-            const client = context.getClient({apiVersion: '2025-02-19'})
-            const primary = await client.fetch<number>(
-              'count(*[_type == "source" && _id in $ids && authority == "primary"])',
-              {ids},
+            // Raw perspective: _id keeps the drafts. prefix, so published and draft-only
+            // sources can be told apart.
+            const client = context
+              .getClient({apiVersion: '2025-02-19'})
+              .withConfig({perspective: 'raw'})
+            const primary = await client.fetch<{published: number; draftOnly: number}>(
+              `{
+                "published": count(*[_type == "source" && authority == "primary" && _id in $ids]),
+                "draftOnly": count(*[_type == "source" && authority == "primary" && _id in $draftIds])
+              }`,
+              {ids, draftIds: ids.map((id) => `drafts.${id}`)},
             )
-            return primary > 0 || 'No evidence points to a primary (official) source.'
+            if (primary.published > 0) return true
+            return primary.draftOnly > 0
+              ? 'The primary source is not published yet. Publish it before this rule.'
+              : 'No evidence points to a primary (official) source.'
           })
           .warning(),
       ],
@@ -212,7 +224,7 @@ export const ruleVersion = defineType({
     },
     prepare: ({title, ruleKey, status, validFrom, validTo}) => ({
       title,
-      subtitle: `${ruleKey} · ${status} · ${validity(validFrom, validTo)}`,
+      subtitle: `${ruleKey} · ${status} · ${validity(validFrom, validTo, status)}`,
     }),
   },
 })

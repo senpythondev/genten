@@ -1,15 +1,17 @@
 /**
  * Imports ../seed/genten-seed.json into the Sanity dataset.
  *
- * - topics and sources are written as published documents.
+ * - topics are written as published documents. Sources are too, except those marked
+ *   `draft: true` (added but not yet reviewed), which are written as drafts.
  * - ruleVersions are written as drafts. A reviewer checks each one in the Studio and
  *   publishes it; Knowledge Base sources read published documents only.
  * - Idempotent: each document is compared with the dataset and only changed ones are
- *   written, in a single transaction. A rule that a reviewer has already published is
- *   skipped, so a re-run never re-opens it as a draft.
+ *   written, in a single transaction. A document that a reviewer has already published
+ *   is skipped, so a re-run never re-opens it as a draft.
  * - Existing documents are patched, not replaced: only the fields the seed sets are
  *   written. Fields owned by tools or reviewers (capturedAt, snapshotSha256,
- *   verification, ...) are never touched. A field removed from the seed is not unset.
+ *   verification, ...) are never touched. A field that is null in the seed is unset;
+ *   a field the seed does not mention is left alone.
  *
  * Usage (inside studio/): npm run seed
  * Needs SANITY_WRITE_TOKEN in the root .env.
@@ -35,6 +37,7 @@ type SeedSource = {
   topics: string[]
   role: string
   curationNote: string
+  draft?: boolean
 }
 
 type SeedRuleVersion = {
@@ -45,7 +48,7 @@ type SeedRuleVersion = {
   statementEn: string
   value: {amount: number | null; unit: string; qualifier: string | null}
   appliesTo: string
-  validFrom: string
+  validFrom: string | null
   validTo: string | null
   status: string
   supersedes: string | null
@@ -84,20 +87,21 @@ function compact<T extends object>(obj: T): Partial<T> {
   ) as Partial<T>
 }
 
+// The to* builders keep top-level nulls: main() turns them into unsets.
 function toTopic(t: SeedTopic): Doc {
-  return compact({
+  return {
     _id: `topic-${t.id}`,
     _type: 'topic',
     title: t.title,
     slug: {_type: 'slug', current: t.id},
     area: t.area,
     summary: t.summary,
-  }) as Doc
+  }
 }
 
 function toSource(s: SeedSource): Doc {
-  return compact({
-    _id: `source-${s.id}`,
+  return {
+    _id: `${s.draft ? 'drafts.' : ''}source-${s.id}`,
     _type: 'source',
     title: s.title,
     url: s.url,
@@ -108,11 +112,11 @@ function toSource(s: SeedSource): Doc {
     topics: s.topics.map((topicId) => ({...ref(`topic-${topicId}`), _key: topicId})),
     role: s.role,
     curationNote: s.curationNote,
-  }) as Doc
+  }
 }
 
-function toRuleVersion(r: SeedRuleVersion): Doc {
-  return compact({
+function toRuleVersion(r: SeedRuleVersion, sourceRef: (sourceId: string) => object): Doc {
+  return {
     _id: `drafts.ruleVersion-${r.id}`,
     _type: 'ruleVersion',
     ruleKey: r.ruleKey,
@@ -129,25 +133,31 @@ function toRuleVersion(r: SeedRuleVersion): Doc {
       compact({
         _key: `evidence-${i}`,
         _type: 'evidenceItem',
-        source: ref(`source-${e.source}`),
+        source: sourceRef(e.source),
         locator: e.locator,
         note: e.note,
       }),
     ),
     checkFirst: r.checkFirst,
-  }) as Doc
+  }
 }
 
-// Compare only the fields the seed sets, ignoring key order. Other fields on the
-// existing document do not count as a difference.
-function sameSeedFields(current: SanityDocument, next: Doc): boolean {
+// Compare only the fields the seed sets or unsets, ignoring key order. Other fields
+// on the existing document do not count as a difference.
+function sameSeedFields(
+  current: SanityDocument,
+  toSet: Record<string, unknown>,
+  toUnset: string[],
+): boolean {
   const sortKeys = (_key: string, value: unknown) =>
     value && typeof value === 'object' && !Array.isArray(value)
       ? Object.fromEntries(Object.entries(value).sort(([a], [b]) => (a < b ? -1 : 1)))
       : value
-  return Object.entries(next).every(
-    ([field, value]) =>
-      JSON.stringify(current[field], sortKeys) === JSON.stringify(value, sortKeys),
+  return (
+    Object.entries(toSet).every(
+      ([field, value]) =>
+        JSON.stringify(current[field], sortKeys) === JSON.stringify(value, sortKeys),
+    ) && toUnset.every((field) => current[field] === undefined)
   )
 }
 
@@ -165,17 +175,34 @@ async function main() {
   })
 
   const seed: Seed = JSON.parse(readFileSync(path.join(ROOT, 'seed/genten-seed.json'), 'utf8'))
+
+  // Every id the seed may write, both published and as a draft.
+  const ids = [
+    ...seed.topics.map((t) => `topic-${t.id}`),
+    ...seed.sources.map((s) => `source-${s.id}`),
+    ...seed.ruleVersions.map((r) => `ruleVersion-${r.id}`),
+  ]
+  const existing = await client.fetch<SanityDocument[]>('*[_id in $ids]', {
+    ids: [...ids, ...ids.map((id) => `drafts.${id}`)],
+  })
+  const byId = new Map(existing.map((doc) => [doc._id, doc]))
+
+  // A source that exists only as a draft can only be referenced weakly. The Studio
+  // makes the reference strong when the rule is published, so the source must be
+  // published first.
+  const draftOnlySources = new Set(
+    seed.sources.filter((s) => s.draft && !byId.has(`source-${s.id}`)).map((s) => s.id),
+  )
+  const sourceRef = (sourceId: string) =>
+    draftOnlySources.has(sourceId)
+      ? {...ref(`source-${sourceId}`), _weak: true, _strengthenOnPublish: {type: 'source'}}
+      : ref(`source-${sourceId}`)
+
   const docs = [
     ...seed.topics.map(toTopic),
     ...seed.sources.map(toSource),
-    ...seed.ruleVersions.map(toRuleVersion),
+    ...seed.ruleVersions.map((r) => toRuleVersion(r, sourceRef)),
   ]
-
-  const publishedIds = docs.map((doc) => doc._id.replace(/^drafts\./, ''))
-  const existing = await client.fetch<SanityDocument[]>('*[_id in $ids]', {
-    ids: [...docs.map((doc) => doc._id), ...publishedIds],
-  })
-  const byId = new Map(existing.map((doc) => [doc._id, doc]))
 
   const tally = Object.fromEntries(
     TYPES.map((type) => [type, {created: 0, updated: 0, unchanged: 0, skippedPublished: 0}]),
@@ -190,17 +217,19 @@ async function main() {
       row.skippedPublished++
       continue
     }
-    const current = byId.get(doc._id)
+    const {_id, _type, ...fields} = doc
+    const toSet = compact(fields)
+    const toUnset = Object.keys(fields).filter((field) => fields[field] === null)
+    const current = byId.get(_id)
     if (!current) {
       row.created++
-      tx.createIfNotExists(doc)
-    } else if (sameSeedFields(current, doc)) {
+      tx.createIfNotExists({_id, _type, ...toSet})
+    } else if (sameSeedFields(current, toSet, toUnset)) {
       row.unchanged++
       continue
     } else {
       row.updated++
-      const {_id, _type, ...seedFields} = doc
-      tx.patch(_id, (patch) => patch.set(seedFields))
+      tx.patch(_id, (patch) => (toUnset.length ? patch.set(toSet).unset(toUnset) : patch.set(toSet)))
     }
     writes++
   }
