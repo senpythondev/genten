@@ -7,6 +7,9 @@
  * - Idempotent: each document is compared with the dataset and only changed ones are
  *   written, in a single transaction. A rule that a reviewer has already published is
  *   skipped, so a re-run never re-opens it as a draft.
+ * - Existing documents are patched, not replaced: only the fields the seed sets are
+ *   written. Fields owned by tools or reviewers (capturedAt, snapshotSha256,
+ *   verification, ...) are never touched. A field removed from the seed is not unset.
  *
  * Usage (inside studio/): npm run seed
  * Needs SANITY_WRITE_TOKEN in the root .env.
@@ -135,14 +138,17 @@ function toRuleVersion(r: SeedRuleVersion): Doc {
   }) as Doc
 }
 
-// Compare content only: ignore system fields and key order.
-function sameContent(current: SanityDocument, next: Doc): boolean {
-  const {_rev, _createdAt, _updatedAt, ...content} = current
+// Compare only the fields the seed sets, ignoring key order. Other fields on the
+// existing document do not count as a difference.
+function sameSeedFields(current: SanityDocument, next: Doc): boolean {
   const sortKeys = (_key: string, value: unknown) =>
     value && typeof value === 'object' && !Array.isArray(value)
       ? Object.fromEntries(Object.entries(value).sort(([a], [b]) => (a < b ? -1 : 1)))
       : value
-  return JSON.stringify(content, sortKeys) === JSON.stringify(next, sortKeys)
+  return Object.entries(next).every(
+    ([field, value]) =>
+      JSON.stringify(current[field], sortKeys) === JSON.stringify(value, sortKeys),
+  )
 }
 
 async function main() {
@@ -185,12 +191,17 @@ async function main() {
       continue
     }
     const current = byId.get(doc._id)
-    if (current && sameContent(current, doc)) {
+    if (!current) {
+      row.created++
+      tx.createIfNotExists(doc)
+    } else if (sameSeedFields(current, doc)) {
       row.unchanged++
       continue
+    } else {
+      row.updated++
+      const {_id, _type, ...seedFields} = doc
+      tx.patch(_id, (patch) => patch.set(seedFields))
     }
-    row[current ? 'updated' : 'created']++
-    tx.createOrReplace(doc)
     writes++
   }
 

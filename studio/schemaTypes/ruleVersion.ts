@@ -10,6 +10,17 @@ function today(): string {
   return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`
 }
 
+// Validity period for previews, e.g. "2018-01-01–2023-12-31", "2024-01-01–now",
+// or "from 2027-01-01 (not yet in force)" for a rule that has not started.
+function validity(validFrom?: string, validTo?: string): string {
+  if (validFrom && validFrom > today()) {
+    return validTo
+      ? `${validFrom}–${validTo} (not yet in force)`
+      : `from ${validFrom} (not yet in force)`
+  }
+  return `${validFrom}–${validTo ?? 'now'}`
+}
+
 export const ruleVersion = defineType({
   name: 'ruleVersion',
   title: 'Rule version',
@@ -201,7 +212,7 @@ export const ruleVersion = defineType({
     },
     prepare: ({title, ruleKey, status, validFrom, validTo}) => ({
       title,
-      subtitle: `${ruleKey} · ${status} · ${validFrom}–${validTo ?? 'now'}`,
+      subtitle: `${ruleKey} · ${status} · ${validity(validFrom, validTo)}`,
     }),
   },
 })
