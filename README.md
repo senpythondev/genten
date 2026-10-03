@@ -8,7 +8,7 @@ Genten is an agent that answers foreign residents' questions about Japanese NISA
 seed/genten-seed.json   topics, sources and rule versions to import
 studio/                 Sanity Studio (project pro5oxe1, dataset production): schema, desk structure, seed script
 web/                    Next.js app (will become the agent UI)
-tools/                  Python utilities
+tools/                  Python utilities (snapshot tool)
 eval/                   Python eval harness
 ```
 
@@ -24,3 +24,21 @@ eval/                   Python eval harness
    ```
 
 The seed is idempotent. It writes only documents whose content changed, in one transaction. It writes only the fields it owns (listed in `OWNED_FIELDS` in the script), so tool-written fields such as `capturedAt` and `snapshotSha256`, and reviewers' `verification`, are never overwritten. Topics and sources are imported as published documents, and rule versions as drafts. Review the drafts under **Needs review** in the Studio (`npm run dev` in `studio/`). Once a rule version is published, the seed leaves it alone and only prints how the seed differs from it.
+
+## Snapshots
+
+`tools/snapshot.py` captures every source in the seed as files for a Sanity Knowledge Base ("Files" source):
+
+```sh
+python3 -m venv .venv
+.venv/bin/pip install -r tools/requirements.txt
+.venv/bin/python -m tools.snapshot [--only id1,id2] [--update-sanity]
+```
+
+It respects robots.txt, sends at most one request per second as `GentenSnapshot/0.1`, and writes into `snapshots/`:
+- `files/<id>.pdf`: PDFs, unchanged.
+- `files/<id>.md`: the main content of HTML pages, with front matter.
+- `manifest.json`: id, URL, status (`ok`, `thin`, `failed` or `robots-blocked`), file, size, SHA-256 and capture time.
+- `genten-kb-files-<YYYYMMDD>.zip`: a reproducible archive of `files/` to upload.
+
+A source's `role` and `curationNote` (the evaluation answer key) are never written to any file. `--update-sanity` sets only `capturedAt` and `snapshotSha256` on the published sources; the seed never writes those fields. `snapshots/` is gitignored because it holds third-party content.
