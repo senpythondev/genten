@@ -1,0 +1,1011 @@
+{
+  "_meta": {
+    "project": "Genten (原典)",
+    "version": "2026-10-03",
+    "notes": [
+      "topics, sources and ruleVersions are imported into Sanity by studio/scripts/import-seed.ts.",
+      "sources[].role and sources[].curationNote are INTERNAL (evaluation answer key). Never write them into Knowledge Base files.",
+      "ruleVersions are imported as DRAFTS. A human checks each one against the official source (see checkFirst) and publishes it. Knowledge Base dataset sources read published documents only.",
+      "ids contain only lowercase letters, digits and hyphens (no dots), so documents stay readable on a public dataset."
+    ]
+  },
+  "topics": [
+    {
+      "id": "nisa",
+      "title": "NISA",
+      "area": "nisa",
+      "summary": "Japan's tax-exempt individual investment account system (Nippon Individual Savings Account)."
+    },
+    {
+      "id": "furusato-nozei",
+      "title": "Furusato nozei",
+      "area": "furusato-nozei",
+      "summary": "Hometown tax donation system: donations to municipalities reduce income tax and residence tax."
+    }
+  ],
+  "sources": [
+    {
+      "id": "fsa-nisa-know",
+      "url": "https://www.fsa.go.jp/policy/nisa2/know/",
+      "title": "NISAを知る（NISA特設ウェブサイト）",
+      "publisher": "金融庁 Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "official-current",
+      "curationNote": "Official overview of the 2024 NISA: tsumitate quota 3x old tsumitate NISA (¥1.2M/yr), growth quota 2x old general NISA (¥2.4M/yr), combined use up to ¥3.6M/yr, ¥18M lifetime limit with growth capped at ¥12M. Also gives the system's history (2014, 2016, 2018, 2024)."
+    },
+    {
+      "id": "fsa-nisa-pre2024",
+      "url": "https://www.fsa.go.jp/policy/nisa2/about/nisa/index.html",
+      "title": "2023年までのNISA（NISA特設ウェブサイト）",
+      "publisher": "金融庁 Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "official-history",
+      "curationNote": "Pre-2024 holdings keep their 5/20-year periods, no new purchases from 2024, cannot be moved into the new NISA, managed outside the ¥18M limit. Junior NISA balances withdrawable tax-free from 2024."
+    },
+    {
+      "id": "fsa-nisa-slides",
+      "url": "https://www.fsa.go.jp/policy/nisa2/about/nisa2024/slide_202406.pdf",
+      "title": "NISAを利用する皆さまへ（令和6年6月・令和7年9月改訂）",
+      "publisher": "金融庁 Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "official-current",
+      "curationNote": "Slide deck summarizing the current system: indefinite holding period, quotas, ¥18M lifetime limit (growth ¥12M)."
+    },
+    {
+      "id": "fsa-tax-reform-r8",
+      "url": "https://www.fsa.go.jp/news/r7/sonota/20251226-2/01.pdf",
+      "title": "令和8（2026）年度税制改正について－税制改正大綱における金融庁関係の主要項目－",
+      "publisher": "金融庁 Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "official-future",
+      "curationNote": "Dec 2025 tax reform outline: tsumitate quota opened to ages 0-17 (¥600k/yr, ¥6M limit), guardian withdrawals from age 12 only with the child's consent; product scope changes."
+    },
+    {
+      "id": "fsa-accessfsa-202602",
+      "url": "https://www.fsa.go.jp/access/r7/270/270_03.pdf",
+      "title": "アクセスFSA 2026年2月号：令和8年度税制改正大綱における金融庁関係の主要項目について",
+      "publisher": "金融庁 Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "official-future",
+      "curationNote": "Explains the reform: currently tsumitate requires age 18+; from January 2027 ages 0-17 get ¥600k/yr and ¥6M limit."
+    },
+    {
+      "id": "nta-nisa",
+      "url": "https://www.nta.go.jp/users/gensen/nisa/index.htm",
+      "title": "NISAに関する情報",
+      "publisher": "国税庁 National Tax Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "official-current",
+      "curationNote": "Procedures and NTA materials on NISA and Junior NISA; links to the FSA site."
+    },
+    {
+      "id": "mof-chugoku-nisa",
+      "url": "https://lfb.mof.go.jp/chugoku/kinyusyouken/kin3/nisaseido.html",
+      "title": "賢く使おう「NISA」制度",
+      "publisher": "財務省中国財務局 Chugoku Local Finance Bureau (Ministry of Finance)",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "official-current",
+      "curationNote": "One NISA account per person, institution changeable yearly; limits managed at book value; sold amounts reusable from the following year."
+    },
+    {
+      "id": "fsa-en-accessfsa-2023",
+      "url": "https://www.fsa.go.jp/en/newsletter/accessfsa2023/234.pdf",
+      "title": "Access FSA (2023, provisional translation): major expansion and perpetuation of NISA",
+      "publisher": "Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "en",
+      "topics": ["nisa"],
+      "role": "official-english-dated",
+      "curationNote": "Official English explanation of the planned new NISA, written before the January 2024 launch."
+    },
+    {
+      "id": "fsa-en-presentation-2025",
+      "url": "https://www.fsa.go.jp/common/conference/danwa/20250521.pdf",
+      "title": "FSA presentation (May 2025): complete revamp of NISA",
+      "publisher": "Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "en",
+      "topics": ["nisa"],
+      "role": "official-english",
+      "curationNote": "English slides summarizing the January 2024 revamp and adoption figures. Carries a disclaimer that it may not reflect the official FSA view."
+    },
+    {
+      "id": "mizuho-faq-leaving",
+      "url": "https://www.faq.mizuhobank.co.jp/faq/show/8370?category_id=62&site_domain=default",
+      "title": "海外へ転居します。NISAの取引はどうなりますか。",
+      "publisher": "みずほ銀行 Mizuho Bank",
+      "publisherType": "financial-institution",
+      "authority": "secondary-institutional",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "institution-current",
+      "curationNote": "Leaving Japan: departure notice closes the account; continuation notice (employer transfer or similar, incl. accompanying spouse) keeps holdings until Dec 31 of the year 5 years after the notice; no trading abroad; return notice needed."
+    },
+    {
+      "id": "mufg-faq-leaving",
+      "url": "https://faq01.bk.mufg.jp/faq/show/5958?site_domain=default",
+      "title": "海外赴任（非居住者）となった場合も、NISAの利用を継続したい。",
+      "publisher": "三菱UFJ銀行 MUFG Bank",
+      "publisherType": "financial-institution",
+      "authority": "secondary-institutional",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "institution-current",
+      "curationNote": "Same continuation rule; Junior NISA excluded; account closed if no return notice within the period."
+    },
+    {
+      "id": "bank77-kodomo-nisa",
+      "url": "https://www.77bank.co.jp/financial-column/article93.html",
+      "title": "2027年開始！こども支援NISAとは？",
+      "publisher": "七十七銀行 The 77 Bank",
+      "publisherType": "financial-institution",
+      "authority": "secondary-institutional",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "institution-current",
+      "curationNote": "Children's NISA from 2027-01-01 (0-17, ¥600k/yr, ¥6M, tsumitate products only, moves to adult NISA at 18); compares with Junior NISA (¥800k/yr, ended 2023)."
+    },
+    {
+      "id": "nomura-kodomo-nisa",
+      "url": "https://www.nomura.co.jp/fin-wing/column/new-nisa4/",
+      "title": "18歳未満向け「こどもNISA」が税制大綱入り！",
+      "publisher": "野村證券 Fin Wing",
+      "publisherType": "financial-institution",
+      "authority": "secondary-institutional",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "institution-dated",
+      "curationNote": "Written at the tax-reform-outline stage (Dec 2025); describes the minors' quota as a plan, not law. Tests outline-vs-enacted status."
+    },
+    {
+      "id": "rangsit-nisa-expat",
+      "url": "https://rangsit.net/2026/07/10/nisa-ideco-expat/",
+      "title": "海外赴任とNISA・iDeCo【2026年版】",
+      "publisher": "rangsit.net (blog)",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "secondary-current",
+      "curationNote": "Dates the continuation framework to the FY2019 tax reform; only employer-ordered moves qualify; documents broker differences (some brokers do not support continuation)."
+    },
+    {
+      "id": "expatfinance-nisa-leaving",
+      "url": "https://note.com/expat_finance/n/n4e5d577b5546",
+      "title": "NISAは駐在中どうなる？海外赴任前に必ず知っておくべき「5年間継続特例」の完全解説",
+      "publisher": "海外駐在投資研究会 (note)",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "secondary-mixed",
+      "curationNote": "Frames the 5-year continuation rule as part of the 2024 new NISA (rangsit dates it to 2019). Tests origin-date conflicts."
+    },
+    {
+      "id": "fptax-nisa-2027",
+      "url": "https://note.com/fp_tax_note/n/n76fede4e7a16",
+      "title": "2027年NISA改正をわかりやすく解説",
+      "publisher": "税と資産の知恵袋 (note)",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "ja",
+      "topics": ["nisa"],
+      "role": "secondary-current",
+      "curationNote": "States the minors' change is in a law promulgated 2026-03-31, effective 2027-01-01. Verify enactment officially."
+    },
+    {
+      "id": "mic-furusato-about",
+      "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/about/",
+      "title": "よくわかる！ふるさと納税",
+      "publisher": "総務省 Ministry of Internal Affairs and Communications",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["furusato-nozei"],
+      "role": "official-current",
+      "curationNote": "Purpose of the system; any municipality can receive donations; donation minus ¥2,000 deducted in principle; one-stop exception for salaried people."
+    },
+    {
+      "id": "mic-furusato-faq",
+      "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/faq/",
+      "title": "ふるさと納税 よくある質問",
+      "publisher": "総務省 Ministry of Internal Affairs and Communications",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["furusato-nozei"],
+      "role": "official-current",
+      "curationNote": "One-stop only if donating to 5 or fewer municipalities; the ¥2,000 applies to the yearly total, not each donation."
+    },
+    {
+      "id": "mic-furusato-criteria-2026",
+      "url": "https://www.soumu.go.jp/main_content/001070694.pdf",
+      "title": "ふるさと納税について（指定基準に係る告示改正）令和8年3月24日",
+      "publisher": "総務省 Ministry of Internal Affairs and Communications",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["furusato-nozei"],
+      "role": "official-current",
+      "curationNote": "March 2026 revision of designation criteria: usable share moving toward 60%, designation revocation up to 3 years, look-back up to 5 years; portal fees ~13% of donations."
+    },
+    {
+      "id": "mic-furusato-portal",
+      "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/080430_2_kojin.html",
+      "title": "ふるさと納税ポータルサイト（総務省）",
+      "publisher": "総務省 Ministry of Internal Affairs and Communications",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["furusato-nozei"],
+      "role": "official-current",
+      "curationNote": "Designation system in force since 2019-06-01: donations to non-designated municipalities do not qualify. Topic list includes 2026 designation notices."
+    },
+    {
+      "id": "mic-furusato-press-2024",
+      "url": "https://www.soumu.go.jp/menu_news/s-news/01zeimu04_02000126.html",
+      "title": "ふるさと納税の指定基準の見直し等（報道資料）",
+      "publisher": "総務省 Ministry of Internal Affairs and Communications",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja",
+      "topics": ["furusato-nozei"],
+      "role": "official-history",
+      "curationNote": "June 2024 revision of designation criteria (令和6年総務省告示第203号), the revision behind the October 2025 portal-point ban."
+    },
+    {
+      "id": "impress-points-ban",
+      "url": "https://netshop.impress.co.jp/node/12499",
+      "title": "ふるさと納税、2025年10月からポイント付与伴う寄付禁止",
+      "publisher": "ネットショップ担当者フォーラム (Impress)",
+      "publisherType": "media",
+      "authority": "secondary-independent",
+      "language": "ja",
+      "topics": ["furusato-nozei"],
+      "role": "secondary-current",
+      "curationNote": "Reports the June 2024 notice: from October 2025, donations via portals granting points are banned, point sites included; card-payment points treated as ordinary."
+    },
+    {
+      "id": "rakuten-points-notice",
+      "url": "https://event.rakuten.co.jp/furusato/notice/20250901/",
+      "title": "楽天ふるさと納税におけるポイント付与ルール変更のおしらせ",
+      "publisher": "楽天グループ Rakuten",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "ja",
+      "topics": ["furusato-nozei"],
+      "role": "institution-current",
+      "curationNote": "Rakuten confirms portal points ended from 2025-10-01 following the June 2024 MIC notice."
+    },
+    {
+      "id": "toolcalc-furusato-2026",
+      "url": "https://tool-calc.com/blog/furusato-2026-october/",
+      "title": "ふるさと納税 2026年10月改正｜何が変わり、何が変わらないか",
+      "publisher": "tool-calc.com (blog)",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "ja",
+      "topics": ["furusato-nozei"],
+      "role": "secondary-current",
+      "curationNote": "Oct 2026 changes affect municipalities only; deduction mechanics and one-stop conditions (5 municipalities, Jan 10 arrival) unchanged."
+    },
+    {
+      "id": "okane-furusato-2026",
+      "url": "https://www.okane-n4vi.com/blog/furusato-2026-october-reform",
+      "title": "ふるさと納税、2026年10月から何が変わる？自治体側の規制強化と2027年寄付分の「193万円上限」",
+      "publisher": "okane-n4vi.com (blog)",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "ja",
+      "topics": ["furusato-nozei"],
+      "role": "secondary-current",
+      "curationNote": "Frames the ¥1.93M special deduction cap as applying to donations from 2027. Pair with geisei (FY2028 residence tax framing): same rule, apparent conflict."
+    },
+    {
+      "id": "geisei-furusato-2026",
+      "url": "https://furusato-geisei.jp/feature/753/",
+      "title": "「ふるさと納税」2026年度改正で激変へ",
+      "publisher": "げいせいつうしん",
+      "publisherType": "media",
+      "authority": "secondary-independent",
+      "language": "ja",
+      "topics": ["furusato-nozei"],
+      "role": "secondary-current",
+      "curationNote": "Frames the ¥1.93M cap as applying from FY2028 residence tax; usable share 52.5% from Oct 2026, 55% from Oct 2027."
+    },
+    {
+      "id": "credo-furusato-2026",
+      "url": "https://credo-tax.jp/column/1939/",
+      "title": "ふるさと納税、2026年10月からルールが変わります",
+      "publisher": "クレド税理士事務所 Credo Tax Office",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "ja",
+      "topics": ["furusato-nozei"],
+      "role": "secondary-current",
+      "curationNote": "Frames the change as a cost cap shrinking from 50% to 47.5% (complement of the 52.5% usable share): same rule, apparent conflict."
+    },
+    {
+      "id": "tyton-nisa-foreigners",
+      "url": "https://www.tytoncapital.com/portfolio/nisa-account-for-foreign-gaijin-japan-tokyo/",
+      "title": "NISA and Retirement Saving For Foreign People in Japan",
+      "publisher": "Tyton Capital",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "en",
+      "topics": ["nisa"],
+      "role": "secondary-outdated",
+      "curationNote": "Presents pre-2024 limits (¥400k tsumitate, ¥1.2M ordinary) and 5/20-year periods as current."
+    },
+    {
+      "id": "tyton-nisa-english",
+      "url": "https://www.tytoncapital.com/portfolio/can-i-get-a-japanese-nisa-retirement-account-in-english/",
+      "title": "Can I Get a Japanese NISA Retirement Account in English?",
+      "publisher": "Tyton Capital",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "en",
+      "topics": ["nisa"],
+      "role": "secondary-outdated",
+      "curationNote": "Says NISA is for residents over 20; gives pre-2024 limits. Accurate for its time, outdated now."
+    },
+    {
+      "id": "wikipedia-nisa",
+      "url": "https://en.wikipedia.org/wiki/Nippon_individual_savings_account",
+      "title": "Nippon individual savings account",
+      "publisher": "Wikipedia",
+      "publisherType": "wiki",
+      "authority": "secondary-independent",
+      "language": "en",
+      "topics": ["nisa"],
+      "role": "secondary-outdated",
+      "curationNote": "At research time described only pre-2024 limits (general ¥1.2M, tsumitate ¥400k, junior ¥800k). Re-check at capture; may have been updated."
+    },
+    {
+      "id": "retirejapan-nisa",
+      "url": "https://www.retirejapan.com/nisa/",
+      "title": "NISA Accounts in Japan: A Beginner's Guide",
+      "publisher": "RetireJapan",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "en",
+      "topics": ["nisa"],
+      "role": "secondary-mixed",
+      "curationNote": "Current annual quotas correct, but gives the tsumitate section a ¥6M lifetime limit; FSA sets ¥18M total with only the growth quota capped (¥12M)."
+    },
+    {
+      "id": "retirejapan-forum-tsumitate",
+      "url": "https://retirejapan.com/forum/viewtopic.php?t=30",
+      "title": "Regular NISA and Tsumitate NISA (forum thread)",
+      "publisher": "RetireJapan forum",
+      "publisherType": "forum",
+      "authority": "secondary-independent",
+      "language": "en",
+      "topics": ["nisa"],
+      "role": "secondary-outdated",
+      "curationNote": "Old thread: ¥400k/yr tsumitate for 20 years, age 20+."
+    },
+    {
+      "id": "argentum-nisa",
+      "url": "https://argentumwealth.com/unlocking-nisa-the-essential-guide-for-expats-in-japan/",
+      "title": "Unlocking NISA: The Essential Guide for Expats in Japan",
+      "publisher": "Argentum Wealth",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "en",
+      "topics": ["nisa"],
+      "role": "secondary-mixed",
+      "curationNote": "Mixes old and new tables; describes restarting a five-year period, which belongs to the pre-2024 rollover system."
+    },
+    {
+      "id": "mailmate-new-nisa",
+      "url": "https://mailmate.jp/blog/new-nisa-program",
+      "title": "The New NISA Program: An Easy Walkthrough",
+      "publisher": "Mailmate",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "en",
+      "topics": ["nisa"],
+      "role": "secondary-dated",
+      "curationNote": "Written before the 2024 launch (future tense); new limits correct."
+    },
+    {
+      "id": "maymoney-nisa-en",
+      "url": "https://may-money.com/en/nisa-guide-en/",
+      "title": "New NISA Complete Guide",
+      "publisher": "May Money",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "en",
+      "topics": ["nisa"],
+      "role": "secondary-current",
+      "curationNote": "Current limits; age 18+ as of January 1; one account per person; quota reuse."
+    },
+    {
+      "id": "nissay-nisa-glossary",
+      "url": "https://note.nam.co.jp/n/n827113e4189a",
+      "title": "New NISA Glossary",
+      "publisher": "Nissay Asset Management",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "en",
+      "topics": ["nisa"],
+      "role": "institution-current",
+      "curationNote": "English glossary of 2024 NISA terms: growth ¥2.4M/yr and ¥12M, tsumitate ¥1.2M/yr, ¥18M lifetime, indefinite period."
+    },
+    {
+      "id": "gaijinpot-furusato",
+      "url": "https://blog.gaijinpot.com/what-is-furusato-nozei-the-japanese-tax-benefit-that-gets-you-free-stuff/",
+      "title": "What Is Furusato Nozei? The Japanese Tax Benefit That Gets You Free Stuff",
+      "publisher": "GaijinPot",
+      "publisherType": "media",
+      "authority": "secondary-independent",
+      "language": "en",
+      "topics": ["furusato-nozei"],
+      "role": "secondary-dated",
+      "curationNote": "Published before the October 2025 portal-point ban and the October 2026 changes. Check what it says about points at capture."
+    },
+    {
+      "id": "mailmate-furusato",
+      "url": "https://mailmate.jp/blog/furusato-nozei",
+      "title": "Furusato Nozei Guide for Company Employees in Japan",
+      "publisher": "Mailmate",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "en",
+      "topics": ["furusato-nozei"],
+      "role": "secondary-incorrect",
+      "curationNote": "Describes the one-stop limit as more than five donations; MIC sets it at five municipalities. Portal-point ban described correctly."
+    },
+    {
+      "id": "japanlifestart-furusato",
+      "url": "https://japanlifestart.com/en/money-cards/rakuten-furusato-nozei-guide",
+      "title": "【2026】Furusato Nozei Guide for Foreigners: Lower Residence Tax & Get Rakuten Points",
+      "publisher": "Japan Life Start",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "en",
+      "topics": ["furusato-nozei"],
+      "role": "secondary-outdated",
+      "curationNote": "Labeled 2026 but recommends timing donations for Rakuten bonus-point campaigns, which the October 2025 ban ended."
+    },
+    {
+      "id": "helloworldjapan-furusato",
+      "url": "https://helloworldjapan.com/en/articles/japan-furusato-nozei-foreigners-guide",
+      "title": "Furusato Nozei for Foreigners: Cut Your Japan Resident Tax",
+      "publisher": "Hello World Japan",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "en",
+      "topics": ["furusato-nozei"],
+      "role": "secondary-current",
+      "curationNote": "One-stop applications are voided if you file a tax return; repeat donations to one municipality count once toward the five."
+    },
+    {
+      "id": "expatjp-furusato",
+      "url": "https://expat.jp/furusato-nozei/",
+      "title": "Furusato Nozei in Japan: A Foreign Resident's Complete Guide (2026)",
+      "publisher": "expat.jp",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "en",
+      "topics": ["furusato-nozei"],
+      "role": "secondary-current",
+      "curationNote": "Five municipalities, January 10 deadline, portal points ended October 2025, name must match residence record."
+    },
+    {
+      "id": "ezeirishi-furusato",
+      "url": "https://e-zeirishi.com/en/furusato-nozei-guide-foreigners-japan/",
+      "title": "Furusato Nozei for Foreigners in Japan: The Complete Guide (2026)",
+      "publisher": "e-zeirishi",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "en",
+      "topics": ["furusato-nozei"],
+      "role": "secondary-current",
+      "curationNote": "Notes the October 2025 ban on portal bonus points; ordinary card points unaffected."
+    },
+    {
+      "id": "maymoney-furusato-en",
+      "url": "https://may-money.com/en/furusato-nozei-guide-en/",
+      "title": "Japan Furusato Nozei Complete Guide",
+      "publisher": "May Money",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "en",
+      "topics": ["furusato-nozei"],
+      "role": "secondary-current",
+      "curationNote": "Point rewards ended October 2025; written early 2026, so no October 2026 changes."
+    }
+  ],
+  "ruleVersions": [
+    {
+      "id": "nisa-tsumitate-annual-limit-2018",
+      "ruleKey": "nisa.tsumitate.annualLimit",
+      "topic": "nisa",
+      "title": "Tsumitate NISA annual limit (2018–2023)",
+      "statementEn": "Tsumitate NISA allowed up to ¥400,000 of new investment per calendar year. No new purchases have been possible in tsumitate NISA since 2024.",
+      "value": { "amount": 400000, "unit": "JPY/year", "qualifier": "tsumitate NISA (pre-2024 system)" },
+      "appliesTo": "Residents of Japan who chose tsumitate NISA for that year",
+      "validFrom": "2018-01-01",
+      "validTo": "2023-12-31",
+      "status": "superseded",
+      "supersedes": null,
+      "evidence": [
+        { "source": "fsa-nisa-know", "locator": "2024年からのNISA — 年間投資枠が拡大", "note": "States the new tsumitate quota is three times tsumitate NISA's limit (implies ¥400,000)." },
+        { "source": "fsa-nisa-pre2024", "locator": "購入（買付）について", "note": "No new purchases in tsumitate or general NISA from 2024." }
+      ],
+      "checkFirst": "FSA states the old limit indirectly (new = 3x old). Confirm ¥400,000 is stated explicitly on an official page, or record the derivation in the locator."
+    },
+    {
+      "id": "nisa-tsumitate-annual-limit-2024",
+      "ruleKey": "nisa.tsumitate.annualLimit",
+      "topic": "nisa",
+      "title": "Tsumitate investment quota annual limit (2024–)",
+      "statementEn": "The tsumitate investment quota allows up to ¥1,200,000 of new investment per calendar year.",
+      "value": { "amount": 1200000, "unit": "JPY/year", "qualifier": "tsumitate investment quota (つみたて投資枠)" },
+      "appliesTo": "NISA account holders aged 18 or older",
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "supersedes": "nisa-tsumitate-annual-limit-2018",
+      "evidence": [
+        { "source": "fsa-nisa-know", "locator": "2024年からのNISA — 年間投資枠が拡大", "note": "¥1.2M per year." },
+        { "source": "fsa-nisa-slides", "locator": "NISA制度の概要", "note": "Quota table." }
+      ],
+      "checkFirst": "Straightforward. Confirm on fsa-nisa-know."
+    },
+    {
+      "id": "nisa-general-annual-limit-2016",
+      "ruleKey": "nisa.growth.annualLimit",
+      "topic": "nisa",
+      "title": "General NISA annual limit (2016–2023)",
+      "statementEn": "General NISA allowed up to ¥1,200,000 of new investment per calendar year. No new purchases have been possible in general NISA since 2024.",
+      "value": { "amount": 1200000, "unit": "JPY/year", "qualifier": "general NISA (pre-2024 system)" },
+      "appliesTo": "Residents of Japan who chose general NISA for that year",
+      "validFrom": "2016-01-01",
+      "validTo": "2023-12-31",
+      "status": "superseded",
+      "supersedes": null,
+      "evidence": [
+        { "source": "fsa-nisa-know", "locator": "2024年からのNISA — 年間投資枠が拡大", "note": "States the growth quota is twice general NISA's limit (implies ¥1.2M)." }
+      ],
+      "checkFirst": "General NISA launched in 2014 with a lower annual limit (¥1,000,000 for 2014–2015, as far as I know). Confirm on an official source; add a separate 2014 version if you want the full history."
+    },
+    {
+      "id": "nisa-growth-annual-limit-2024",
+      "ruleKey": "nisa.growth.annualLimit",
+      "topic": "nisa",
+      "title": "Growth investment quota annual limit (2024–)",
+      "statementEn": "The growth investment quota allows up to ¥2,400,000 of new investment per calendar year.",
+      "value": { "amount": 2400000, "unit": "JPY/year", "qualifier": "growth investment quota (成長投資枠)" },
+      "appliesTo": "NISA account holders aged 18 or older",
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "supersedes": "nisa-general-annual-limit-2016",
+      "evidence": [
+        { "source": "fsa-nisa-know", "locator": "2024年からのNISA — 年間投資枠が拡大", "note": "¥2.4M per year." },
+        { "source": "fsa-nisa-slides", "locator": "NISA制度の概要", "note": "Quota table." }
+      ],
+      "checkFirst": "Straightforward. Confirm on fsa-nisa-know."
+    },
+    {
+      "id": "nisa-combined-use-2018",
+      "ruleKey": "nisa.quotas.combinedUse",
+      "topic": "nisa",
+      "title": "Choosing between tsumitate and general NISA (2018–2023)",
+      "statementEn": "Tsumitate NISA and general NISA could not be used in the same year; an investor had to choose one of the two.",
+      "value": { "amount": null, "unit": "none", "qualifier": "either/or" },
+      "appliesTo": "NISA account holders under the pre-2024 system",
+      "validFrom": "2018-01-01",
+      "validTo": "2023-12-31",
+      "status": "superseded",
+      "supersedes": null,
+      "evidence": [
+        { "source": "fsa-nisa-know", "locator": "2024年からのNISA — 併用", "note": "Says combined use became possible from 2024 (implies it was not before)." }
+      ],
+      "checkFirst": "Confirm the either/or rule, and whether switching between the two was allowed year by year, on an official page."
+    },
+    {
+      "id": "nisa-combined-use-2024",
+      "ruleKey": "nisa.quotas.combinedUse",
+      "topic": "nisa",
+      "title": "Combined use of both quotas (2024–)",
+      "statementEn": "Both quotas can be used in the same year, for a combined maximum of ¥3,600,000 of new investment per year (¥1,200,000 tsumitate plus ¥2,400,000 growth).",
+      "value": { "amount": 3600000, "unit": "JPY/year", "qualifier": "combined annual maximum" },
+      "appliesTo": "NISA account holders aged 18 or older",
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "supersedes": "nisa-combined-use-2018",
+      "evidence": [
+        { "source": "fsa-nisa-know", "locator": "2024年からのNISA — 併用・年間投資枠が拡大", "note": "Combined use; ¥3.6M per year in total." }
+      ],
+      "checkFirst": "Straightforward."
+    },
+    {
+      "id": "nisa-lifetime-limit-2024",
+      "ruleKey": "nisa.lifetimeLimit",
+      "topic": "nisa",
+      "title": "Lifetime tax-exempt holding limit (2024–)",
+      "statementEn": "The lifetime tax-exempt holding limit is ¥18,000,000, measured at purchase cost (book value), not market value. At most ¥12,000,000 of it can be used through the growth quota; the tsumitate quota alone can use the full ¥18,000,000.",
+      "value": { "amount": 18000000, "unit": "JPY", "qualifier": "book value; growth quota at most ¥12,000,000" },
+      "appliesTo": "NISA account holders aged 18 or older",
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "supersedes": null,
+      "evidence": [
+        { "source": "fsa-nisa-know", "locator": "非課税保有限度額（総枠）が新設", "note": "¥18M total; growth up to ¥12M of it." },
+        { "source": "fsa-nisa-slides", "locator": "NISA制度の概要", "note": "¥18M total, ¥12M growth (内数)." },
+        { "source": "mof-chugoku-nisa", "locator": "簿価残高で管理", "note": "Managed at book value; price rises do not reduce room." }
+      ],
+      "checkFirst": "FSA states the ¥18M total and ¥12M growth cap. Confirm the reading that the tsumitate quota alone can use all ¥18M on an FSA page or FAQ (secondary sources state it explicitly)."
+    },
+    {
+      "id": "nisa-holding-period-pre2024",
+      "ruleKey": "nisa.holdingPeriod",
+      "topic": "nisa",
+      "title": "Tax-exempt period under the pre-2024 system",
+      "statementEn": "Investments made under the pre-2024 system stay tax-exempt for a fixed period from purchase: 5 years for general NISA and 20 years for tsumitate NISA. These periods still apply to holdings bought before 2024.",
+      "value": { "amount": null, "unit": "years", "qualifier": "5 (general) / 20 (tsumitate)" },
+      "appliesTo": "Holdings purchased under general or tsumitate NISA before 2024",
+      "validFrom": "2014-01-01",
+      "validTo": "2023-12-31",
+      "status": "superseded",
+      "supersedes": null,
+      "evidence": [
+        { "source": "fsa-nisa-pre2024", "locator": "非課税保有期間について", "note": "5/20-year periods continue for old holdings." }
+      ],
+      "checkFirst": "validTo marks the end of new purchases, not the end of tax exemption for existing holdings. The agent must explain this distinction."
+    },
+    {
+      "id": "nisa-holding-period-2024",
+      "ruleKey": "nisa.holdingPeriod",
+      "topic": "nisa",
+      "title": "Tax-exempt period (2024–)",
+      "statementEn": "Investments made from 2024 onward have no time limit on tax exemption.",
+      "value": { "amount": null, "unit": "years", "qualifier": "indefinite (無期限)" },
+      "appliesTo": "Holdings purchased in the NISA from 2024",
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "supersedes": "nisa-holding-period-pre2024",
+      "evidence": [
+        { "source": "fsa-nisa-slides", "locator": "非課税保有期間", "note": "Indefinite for both quotas." }
+      ],
+      "checkFirst": "Straightforward."
+    },
+    {
+      "id": "nisa-quota-reuse-2024",
+      "ruleKey": "nisa.lifetimeLimit.reuse",
+      "topic": "nisa",
+      "title": "Reusing the lifetime limit after selling (2024–)",
+      "statementEn": "When NISA holdings are sold, the purchase cost of what was sold frees up room within the ¥18,000,000 lifetime limit from the following year. New purchases are still capped by the annual quotas.",
+      "value": { "amount": null, "unit": "none", "qualifier": "reusable from the following year" },
+      "appliesTo": "NISA account holders aged 18 or older",
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "supersedes": null,
+      "evidence": [
+        { "source": "mof-chugoku-nisa", "locator": "非課税枠の再利用", "note": "Book value of sold holdings reusable from the next year." }
+      ],
+      "checkFirst": "Confirm 'from the following year' on an FSA page as well."
+    },
+    {
+      "id": "nisa-legacy-holdings-2024",
+      "ruleKey": "nisa.legacyHoldings",
+      "topic": "nisa",
+      "title": "What happens to pre-2024 NISA holdings",
+      "statementEn": "Pre-2024 NISA holdings can be kept until their original tax-exempt period ends. They cannot be moved into the new NISA, no new purchases are possible in the old accounts, and they do not count toward the ¥18,000,000 lifetime limit. When the period ends they must be sold or moved to a taxable account.",
+      "value": { "amount": null, "unit": "none", "qualifier": null },
+      "appliesTo": "Holders of general or tsumitate NISA investments made before 2024",
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "supersedes": null,
+      "evidence": [
+        { "source": "fsa-nisa-pre2024", "locator": "旧制度で保有している商品について", "note": "Keep until period ends; no transfer; outside ¥18M." }
+      ],
+      "checkFirst": "Straightforward."
+    },
+    {
+      "id": "nisa-junior-2016",
+      "ruleKey": "nisa.minors",
+      "topic": "nisa",
+      "title": "Junior NISA (2016–2023)",
+      "statementEn": "Junior NISA let minors invest up to ¥800,000 per year. New investment ended at the end of 2023.",
+      "value": { "amount": 800000, "unit": "JPY/year", "qualifier": "Junior NISA" },
+      "appliesTo": "Minors resident in Japan",
+      "validFrom": "2016-04-01",
+      "validTo": "2023-12-31",
+      "status": "superseded",
+      "supersedes": null,
+      "evidence": [
+        { "source": "fsa-nisa-know", "locator": "より使いやすいNISAへ", "note": "Junior NISA started April 2016." },
+        { "source": "bank77-kodomo-nisa", "locator": "ジュニアNISAとの違い", "note": "¥800,000/yr; ended at the end of 2023." }
+      ],
+      "checkFirst": "The ¥800,000 figure comes from a bank page. Confirm it on an official source."
+    },
+    {
+      "id": "nisa-minors-gap-2024",
+      "ruleKey": "nisa.minors",
+      "topic": "nisa",
+      "title": "No NISA option for minors (2024–2026)",
+      "statementEn": "From 2024 through 2026 there is no NISA option for children: Junior NISA is closed to new investment and the NISA requires the account holder to be 18 or older. A new option for ages 0–17 starts in January 2027.",
+      "value": { "amount": 0, "unit": "JPY/year", "qualifier": "no minors' account available" },
+      "appliesTo": "Residents of Japan under 18",
+      "validFrom": "2024-01-01",
+      "validTo": "2026-12-31",
+      "status": "in-force",
+      "supersedes": "nisa-junior-2016",
+      "evidence": [
+        { "source": "fsa-nisa-pre2024", "locator": "ジュニアNISAについて", "note": "Junior NISA closed to new purchases." },
+        { "source": "fsa-accessfsa-202602", "locator": "現行制度", "note": "Current tsumitate quota requires age 18+; minors' quota from January 2027." }
+      ],
+      "checkFirst": "Change status to superseded on 2027-01-01."
+    },
+    {
+      "id": "nisa-junior-withdrawal-2024",
+      "ruleKey": "nisa.minors.juniorWithdrawal",
+      "topic": "nisa",
+      "title": "Withdrawing Junior NISA balances (2024–)",
+      "statementEn": "From 2024, the full Junior NISA balance can be withdrawn tax-free regardless of the child's age or the reason. Partial withdrawals are not allowed.",
+      "value": { "amount": null, "unit": "none", "qualifier": "whole balance only" },
+      "appliesTo": "Holders of Junior NISA accounts",
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "supersedes": null,
+      "evidence": [
+        { "source": "fsa-nisa-pre2024", "locator": "ジュニアNISAについて", "note": "Tax-free withdrawal regardless of age or reason; whole balance." }
+      ],
+      "checkFirst": "Confirm the 'whole balance only' wording."
+    },
+    {
+      "id": "nisa-minors-2027",
+      "ruleKey": "nisa.minors",
+      "topic": "nisa",
+      "title": "NISA for ages 0–17 (from January 2027)",
+      "statementEn": "From January 2027, children aged 0–17 (as of January 1) can use the tsumitate quota only, up to ¥600,000 per year and ¥6,000,000 in total. From age 12, a parent or guardian can withdraw money only with the child's consent. The account becomes a regular adult NISA when the child turns 18.",
+      "value": { "amount": 600000, "unit": "JPY/year", "qualifier": "holding limit ¥6,000,000; tsumitate quota only" },
+      "appliesTo": "Residents of Japan aged 0–17 as of January 1",
+      "validFrom": "2027-01-01",
+      "validTo": null,
+      "status": "enacted-future",
+      "supersedes": "nisa-minors-gap-2024",
+      "evidence": [
+        { "source": "fsa-tax-reform-r8", "locator": "つみたて投資枠の対象年齢見直し", "note": "0–17: ¥600k/yr, ¥6M; withdrawals from 12 with consent." },
+        { "source": "fsa-accessfsa-202602", "locator": "NISA", "note": "Effective January 2027." },
+        { "source": "bank77-kodomo-nisa", "locator": "制度の概要", "note": "Automatic move to adult NISA." },
+        { "source": "fptax-nisa-2027", "locator": "冒頭", "note": "Says law promulgated 2026-03-31." }
+      ],
+      "checkFirst": "1) Confirm the law was enacted (a blog says promulgated 2026-03-31). If you cannot confirm it officially, set status to outline-only. 2) Confirm the automatic switch to adult NISA (currently from a bank page)."
+    },
+    {
+      "id": "nisa-eligibility-age-2014",
+      "ruleKey": "nisa.eligibilityAge",
+      "topic": "nisa",
+      "title": "NISA minimum age 20 (2014–2022)",
+      "statementEn": "General and tsumitate NISA required the account holder to be 20 or older.",
+      "value": { "amount": 20, "unit": "count", "qualifier": "minimum age in years" },
+      "appliesTo": "Residents of Japan",
+      "validFrom": "2014-01-01",
+      "validTo": "2022-12-31",
+      "status": "superseded",
+      "supersedes": null,
+      "evidence": [
+        { "source": "tyton-nisa-english", "locator": "How Does a NISA Retirement Account Work?", "note": "States 20+; accurate for its time." }
+      ],
+      "checkFirst": "Only secondary evidence so far. Find an FSA/NTA page or set verification.method to secondary-only. Note for the writeup: 'outdated' is not 'wrong' — this page was right when written."
+    },
+    {
+      "id": "nisa-eligibility-age-2023",
+      "ruleKey": "nisa.eligibilityAge",
+      "topic": "nisa",
+      "title": "NISA minimum age 18 (2023–)",
+      "statementEn": "Residents of Japan aged 18 or older as of January 1 of the year can open a NISA account. The minimum age was lowered from 20 following the 2022 change in the legal age of adulthood.",
+      "value": { "amount": 18, "unit": "count", "qualifier": "minimum age in years, as of January 1" },
+      "appliesTo": "Residents of Japan",
+      "validFrom": "2023-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "supersedes": "nisa-eligibility-age-2014",
+      "evidence": [
+        { "source": "maymoney-nisa-en", "locator": "New NISA Basic Information", "note": "18+ as of January 1." },
+        { "source": "fsa-accessfsa-202602", "locator": "現行制度", "note": "Current tsumitate quota age requirement is 18+." }
+      ],
+      "checkFirst": "Confirm the 2023 start date on an official page."
+    },
+    {
+      "id": "nisa-one-account-2024",
+      "ruleKey": "nisa.accountsPerPerson",
+      "topic": "nisa",
+      "title": "One NISA account per person",
+      "statementEn": "Each person can hold only one NISA account at a time. The financial institution can be changed on a yearly basis.",
+      "value": { "amount": 1, "unit": "count", "qualifier": "accounts per person" },
+      "appliesTo": "NISA account holders",
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "supersedes": null,
+      "evidence": [
+        { "source": "mof-chugoku-nisa", "locator": "まとめ", "note": "One account per person; institution changeable yearly." }
+      ],
+      "checkFirst": "The rule existed before 2024; only the current system is modeled here."
+    },
+    {
+      "id": "nisa-leaving-japan",
+      "ruleKey": "nisa.leavingJapan",
+      "topic": "nisa",
+      "title": "Keeping NISA when leaving Japan",
+      "statementEn": "Account holders who leave Japan because of an employer's transfer order (or a similar unavoidable reason, including a spouse accompanying the transferee) can keep existing NISA holdings tax-exempt by filing a continuation notice (継続適用届出書) with their financial institution by the day before departure. The exemption lasts until December 31 of the year in which five years have passed since the notice. No new purchases are allowed while abroad, and a return notice (帰国届出書) must be filed within that period, or the account is closed and the holdings move to a taxable account. People leaving for other reasons must file a departure notice, and their NISA account is closed. Not every financial institution supports the continuation procedure.",
+      "value": { "amount": 5, "unit": "years", "qualifier": "until Dec 31 of the year 5 years after the notice" },
+      "appliesTo": "NISA account holders who become non-residents of Japan",
+      "validFrom": "2019-04-01",
+      "validTo": null,
+      "status": "in-force",
+      "supersedes": null,
+      "evidence": [
+        { "source": "mizuho-faq-leaving", "locator": "回答", "note": "Conditions, period, no trading, return notice." },
+        { "source": "mufg-faq-leaving", "locator": "回答", "note": "Same rule; Junior NISA excluded." },
+        { "source": "rangsit-nisa-expat", "locator": "証券会社ごとの対応差", "note": "Broker support differs; dates the framework to the FY2019 reform." }
+      ],
+      "checkFirst": "1) The effective date is unverified: one blog dates it to the FY2019 tax reform, another frames it as part of the 2024 NISA. Find the official date or record the uncertainty. 2) Support differs by financial institution; the agent must say so."
+    },
+    {
+      "id": "furusato-designation-2019",
+      "ruleKey": "furusato.designation",
+      "topic": "furusato-nozei",
+      "title": "Only designated municipalities qualify (2019–)",
+      "statementEn": "Since June 1, 2019, donations only qualify for furusato nozei deductions if the receiving municipality is designated by the Minister of Internal Affairs and Communications.",
+      "value": { "amount": null, "unit": "none", "qualifier": null },
+      "appliesTo": "All furusato nozei donors",
+      "validFrom": "2019-06-01",
+      "validTo": null,
+      "status": "in-force",
+      "supersedes": null,
+      "evidence": [
+        { "source": "mic-furusato-portal", "locator": "冒頭のお知らせ", "note": "New designation system from 令和元年6月1日." }
+      ],
+      "checkFirst": "Straightforward."
+    },
+    {
+      "id": "furusato-self-burden",
+      "ruleKey": "furusato.selfBurden",
+      "topic": "furusato-nozei",
+      "title": "The ¥2,000 self-burden",
+      "statementEn": "Within the donor's deduction limit, the amount donated minus ¥2,000 is deducted from income tax and residence tax. The ¥2,000 applies once to the calendar year's total donations, not to each donation.",
+      "value": { "amount": 2000, "unit": "JPY", "qualifier": "per calendar year, total" },
+      "appliesTo": "Furusato nozei donors within their deduction limit",
+      "validFrom": "2008-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "supersedes": null,
+      "evidence": [
+        { "source": "mic-furusato-about", "locator": "ふるさと納税って何？", "note": "Donation minus ¥2,000 deducted in principle." },
+        { "source": "mic-furusato-faq", "locator": "Q7付近", "note": "¥2,000 applies to the yearly total, not each donation." }
+      ],
+      "checkFirst": "Start date is approximate (the system began in 2008). Keep it as approximate or find the exact date."
+    },
+    {
+      "id": "furusato-one-stop",
+      "ruleKey": "furusato.oneStop",
+      "topic": "furusato-nozei",
+      "title": "One-stop exception conditions",
+      "statementEn": "Salaried people who do not otherwise need to file a tax return can use the one-stop exception if they donate to five or fewer municipalities in a year (repeat donations to the same municipality count once toward the five). Applications must reach each municipality by January 10 of the following year. Filing a tax return voids all one-stop applications, so every donation must then be declared on the return.",
+      "value": { "amount": 5, "unit": "count", "qualifier": "municipalities, not donations" },
+      "appliesTo": "Salaried furusato nozei donors who do not file a tax return",
+      "validFrom": "2015-04-01",
+      "validTo": null,
+      "status": "in-force",
+      "supersedes": null,
+      "evidence": [
+        { "source": "mic-furusato-faq", "locator": "Q7", "note": "Limited to 5 municipalities (5団体以内)." },
+        { "source": "toolcalc-furusato-2026", "locator": "結論", "note": "5 municipalities and January 10 arrival unchanged in October 2026." },
+        { "source": "helloworldjapan-furusato", "locator": "One-stop is voided if you then file a tax return", "note": "Filing a return voids one-stop." }
+      ],
+      "checkFirst": "1) The April 2015 start date is from memory; confirm it. 2) Confirm on an official page that filing a return voids one-stop. 3) Check whether an application is needed for each donation even to the same municipality, and add it to the statement if so."
+    },
+    {
+      "id": "furusato-portal-points-ban-2025",
+      "ruleKey": "furusato.portalPoints",
+      "topic": "furusato-nozei",
+      "title": "Portal points banned (2025-10-01–)",
+      "statementEn": "Since October 1, 2025, municipalities may not accept donations through portal sites that give donors points or similar rewards, including through point sites. Ordinary points from the credit card used to pay are not affected.",
+      "value": { "amount": null, "unit": "none", "qualifier": null },
+      "appliesTo": "All furusato nozei donors and portal sites",
+      "validFrom": "2025-10-01",
+      "validTo": null,
+      "status": "in-force",
+      "supersedes": null,
+      "evidence": [
+        { "source": "mic-furusato-press-2024", "locator": "報道資料", "note": "June 2024 criteria revision behind the ban." },
+        { "source": "impress-points-ban", "locator": "本文", "note": "Ban from October 2025, point sites included; card points ordinary." },
+        { "source": "rakuten-points-notice", "locator": "本文", "note": "Rakuten stopped portal points from 2025-10-01." }
+      ],
+      "checkFirst": "Confirm in the MIC notice or Q&A that card-payment points are outside the ban."
+    },
+    {
+      "id": "furusato-cost-cap-2019",
+      "ruleKey": "furusato.fundraisingCostCap",
+      "topic": "furusato-nozei",
+      "title": "Fundraising cost cap 50% (2019–2026-09)",
+      "statementEn": "Municipalities had to keep total fundraising costs (gifts, shipping, portal fees and similar) at or below 50% of donations received.",
+      "value": { "amount": 50, "unit": "percent", "qualifier": "maximum cost share" },
+      "appliesTo": "Designated municipalities",
+      "validFrom": "2019-06-01",
+      "validTo": "2026-09-30",
+      "status": "superseded",
+      "supersedes": null,
+      "evidence": [
+        { "source": "credo-furusato-2026", "locator": "まとめ", "note": "Cost cap shrinks from 50% to 47.5%." }
+      ],
+      "checkFirst": "The start date assumes the 50% cap came with the 2019 designation system. Confirm it."
+    },
+    {
+      "id": "furusato-cost-cap-2026",
+      "ruleKey": "furusato.fundraisingCostCap",
+      "topic": "furusato-nozei",
+      "title": "Usable share 52.5% / cost cap 47.5% (2026-10-01–)",
+      "statementEn": "For the designation period starting October 1, 2026, municipalities must keep at least 52.5% of donations for local use; equivalently, fundraising costs may be at most 47.5%. The required share rises in steps (55% from October 2027) to 60% by the 2029 designation. These are rules for municipalities; donors' deductions are unchanged.",
+      "value": { "amount": 52.5, "unit": "percent", "qualifier": "minimum usable share (= cost cap 47.5%)" },
+      "appliesTo": "Designated municipalities",
+      "validFrom": "2026-10-01",
+      "validTo": null,
+      "status": "in-force",
+      "supersedes": "furusato-cost-cap-2019",
+      "evidence": [
+        { "source": "mic-furusato-criteria-2026", "locator": "寄附金活用可能額", "note": "Target 60%+." },
+        { "source": "geisei-furusato-2026", "locator": "6割ルールへの移行", "note": "52.5% from Oct 2026, 55% from Oct 2027." },
+        { "source": "credo-furusato-2026", "locator": "まとめ", "note": "Same rule framed as a 47.5% cost cap." },
+        { "source": "toolcalc-furusato-2026", "locator": "結論", "note": "Donor deductions unchanged." }
+      ],
+      "checkFirst": "Confirm the step schedule (52.5% → 55% → … → 60%) in the MIC PDF. '52.5% usable' and '47.5% cost cap' are the same rule: resolve that Knowledge Base issue as 'both correct'."
+    },
+    {
+      "id": "furusato-deduction-cap-2027",
+      "ruleKey": "furusato.specialDeductionCap",
+      "topic": "furusato-nozei",
+      "title": "¥1.93M cap on the special deduction (donations from 2027)",
+      "statementEn": "For donations made in 2027 and later, the residence-tax special deduction (特例控除額) is capped at ¥1,930,000 (roughly the level of a ¥100 million salary), in addition to the existing cap of 20% of the residence-tax income levy. Because residence tax is assessed the following year, the cap first applies to fiscal 2028 residence tax. It affects only very high earners.",
+      "value": { "amount": 1930000, "unit": "JPY", "qualifier": "cap on residence-tax special deduction" },
+      "appliesTo": "Very high-income furusato nozei donors",
+      "validFrom": "2027-01-01",
+      "validTo": null,
+      "status": "enacted-future",
+      "supersedes": null,
+      "evidence": [
+        { "source": "okane-furusato-2026", "locator": "2027年寄付分から変わること", "note": "Cap applies to donations from 2027." },
+        { "source": "geisei-furusato-2026", "locator": "高額寄附の控除見直し", "note": "Cap applies from FY2028 residence tax." },
+        { "source": "toolcalc-furusato-2026", "locator": "結論", "note": "Cap from 2027 donations; October 2026 changes are municipal." }
+      ],
+      "checkFirst": "1) Confirm enactment (decided in the FY2026 tax reform outline). If you cannot confirm it, set status to outline-only. 2) 'From 2027 donations' and 'from FY2028 residence tax' describe the same change: resolve that Knowledge Base issue as 'both correct'."
+    }
+  ]
+}
