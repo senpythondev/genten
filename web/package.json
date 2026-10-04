@@ -11,7 +11,8 @@
     "smoke": "tsx scripts/smoke.ts",
     "mcp-smoke": "tsx scripts/mcp-smoke.ts",
     "eval": "tsx ../eval/run.ts",
-    "typecheck:eval": "tsc -p ../eval/tsconfig.json"
+    "typecheck:eval": "tsc -p ../eval/tsconfig.json",
+    "precompute-examples": "tsx scripts/precompute-examples.ts"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^4.0.71",

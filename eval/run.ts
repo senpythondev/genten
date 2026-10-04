@@ -40,15 +40,8 @@ async function runRow(config: ConfigName, question: EvalQuestion, index: Keyword
       question,
       asOf,
       latencyMs: Date.now() - started,
-      answer: {
-        answer: answer.answer,
-        verdict: answer.verdict,
-        abstained: answer.abstained,
-        citations: answer.citations.map(({ref, url, authority}) => ({ref, url, authority})),
-        conflicts: answer.conflicts.map(({source, kind}) => ({source, kind})),
-        rule: answer.rule && {ruleKey: answer.rule.ruleKey, validFrom: answer.rule.validFrom, validTo: answer.rule.validTo},
-        toolCalls: answer.trace.filter((t) => t.tool.startsWith('knowledge_base')).length,
-      },
+      // The full output (incl. trace, conflict text and token usage), so recorded answers can be reused.
+      answer: {...answer, toolCalls: answer.trace.filter((t) => t.tool.startsWith('knowledge_base')).length},
       retrieved,
       grade: grade(question, answer),
     }
@@ -64,7 +57,9 @@ async function runRow(config: ConfigName, question: EvalQuestion, index: Keyword
     }
   }
   const mark = row.grade.correct ? (row.grade.correctOfficial ? 'PASS' : 'pass (no official)') : row.error ? 'ERROR' : 'FAIL'
-  console.log(`[${config}] Q${question.id} ${mark} ${(row.latencyMs / 1000).toFixed(1)}s`)
+  const u = row.answer?.usage
+  const tokens = u ? ` tokens in=${u.input} cacheRead=${u.cacheRead} cacheWrite=${u.cacheWrite} out=${u.output}` : ''
+  console.log(`[${config}] Q${question.id} ${mark} ${(row.latencyMs / 1000).toFixed(1)}s${tokens}`)
   return row
 }
 

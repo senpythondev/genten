@@ -64,6 +64,7 @@ Useful scripts in `web/`:
 npm run mcp-smoke              # check the Context MCP endpoint: list its tools, call initial_context
 npm run smoke                  # run the 6 example questions through askGenten (uses API credits)
 npm run build:sources          # regenerate src/data/sources.json from the seed (no role/curationNote)
+npm run precompute-examples    # regenerate src/data/example-answers.json live (uses API credits)
 ```
 
 ### Deploy to Vercel

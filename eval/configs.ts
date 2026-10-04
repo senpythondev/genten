@@ -30,18 +30,23 @@ export async function runConfig(
   if (config === 'genten') return {answer: await askGenten({question, asOf})}
 
   if (config === 'closed-book') {
-    const {output, trace} = await generateAnswer({system: CLOSED_BOOK_SYSTEM, prompt: userPrompt(question, asOf)})
-    return {answer: await finalizeAnswer(output, asOf, trace)}
+    const {output, trace, usage} = await generateAnswer({system: CLOSED_BOOK_SYSTEM, prompt: userPrompt(question, asOf)})
+    return {answer: await finalizeAnswer(output, asOf, trace, usage)}
   }
 
   const chunks = index.search(question, TOP_K)
   const excerpts = chunks.map((c) => `[${c.file}]\n${c.text}`).join('\n\n---\n\n')
-  const {output, trace} = await generateAnswer({
+  const {output, trace, usage} = await generateAnswer({
     system: KEYWORD_SYSTEM,
     prompt: `${userPrompt(question, asOf)}\n\nExcerpts (top ${TOP_K} by keyword search):\n\n${excerpts || '(none found)'}`,
   })
   return {
-    answer: await finalizeAnswer(output, asOf, [{tool: 'bm25', inputSummary: chunks.map((c) => c.id).join(', ')}, ...trace]),
+    answer: await finalizeAnswer(
+      output,
+      asOf,
+      [{tool: 'bm25', inputSummary: chunks.map((c) => c.id).join(', ')}, ...trace],
+      usage,
+    ),
     retrieved: chunks.map((c) => c.id),
   }
 }

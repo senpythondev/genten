@@ -1,4 +1,5 @@
 import {z} from 'zod'
+import {isModelApiError} from '@/lib/answer'
 import {todayInTokyo} from '@/lib/dates'
 import {askGenten} from '@/lib/genten'
 
@@ -67,6 +68,9 @@ export async function POST(request: Request) {
     return Response.json(answer)
   } catch (err) {
     console.error('askGenten failed:', err instanceof Error ? `${err.name}: ${err.message.slice(0, 300)}` : 'unknown error')
+    if (isModelApiError(err)) {
+      return error('Live answers are temporarily unavailable. Try one of the recorded examples.', 503)
+    }
     return error('Genten could not answer right now. Please try again.', 502)
   }
 }

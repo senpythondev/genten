@@ -1,4 +1,5 @@
 // Writes eval/REPORT.md from one run's results.
+import type {GentenAnswer} from '../web/src/lib/types'
 import type {ConfigName} from './configs'
 import {CONFIGS, TOP_K} from './configs'
 import type {Grade} from './grade'
@@ -11,15 +12,9 @@ export type ResultRow = {
   asOf: string
   latencyMs: number
   error?: string
-  answer?: {
-    answer: string
-    verdict: string
-    abstained: boolean
-    citations: {ref: string; url: string | null; authority: string}[]
-    conflicts: {source: string; kind: string}[]
-    rule?: {ruleKey: string; validFrom: string | null; validTo: string | null}
-    toolCalls: number
-  }
+  // Full askGenten output. Results files before 2026-10-05 stored only answer, verdict,
+  // abstained, citations (ref, url, authority), conflicts (source, kind), rule dates and toolCalls.
+  answer?: GentenAnswer & {toolCalls: number}
   retrieved?: string[]
   grade: Grade
 }
@@ -120,6 +115,19 @@ export function renderReport(rows: ResultRow[], info: RunInfo): string {
     lines.push(`| ${config} | ${seconds(avg)} | ${seconds(times[Math.floor(times.length / 2)])} | ${seconds(times[times.length - 1])} | ${avgCalls} |`)
   }
   lines.push('', 'Wall-clock time per answered question; failed API calls are excluded. The three configurations ran concurrently.', '')
+
+  if (rows.some((r) => r.answer?.usage)) {
+    lines.push('## Tokens per question (average)', '')
+    lines.push('| Configuration | Input (incl. cache) | Cache read | Cache write | Output |', '|---|---|---|---|---|')
+    for (const config of configs) {
+      const usages = byConfig(config).flatMap((r) => (r.answer?.usage ? [r.answer.usage] : []))
+      if (!usages.length) continue
+      const avg = (key: 'input' | 'cacheRead' | 'cacheWrite' | 'output') =>
+        Math.round(usages.reduce((s, u) => s + u[key], 0) / usages.length).toLocaleString('en-US')
+      lines.push(`| ${config} | ${avg('input')} | ${avg('cacheRead')} | ${avg('cacheWrite')} | ${avg('output')} |`)
+    }
+    lines.push('')
+  }
 
   lines.push('## Failures', '')
   for (const config of configs) {

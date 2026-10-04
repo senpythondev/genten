@@ -70,16 +70,18 @@ export async function askGenten({
     const tools = Object.fromEntries(
       Object.entries(await client.tools()).filter(([name]) => name !== 'initial_context'),
     )
-    const {output, trace} = await generateAnswer({
+    const {output, trace, usage} = await generateAnswer({
       system: `${SYSTEM}\n\n# Knowledge base (from initial_context)\n\n${outline}`,
       prompt: `As of: ${asOf}\n\nQuestion: ${question}`,
       tools,
       maxToolSteps: MAX_TOOL_STEPS,
     })
-    return finalizeAnswer(output, asOf, [
-      {tool: 'initial_context', inputSummary: 'outline loaded into the system prompt'},
-      ...trace,
-    ])
+    return finalizeAnswer(
+      output,
+      asOf,
+      [{tool: 'initial_context', inputSummary: 'outline loaded into the system prompt'}, ...trace],
+      usage,
+    )
   } finally {
     await client.close()
   }

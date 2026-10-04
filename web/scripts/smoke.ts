@@ -1,6 +1,6 @@
 /**
  * Runs the example questions through askGenten and prints, for each: verdict, rule,
- * citation URLs and conflicts, then a summary table. Calls the model (uses API credits).
+ * citation URLs, conflicts and token usage, then a summary table. Calls the model (uses API credits).
  *
  * Run from web/: npm run smoke [-- 1,3]   (optional 1-based question numbers)
  */
@@ -46,17 +46,20 @@ async function main() {
       for (const c of a.conflicts) console.log(`  [${c.kind}] ${c.source}: ${c.claim} — ${c.note}`)
       if (a.conflicts.length === 0) console.log('  (none)')
       console.log(`trace:   ${a.trace.map((t) => `${t.tool}(${t.inputSummary})`).join(' → ')}`)
+      const u = a.usage
+      const tokens = u ? `in ${u.input} / cache read ${u.cacheRead} / cache write ${u.cacheWrite} / out ${u.output}` : 'n/a'
+      console.log(`tokens:  ${tokens}`)
       const conflicts = a.conflicts.map((c) => `${c.source} (${c.kind})`).join(', ') || 'none'
-      rows.push(`| ${i + 1} | ${a.verdict} | ${formatRule(a.rule)} | ${words} | ${conflicts} | ${toolCalls} | ${seconds}s |`)
+      rows.push(`| ${i + 1} | ${a.verdict} | ${formatRule(a.rule)} | ${words} | ${conflicts} | ${toolCalls} | ${tokens} | ${seconds}s |`)
     } catch (err) {
       console.log(`FAILED: ${err instanceof Error ? `${err.name}: ${err.message}` : err}`)
-      rows.push(`| ${i + 1} | FAILED | | | | | |`)
+      rows.push(`| ${i + 1} | FAILED | | | | | | |`)
       process.exitCode = 1
     }
   }
 
-  console.log('\n| # | Verdict | Rule | Words | Conflicts | KB tool calls | Time |')
-  console.log('|---|---|---|---|---|---|---|')
+  console.log('\n| # | Verdict | Rule | Words | Conflicts | KB tool calls | Tokens | Time |')
+  console.log('|---|---|---|---|---|---|---|---|')
   console.log(rows.join('\n'))
 }
 

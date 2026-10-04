@@ -1,16 +1,57 @@
 // Shared by the Genten agent and the evaluation baselines: the model, the output
 // schema, the answering rules and the post-processing. Server-only.
 import {anthropic} from '@ai-sdk/anthropic'
-import {generateText, Output, stepCountIs, type ToolSet} from 'ai'
+import {
+  APICallError,
+  generateText,
+  Output,
+  RetryError,
+  stepCountIs,
+  type LanguageModelUsage,
+  type ToolSet,
+} from 'ai'
 import {z} from 'zod'
 import {resolveCitations, resolveRef, ruleIdForRef, ruleVersionOn} from './sources'
-import type {GentenAnswer, TraceStep} from './types'
+import type {GentenAnswer, TokenUsage, TraceStep} from './types'
 
 const DEFAULT_MODEL = 'claude-sonnet-5-5'
 const TARGET_WORDS = 120
 const MAX_WORDS = 150
 
 export const modelId = () => process.env.GENTEN_MODEL || DEFAULT_MODEL
+
+// Anthropic prompt caching: a breakpoint after the tool definitions and one after the
+// system prompt (requests render tools, then system, then messages).
+const CACHE = {anthropic: {cacheControl: {type: 'ephemeral' as const}}}
+
+function withCachedTools(tools?: ToolSet): ToolSet | undefined {
+  const names = Object.keys(tools ?? {})
+  if (!tools || names.length === 0) return tools
+  const last = names[names.length - 1]
+  return {...tools, [last]: {...tools[last], providerOptions: {...tools[last].providerOptions, ...CACHE}}}
+}
+
+const cachedInstructions = (system: string) => ({role: 'system' as const, content: system, providerOptions: CACHE})
+
+const toUsage = (u: LanguageModelUsage): TokenUsage => ({
+  input: u.inputTokens ?? 0,
+  cacheRead: u.inputTokenDetails?.cacheReadTokens ?? 0,
+  cacheWrite: u.inputTokenDetails?.cacheWriteTokens ?? 0,
+  output: u.outputTokens ?? 0,
+})
+
+const addUsage = (a: TokenUsage, b: TokenUsage): TokenUsage => ({
+  input: a.input + b.input,
+  cacheRead: a.cacheRead + b.cacheRead,
+  cacheWrite: a.cacheWrite + b.cacheWrite,
+  output: a.output + b.output,
+})
+
+/** True if an error came from the Anthropic API (credit, auth, rate limit, outage). */
+export function isModelApiError(err: unknown): boolean {
+  const cause = RetryError.isInstance(err) ? err.lastError : err
+  return APICallError.isInstance(cause) && cause.url.includes('anthropic.com')
+}
 
 const providerOptions = (structured: boolean) => ({
   anthropic: {
@@ -91,9 +132,9 @@ export async function generateAnswer({
 }) {
   const result = await generateText({
     model: anthropic(modelId()),
-    system,
+    instructions: cachedInstructions(system),
     prompt,
-    tools,
+    tools: withCachedTools(tools),
     stopWhen: stepCountIs(maxToolSteps + 1),
     // After the tool budget is spent, answer with what was found.
     prepareStep: ({stepNumber}) => (stepNumber >= maxToolSteps ? {toolChoice: 'none' as const} : undefined),
@@ -108,7 +149,7 @@ export async function generateAnswer({
       inputSummary: summarizeInput(call.input) + (failed.has(call.toolCallId) ? ' (failed)' : ''),
     }))
   })
-  return {output: result.output, trace}
+  return {output: result.output, trace, usage: toUsage(result.totalUsage)}
 }
 
 // A short, readable summary of a tool call's input for the trace (no knowledge base id).
@@ -122,20 +163,23 @@ function summarizeInput(input: unknown): string {
 }
 
 /** If an answer is over MAX_WORDS, one shortening pass with the same model and no tools. */
-export async function shortenIfLong(answer: string): Promise<{answer: string; shortened: boolean}> {
+export async function shortenIfLong(
+  answer: string,
+): Promise<{answer: string; shortened: boolean; usage?: TokenUsage}> {
   if (countWords(answer) <= MAX_WORDS) return {answer, shortened: false}
-  const {text} = await generateText({
+  const result = await generateText({
     model: anthropic(modelId()),
-    system:
+    instructions:
       'You shorten answers. Keep the language, the opening verdict, and every figure, date and source name. Return only the shortened markdown.',
     prompt: `Shorten this answer to at most ${TARGET_WORDS} words:\n\n${answer}`,
     maxOutputTokens: 4000,
     providerOptions: providerOptions(false),
   })
-  const shorter = text.trim()
+  const shorter = result.text.trim()
+  const usage = toUsage(result.totalUsage)
   return shorter && countWords(shorter) < countWords(answer)
-    ? {answer: shorter, shortened: true}
-    : {answer, shortened: false}
+    ? {answer: shorter, shortened: true, usage}
+    : {answer, shortened: false, usage}
 }
 
 /** Turn the model's output into the GentenAnswer returned to callers. */
@@ -143,12 +187,14 @@ export async function finalizeAnswer(
   out: AgentOutputValue,
   asOf: string,
   trace: TraceStep[],
+  usage: TokenUsage,
 ): Promise<GentenAnswer> {
   const abstained = out.abstained || out.verdict === 'abstain'
   const ruleId = !abstained && out.ruleRef ? ruleIdForRef(out.ruleRef) : undefined
   const refs = out.ruleRef && !abstained ? [out.ruleRef, ...out.citedRefs] : out.citedRefs
-  const {answer, shortened} = await shortenIfLong(out.answer)
+  const {answer, shortened, usage: shortenUsage} = await shortenIfLong(out.answer)
   return {
+    usage: shortenUsage ? addUsage(usage, shortenUsage) : usage,
     answer,
     verdict: abstained ? 'abstain' : out.verdict,
     rule: ruleId ? ruleVersionOn(ruleId, asOf) : undefined,

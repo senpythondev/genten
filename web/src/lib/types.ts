@@ -38,7 +38,11 @@ export type Conflict = {
 
 export type TraceStep = {tool: string; inputSummary: string}
 
+// Tokens for one question, summed over all model calls. input includes cache reads and writes.
+export type TokenUsage = {input: number; cacheRead: number; cacheWrite: number; output: number}
+
 export type GentenAnswer = {
+  usage?: TokenUsage
   answer: string
   verdict: Verdict
   rule?: Rule
