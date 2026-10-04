@@ -42,3 +42,18 @@ It respects robots.txt, sends at most one request per second as `GentenSnapshot/
 - `genten-kb-files-<YYYYMMDD>.zip`: a reproducible archive of `files/` to upload.
 
 A source's `role` and `curationNote` (the evaluation answer key) are never written to any file. `--update-sanity` sets only `capturedAt` and `snapshotSha256` on the published sources; the seed never writes those fields. `snapshots/` is gitignored because it holds third-party content.
+
+## Web app (agent and page)
+
+`web/` is a Next.js app. `src/lib/genten.ts` (`askGenten`) answers a question from the Sanity Context knowledge base, using Claude through the Vercel AI SDK. It cites the official sources and flags English guides that conflict with the rule. `POST /api/ask` serves the page.
+
+```sh
+cd web
+npm install
+npm run mcp-smoke      # check the Context MCP endpoint: lists its tools, calls initial_context
+npm run build:sources  # regenerate src/data/sources.json from the seed (no role/curationNote)
+npm run smoke          # run the 6 example questions through askGenten (uses API credits)
+npm run dev            # http://localhost:3000
+```
+
+The app reads `SANITY_CONTEXT_TOKEN` and `ANTHROPIC_API_KEY` from the root `.env`, through `web/.env.local`: a gitignored symlink you create with `ln -s ../.env web/.env.local`. Optional settings: `GENTEN_MODEL` (default `claude-sonnet-5-5`) and `GENTEN_DISABLED=true`, which makes `/api/ask` return 503.

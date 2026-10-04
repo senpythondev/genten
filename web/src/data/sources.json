@@ -1,0 +1,1046 @@
+{
+  "generatedFrom": "seed/genten-seed.json",
+  "sources": {
+    "fsa-nisa-know": {
+      "url": "https://www.fsa.go.jp/policy/nisa2/know/",
+      "title": "NISAを知る（NISA特設ウェブサイト）",
+      "publisher": "金融庁 Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "fsa-nisa-pre2024": {
+      "url": "https://www.fsa.go.jp/policy/nisa2/about/nisa/index.html",
+      "title": "2023年までのNISA（NISA特設ウェブサイト）",
+      "publisher": "金融庁 Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "fsa-nisa-slides": {
+      "url": "https://www.fsa.go.jp/policy/nisa2/about/nisa2024/slide_202406.pdf",
+      "title": "NISAを利用する皆さまへ（令和6年6月・令和7年9月改訂）",
+      "publisher": "金融庁 Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "fsa-tax-reform-r8": {
+      "url": "https://www.fsa.go.jp/news/r7/sonota/20251226-2/01.pdf",
+      "title": "令和8（2026）年度税制改正について－税制改正大綱における金融庁関係の主要項目－",
+      "publisher": "金融庁 Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "fsa-accessfsa-202602": {
+      "url": "https://www.fsa.go.jp/access/r7/270/270_03.pdf",
+      "title": "アクセスFSA 2026年2月号：令和8年度税制改正大綱における金融庁関係の主要項目について",
+      "publisher": "金融庁 Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "nta-nisa": {
+      "url": "https://www.nta.go.jp/users/gensen/nisa/index.htm",
+      "title": "NISAに関する情報",
+      "publisher": "国税庁 National Tax Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "mof-chugoku-nisa": {
+      "url": "https://lfb.mof.go.jp/chugoku/kinyusyouken/kin3/nisaseido.html",
+      "title": "賢く使おう「NISA」制度",
+      "publisher": "財務省中国財務局 Chugoku Local Finance Bureau (Ministry of Finance)",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "fsa-en-accessfsa-2023": {
+      "url": "https://www.fsa.go.jp/en/newsletter/accessfsa2023/234.pdf",
+      "title": "Access FSA (2023, provisional translation): major expansion and perpetuation of NISA",
+      "publisher": "Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "en"
+    },
+    "fsa-en-presentation-2025": {
+      "url": "https://www.fsa.go.jp/common/conference/danwa/20250521.pdf",
+      "title": "FSA presentation (May 2025): complete revamp of NISA",
+      "publisher": "Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "en"
+    },
+    "mizuho-faq-leaving": {
+      "url": "https://www.faq.mizuhobank.co.jp/faq/show/8370?category_id=62&site_domain=default",
+      "title": "海外へ転居します。NISAの取引はどうなりますか。",
+      "publisher": "みずほ銀行 Mizuho Bank",
+      "publisherType": "financial-institution",
+      "authority": "secondary-institutional",
+      "language": "ja"
+    },
+    "mufg-faq-leaving": {
+      "url": "https://faq01.bk.mufg.jp/faq/show/5958?site_domain=default",
+      "title": "海外赴任（非居住者）となった場合も、NISAの利用を継続したい。",
+      "publisher": "三菱UFJ銀行 MUFG Bank",
+      "publisherType": "financial-institution",
+      "authority": "secondary-institutional",
+      "language": "ja"
+    },
+    "bank77-kodomo-nisa": {
+      "url": "https://www.77bank.co.jp/financial-column/article93.html",
+      "title": "2027年開始！こども支援NISAとは？",
+      "publisher": "七十七銀行 The 77 Bank",
+      "publisherType": "financial-institution",
+      "authority": "secondary-institutional",
+      "language": "ja"
+    },
+    "nomura-kodomo-nisa": {
+      "url": "https://www.nomura.co.jp/fin-wing/column/new-nisa4/",
+      "title": "18歳未満向け「こどもNISA」が税制大綱入り！",
+      "publisher": "野村證券 Fin Wing",
+      "publisherType": "financial-institution",
+      "authority": "secondary-institutional",
+      "language": "ja"
+    },
+    "rangsit-nisa-expat": {
+      "url": "https://rangsit.net/2026/07/10/nisa-ideco-expat/",
+      "title": "海外赴任とNISA・iDeCo【2026年版】",
+      "publisher": "rangsit.net (blog)",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "ja"
+    },
+    "expatfinance-nisa-leaving": {
+      "url": "https://note.com/expat_finance/n/n4e5d577b5546",
+      "title": "NISAは駐在中どうなる？海外赴任前に必ず知っておくべき「5年間継続特例」の完全解説",
+      "publisher": "海外駐在投資研究会 (note)",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "ja"
+    },
+    "fptax-nisa-2027": {
+      "url": "https://note.com/fp_tax_note/n/n76fede4e7a16",
+      "title": "2027年NISA改正をわかりやすく解説",
+      "publisher": "税と資産の知恵袋 (note)",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "ja"
+    },
+    "mic-furusato-about": {
+      "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/about/",
+      "title": "よくわかる！ふるさと納税",
+      "publisher": "総務省 Ministry of Internal Affairs and Communications",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "mic-furusato-faq": {
+      "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/faq/",
+      "title": "ふるさと納税 よくある質問",
+      "publisher": "総務省 Ministry of Internal Affairs and Communications",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "mic-furusato-criteria-2026": {
+      "url": "https://www.soumu.go.jp/main_content/001070694.pdf",
+      "title": "ふるさと納税について（指定基準に係る告示改正）令和8年3月24日",
+      "publisher": "総務省 Ministry of Internal Affairs and Communications",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "mic-furusato-portal": {
+      "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/080430_2_kojin.html",
+      "title": "ふるさと納税ポータルサイト（総務省）",
+      "publisher": "総務省 Ministry of Internal Affairs and Communications",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "mic-furusato-press-2024": {
+      "url": "https://www.soumu.go.jp/menu_news/s-news/01zeimu04_02000126.html",
+      "title": "ふるさと納税の指定基準の見直し等（報道資料）",
+      "publisher": "総務省 Ministry of Internal Affairs and Communications",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "impress-points-ban": {
+      "url": "https://netshop.impress.co.jp/node/12499",
+      "title": "ふるさと納税、2025年10月からポイント付与伴う寄付禁止",
+      "publisher": "ネットショップ担当者フォーラム (Impress)",
+      "publisherType": "media",
+      "authority": "secondary-independent",
+      "language": "ja"
+    },
+    "rakuten-points-notice": {
+      "url": "https://event.rakuten.co.jp/furusato/notice/20250901/",
+      "title": "楽天ふるさと納税におけるポイント付与ルール変更のおしらせ",
+      "publisher": "楽天グループ Rakuten",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "ja"
+    },
+    "toolcalc-furusato-2026": {
+      "url": "https://tool-calc.com/blog/furusato-2026-october/",
+      "title": "ふるさと納税 2026年10月改正｜何が変わり、何が変わらないか",
+      "publisher": "tool-calc.com (blog)",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "ja"
+    },
+    "okane-furusato-2026": {
+      "url": "https://www.okane-n4vi.com/blog/furusato-2026-october-reform",
+      "title": "ふるさと納税、2026年10月から何が変わる？自治体側の規制強化と2027年寄付分の「193万円上限」",
+      "publisher": "okane-n4vi.com (blog)",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "ja"
+    },
+    "geisei-furusato-2026": {
+      "url": "https://furusato-geisei.jp/feature/753/",
+      "title": "「ふるさと納税」2026年度改正で激変へ",
+      "publisher": "げいせいつうしん",
+      "publisherType": "media",
+      "authority": "secondary-independent",
+      "language": "ja"
+    },
+    "credo-furusato-2026": {
+      "url": "https://credo-tax.jp/column/1939/",
+      "title": "ふるさと納税、2026年10月からルールが変わります",
+      "publisher": "クレド税理士事務所 Credo Tax Office",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "ja"
+    },
+    "tyton-nisa-foreigners": {
+      "url": "https://www.tytoncapital.com/portfolio/nisa-account-for-foreign-gaijin-japan-tokyo/",
+      "title": "NISA and Retirement Saving For Foreign People in Japan",
+      "publisher": "Tyton Capital",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "en"
+    },
+    "tyton-nisa-english": {
+      "url": "https://www.tytoncapital.com/portfolio/can-i-get-a-japanese-nisa-retirement-account-in-english/",
+      "title": "Can I Get a Japanese NISA Retirement Account in English?",
+      "publisher": "Tyton Capital",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "en"
+    },
+    "wikipedia-nisa": {
+      "url": "https://en.wikipedia.org/wiki/Nippon_individual_savings_account",
+      "title": "Nippon individual savings account",
+      "publisher": "Wikipedia",
+      "publisherType": "wiki",
+      "authority": "secondary-independent",
+      "language": "en"
+    },
+    "retirejapan-nisa": {
+      "url": "https://www.retirejapan.com/nisa/",
+      "title": "NISA Accounts in Japan: A Beginner's Guide",
+      "publisher": "RetireJapan",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "en"
+    },
+    "retirejapan-forum-tsumitate": {
+      "url": "https://retirejapan.com/forum/viewtopic.php?t=30",
+      "title": "Regular NISA and Tsumitate NISA (forum thread)",
+      "publisher": "RetireJapan forum",
+      "publisherType": "forum",
+      "authority": "secondary-independent",
+      "language": "en"
+    },
+    "argentum-nisa": {
+      "url": "https://argentumwealth.com/unlocking-nisa-the-essential-guide-for-expats-in-japan/",
+      "title": "Unlocking NISA: The Essential Guide for Expats in Japan",
+      "publisher": "Argentum Wealth",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "en"
+    },
+    "mailmate-new-nisa": {
+      "url": "https://mailmate.jp/blog/new-nisa-program",
+      "title": "The New NISA Program: An Easy Walkthrough",
+      "publisher": "Mailmate",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "en"
+    },
+    "maymoney-nisa-en": {
+      "url": "https://may-money.com/en/nisa-guide-en/",
+      "title": "New NISA Complete Guide",
+      "publisher": "May Money",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "en"
+    },
+    "nissay-nisa-glossary": {
+      "url": "https://note.nam.co.jp/n/n827113e4189a",
+      "title": "New NISA Glossary",
+      "publisher": "Nissay Asset Management",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "en"
+    },
+    "gaijinpot-furusato": {
+      "url": "https://blog.gaijinpot.com/what-is-furusato-nozei-the-japanese-tax-benefit-that-gets-you-free-stuff/",
+      "title": "What Is Furusato Nozei? The Japanese Tax Benefit That Gets You Free Stuff",
+      "publisher": "GaijinPot",
+      "publisherType": "media",
+      "authority": "secondary-independent",
+      "language": "en"
+    },
+    "mailmate-furusato": {
+      "url": "https://mailmate.jp/blog/furusato-nozei",
+      "title": "Furusato Nozei Guide for Company Employees in Japan",
+      "publisher": "Mailmate",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "en"
+    },
+    "japanlifestart-furusato": {
+      "url": "https://japanlifestart.com/en/money-cards/rakuten-furusato-nozei-guide",
+      "title": "【2026】Furusato Nozei Guide for Foreigners: Lower Residence Tax & Get Rakuten Points",
+      "publisher": "Japan Life Start",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "en"
+    },
+    "helloworldjapan-furusato": {
+      "url": "https://helloworldjapan.com/en/articles/japan-furusato-nozei-foreigners-guide",
+      "title": "Furusato Nozei for Foreigners: Cut Your Japan Resident Tax",
+      "publisher": "Hello World Japan",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "en"
+    },
+    "expatjp-furusato": {
+      "url": "https://expat.jp/furusato-nozei/",
+      "title": "Furusato Nozei in Japan: A Foreign Resident's Complete Guide (2026)",
+      "publisher": "expat.jp",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "en"
+    },
+    "ezeirishi-furusato": {
+      "url": "https://e-zeirishi.com/en/furusato-nozei-guide-foreigners-japan/",
+      "title": "Furusato Nozei for Foreigners in Japan: The Complete Guide (2026)",
+      "publisher": "e-zeirishi",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "en"
+    },
+    "maymoney-furusato-en": {
+      "url": "https://may-money.com/en/furusato-nozei-guide-en/",
+      "title": "Japan Furusato Nozei Complete Guide",
+      "publisher": "May Money",
+      "publisherType": "blog",
+      "authority": "secondary-independent",
+      "language": "en"
+    },
+    "fsa-tax-reform-h26": {
+      "url": "https://www.fsa.go.jp/news/25/sonota/20131224-2/01.pdf",
+      "title": "平成26年度税制改正について－税制改正大綱における金融庁関係の主要項目－",
+      "publisher": "金融庁 Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "fsa-tax-reform-h27": {
+      "url": "https://www.fsa.go.jp/news/26/sonota/20150114-1/01.pdf",
+      "title": "平成27年度税制改正について－税制改正大綱における金融庁関係の主要項目－",
+      "publisher": "金融庁 Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "fsa-supervision-nisa-2015": {
+      "url": "https://www.fsa.go.jp/news/27/syouken/20151030-2.html",
+      "title": "「金融商品取引業者等向けの総合的な監督指針」の一部改正（案）の公表について",
+      "publisher": "金融庁 Financial Services Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "nta-tax-reform-r8-securities": {
+      "url": "https://www.nta.go.jp/publication/pamph/joto-sanrin/r08aramashi.pdf",
+      "title": "個人の方が株式等や土地・建物等を譲渡した場合の令和8年度税制改正のあらまし",
+      "publisher": "国税庁 National Tax Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "mic-furusato-overview": {
+      "url": "https://www.soumu.go.jp/main_content/000448758.pdf",
+      "title": "ふるさと納税の概要について",
+      "publisher": "総務省 Ministry of Internal Affairs and Communications",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "mic-furusato-2015-reform": {
+      "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/topics/20150401.html",
+      "title": "ふるさと納税トピックス：制度改正について（2015年4月1日）",
+      "publisher": "総務省 Ministry of Internal Affairs and Communications",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "ndl-law-r8-local-tax": {
+      "url": "https://hourei.ndl.go.jp/simple/detail?lawId=0000169958&current=-1",
+      "title": "地方税法等の一部を改正する法律（令和8年3月31日法律第2号）",
+      "publisher": "国立国会図書館 日本法令索引 National Diet Library",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "takasaki-kifukin": {
+      "url": "https://www.city.takasaki.gunma.jp/page/2422.html",
+      "title": "寄附金税額控除について",
+      "publisher": "高崎市 Takasaki City",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "nta-1155": {
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1155.htm",
+      "title": "No.1155 ふるさと納税(寄附金控除)",
+      "publisher": "国税庁 National Tax Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "fukushima-bank-age": {
+      "url": "https://www.fukushimabank.co.jp/press/2021/img/20220401_seinen.pdf",
+      "title": "成年年齢引き下げに伴う対応について",
+      "publisher": "福島銀行 The Fukushima Bank",
+      "publisherType": "financial-institution",
+      "authority": "secondary-institutional",
+      "language": "ja"
+    },
+    "rakuten-sec-age": {
+      "url": "https://www.rakuten-sec.co.jp/web/info/info20220214-01.html",
+      "title": "【重要】成年年齢の引下げに伴う当社の対応について",
+      "publisher": "楽天証券 Rakuten Securities",
+      "publisherType": "financial-institution",
+      "authority": "secondary-institutional",
+      "language": "ja"
+    },
+    "nta-nisa-qa-2019": {
+      "url": "https://www.nta.go.jp/publication/pamph/pdf/nisa_qa01.pdf",
+      "title": "ＮＩＳＡ及びつみたてＮＩＳＡの手続に関するＱ＆Ａ（令和元年７月）",
+      "publisher": "国税庁 National Tax Agency",
+      "publisherType": "government",
+      "authority": "primary",
+      "language": "ja"
+    },
+    "kindai-tsumitate-2017": {
+      "url": "https://www.kindai-sales.co.jp/images/upload/files/FA03P08-09.pdf",
+      "title": "ここがこう変わる！平成29年度税制改正大綱の要点解説",
+      "publisher": "近代セールス社 Kindai Sales",
+      "publisherType": "media",
+      "authority": "secondary-institutional",
+      "language": "ja"
+    },
+    "yamada-h31-nisa": {
+      "url": "https://www.yamada-partners.jp/reform/h31/i03-improving-the-convenience-of-nisa",
+      "title": "NISAの利便性向上等",
+      "publisher": "山田＆パートナーズ Yamada & Partners",
+      "publisherType": "company",
+      "authority": "secondary-institutional",
+      "language": "ja"
+    },
+    "retirejapan-forum-fsa-guideline": {
+      "url": "https://retirejapan.com/forum/viewtopic.php?p=7655",
+      "title": "Continuing NISA contributions from abroad",
+      "publisher": "RetireJapan forum",
+      "publisherType": "forum",
+      "authority": "secondary-independent",
+      "language": "ja"
+    }
+  },
+  "rules": {
+    "nisa-tsumitate-annual-limit-2018": {
+      "title": "Tsumitate NISA annual limit (2018–2023)",
+      "ruleKey": "nisa.tsumitate.annualLimit",
+      "value": {
+        "amount": 400000,
+        "unit": "JPY/year",
+        "qualifier": "tsumitate NISA (pre-2024 system)"
+      },
+      "validFrom": "2018-01-01",
+      "validTo": "2023-12-31",
+      "status": "superseded",
+      "evidence": [
+        "fsa-nisa-know",
+        "fsa-nisa-pre2024",
+        "kindai-tsumitate-2017"
+      ]
+    },
+    "nisa-tsumitate-annual-limit-2024": {
+      "title": "Tsumitate investment quota annual limit (2024–)",
+      "ruleKey": "nisa.tsumitate.annualLimit",
+      "value": {
+        "amount": 1200000,
+        "unit": "JPY/year",
+        "qualifier": "tsumitate investment quota (つみたて投資枠)"
+      },
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "evidence": [
+        "fsa-nisa-know",
+        "fsa-nisa-slides"
+      ]
+    },
+    "nisa-general-annual-limit-2014": {
+      "title": "General NISA annual limit (2014–2015)",
+      "ruleKey": "nisa.growth.annualLimit",
+      "value": {
+        "amount": 1000000,
+        "unit": "JPY/year",
+        "qualifier": "general NISA (pre-2024 system)"
+      },
+      "validFrom": "2014-01-01",
+      "validTo": "2015-12-31",
+      "status": "superseded",
+      "evidence": [
+        "fsa-tax-reform-h27",
+        "fsa-supervision-nisa-2015",
+        "nta-nisa-qa-2019"
+      ]
+    },
+    "nisa-general-annual-limit-2016": {
+      "title": "General NISA annual limit (2016–2023)",
+      "ruleKey": "nisa.growth.annualLimit",
+      "value": {
+        "amount": 1200000,
+        "unit": "JPY/year",
+        "qualifier": "general NISA (pre-2024 system)"
+      },
+      "validFrom": "2016-01-01",
+      "validTo": "2023-12-31",
+      "status": "superseded",
+      "evidence": [
+        "fsa-nisa-know",
+        "fsa-tax-reform-h27",
+        "nta-nisa-qa-2019"
+      ]
+    },
+    "nisa-growth-annual-limit-2024": {
+      "title": "Growth investment quota annual limit (2024–)",
+      "ruleKey": "nisa.growth.annualLimit",
+      "value": {
+        "amount": 2400000,
+        "unit": "JPY/year",
+        "qualifier": "growth investment quota (成長投資枠)"
+      },
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "evidence": [
+        "fsa-nisa-know",
+        "fsa-nisa-slides"
+      ]
+    },
+    "nisa-combined-use-2018": {
+      "title": "Choosing between tsumitate and general NISA (2018–2023)",
+      "ruleKey": "nisa.quotas.combinedUse",
+      "value": {
+        "amount": null,
+        "unit": "none",
+        "qualifier": "either/or"
+      },
+      "validFrom": "2018-01-01",
+      "validTo": "2023-12-31",
+      "status": "superseded",
+      "evidence": [
+        "fsa-nisa-know",
+        "kindai-tsumitate-2017"
+      ]
+    },
+    "nisa-combined-use-2024": {
+      "title": "Combined use of both quotas (2024–)",
+      "ruleKey": "nisa.quotas.combinedUse",
+      "value": {
+        "amount": 3600000,
+        "unit": "JPY/year",
+        "qualifier": "combined annual maximum"
+      },
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "evidence": [
+        "fsa-nisa-know"
+      ]
+    },
+    "nisa-lifetime-limit-2024": {
+      "title": "Lifetime tax-exempt holding limit (2024–)",
+      "ruleKey": "nisa.lifetimeLimit",
+      "value": {
+        "amount": 18000000,
+        "unit": "JPY",
+        "qualifier": "book value; growth quota at most ¥12,000,000"
+      },
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "evidence": [
+        "fsa-nisa-know",
+        "fsa-nisa-slides",
+        "mof-chugoku-nisa"
+      ]
+    },
+    "nisa-holding-period-pre2024": {
+      "title": "Tax-exempt period under the pre-2024 system",
+      "ruleKey": "nisa.holdingPeriod",
+      "value": {
+        "amount": null,
+        "unit": "years",
+        "qualifier": "5 (general) / 20 (tsumitate)"
+      },
+      "validFrom": "2014-01-01",
+      "validTo": "2023-12-31",
+      "status": "superseded",
+      "evidence": [
+        "fsa-nisa-pre2024"
+      ]
+    },
+    "nisa-holding-period-2024": {
+      "title": "Tax-exempt period (2024–)",
+      "ruleKey": "nisa.holdingPeriod",
+      "value": {
+        "amount": null,
+        "unit": "years",
+        "qualifier": "indefinite (無期限)"
+      },
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "evidence": [
+        "fsa-nisa-slides"
+      ]
+    },
+    "nisa-quota-reuse-2024": {
+      "title": "Reusing the lifetime limit after selling (2024–)",
+      "ruleKey": "nisa.lifetimeLimit.reuse",
+      "value": {
+        "amount": null,
+        "unit": "none",
+        "qualifier": "reusable from the following year"
+      },
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "evidence": [
+        "mof-chugoku-nisa"
+      ]
+    },
+    "nisa-legacy-holdings-2024": {
+      "title": "What happens to pre-2024 NISA holdings",
+      "ruleKey": "nisa.legacyHoldings",
+      "value": {
+        "amount": null,
+        "unit": "none",
+        "qualifier": null
+      },
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "evidence": [
+        "fsa-nisa-pre2024"
+      ]
+    },
+    "nisa-junior-2016": {
+      "title": "Junior NISA (2016–2023)",
+      "ruleKey": "nisa.minors",
+      "value": {
+        "amount": 800000,
+        "unit": "JPY/year",
+        "qualifier": "Junior NISA"
+      },
+      "validFrom": "2016-04-01",
+      "validTo": "2023-12-31",
+      "status": "superseded",
+      "evidence": [
+        "fsa-nisa-know",
+        "bank77-kodomo-nisa"
+      ]
+    },
+    "nisa-minors-gap-2024": {
+      "title": "No NISA option for minors (2024–2026)",
+      "ruleKey": "nisa.minors",
+      "value": {
+        "amount": 0,
+        "unit": "JPY/year",
+        "qualifier": "no minors' account available"
+      },
+      "validFrom": "2024-01-01",
+      "validTo": "2026-12-31",
+      "status": "in-force",
+      "evidence": [
+        "fsa-nisa-pre2024",
+        "fsa-accessfsa-202602"
+      ]
+    },
+    "nisa-junior-withdrawal-2024": {
+      "title": "Withdrawing Junior NISA balances (2024–)",
+      "ruleKey": "nisa.minors.juniorWithdrawal",
+      "value": {
+        "amount": null,
+        "unit": "none",
+        "qualifier": "whole balance only"
+      },
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "evidence": [
+        "fsa-nisa-pre2024"
+      ]
+    },
+    "nisa-minors-2027": {
+      "title": "NISA for ages 0–17 (from January 2027)",
+      "ruleKey": "nisa.minors",
+      "value": {
+        "amount": 600000,
+        "unit": "JPY/year",
+        "qualifier": "holding limit ¥6,000,000; tsumitate quota only"
+      },
+      "validFrom": "2027-01-01",
+      "validTo": null,
+      "status": "enacted-future",
+      "evidence": [
+        "fsa-tax-reform-r8",
+        "fsa-accessfsa-202602",
+        "bank77-kodomo-nisa",
+        "fptax-nisa-2027",
+        "nta-tax-reform-r8-securities"
+      ]
+    },
+    "nisa-eligibility-age-2014": {
+      "title": "NISA minimum age 20 (2014–2022)",
+      "ruleKey": "nisa.eligibilityAge",
+      "value": {
+        "amount": 20,
+        "unit": "count",
+        "qualifier": "minimum age in years"
+      },
+      "validFrom": "2014-01-01",
+      "validTo": "2022-12-31",
+      "status": "superseded",
+      "evidence": [
+        "tyton-nisa-english",
+        "fukushima-bank-age",
+        "rakuten-sec-age",
+        "nta-nisa-qa-2019"
+      ]
+    },
+    "nisa-eligibility-age-2023": {
+      "title": "NISA minimum age 18 (2023–)",
+      "ruleKey": "nisa.eligibilityAge",
+      "value": {
+        "amount": 18,
+        "unit": "count",
+        "qualifier": "minimum age in years, as of January 1"
+      },
+      "validFrom": "2023-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "evidence": [
+        "maymoney-nisa-en",
+        "fsa-accessfsa-202602",
+        "fukushima-bank-age",
+        "rakuten-sec-age",
+        "nta-nisa-qa-2019"
+      ]
+    },
+    "nisa-one-account-2014": {
+      "title": "One NISA account per person, no change of institution (2014)",
+      "ruleKey": "nisa.accountsPerPerson",
+      "value": {
+        "amount": 1,
+        "unit": "count",
+        "qualifier": "accounts per person"
+      },
+      "validFrom": "2014-01-01",
+      "validTo": "2014-12-31",
+      "status": "superseded",
+      "evidence": [
+        "fsa-tax-reform-h26"
+      ]
+    },
+    "nisa-one-account-2015": {
+      "title": "One NISA account per person, institution changeable yearly (2015–2023)",
+      "ruleKey": "nisa.accountsPerPerson",
+      "value": {
+        "amount": 1,
+        "unit": "count",
+        "qualifier": "accounts per person"
+      },
+      "validFrom": "2015-01-01",
+      "validTo": "2023-12-31",
+      "status": "superseded",
+      "evidence": [
+        "fsa-tax-reform-h26"
+      ]
+    },
+    "nisa-one-account-2024": {
+      "title": "One NISA account per person",
+      "ruleKey": "nisa.accountsPerPerson",
+      "value": {
+        "amount": 1,
+        "unit": "count",
+        "qualifier": "accounts per person"
+      },
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "evidence": [
+        "mof-chugoku-nisa"
+      ]
+    },
+    "nisa-leaving-japan": {
+      "title": "Keeping NISA when leaving Japan",
+      "ruleKey": "nisa.leavingJapan",
+      "value": {
+        "amount": 5,
+        "unit": "years",
+        "qualifier": "until Dec 31 of the year 5 years after the notice"
+      },
+      "validFrom": "2019-04-01",
+      "validTo": null,
+      "status": "in-force",
+      "evidence": [
+        "mizuho-faq-leaving",
+        "mufg-faq-leaving",
+        "rangsit-nisa-expat",
+        "yamada-h31-nisa",
+        "retirejapan-forum-fsa-guideline"
+      ]
+    },
+    "furusato-designation-2019": {
+      "title": "Only designated municipalities qualify (2019–)",
+      "ruleKey": "furusato.designation",
+      "value": {
+        "amount": null,
+        "unit": "none",
+        "qualifier": null
+      },
+      "validFrom": "2019-06-01",
+      "validTo": null,
+      "status": "in-force",
+      "evidence": [
+        "mic-furusato-portal"
+      ]
+    },
+    "furusato-self-burden-2008": {
+      "title": "The ¥5,000 residence-tax minimum (donations 2008–2010)",
+      "ruleKey": "furusato.selfBurden",
+      "value": {
+        "amount": 5000,
+        "unit": "JPY",
+        "qualifier": "residence-tax deduction minimum (適用下限額)"
+      },
+      "validFrom": "2008-01-01",
+      "validTo": "2010-12-31",
+      "status": "superseded",
+      "evidence": [
+        "mic-furusato-overview",
+        "takasaki-kifukin"
+      ]
+    },
+    "furusato-self-burden": {
+      "title": "The ¥2,000 self-burden (donations from 2011)",
+      "ruleKey": "furusato.selfBurden",
+      "value": {
+        "amount": 2000,
+        "unit": "JPY",
+        "qualifier": "per calendar year, total"
+      },
+      "validFrom": "2011-01-01",
+      "validTo": null,
+      "status": "in-force",
+      "evidence": [
+        "mic-furusato-about",
+        "mic-furusato-faq",
+        "mic-furusato-overview",
+        "takasaki-kifukin"
+      ]
+    },
+    "furusato-one-stop": {
+      "title": "One-stop exception conditions",
+      "ruleKey": "furusato.oneStop",
+      "value": {
+        "amount": 5,
+        "unit": "count",
+        "qualifier": "municipalities, not donations"
+      },
+      "validFrom": "2015-04-01",
+      "validTo": null,
+      "status": "in-force",
+      "evidence": [
+        "mic-furusato-faq",
+        "toolcalc-furusato-2026",
+        "helloworldjapan-furusato",
+        "mic-furusato-2015-reform",
+        "nta-1155"
+      ]
+    },
+    "furusato-portal-points-ban-2025": {
+      "title": "Portal points banned (2025-10-01–)",
+      "ruleKey": "furusato.portalPoints",
+      "value": {
+        "amount": null,
+        "unit": "none",
+        "qualifier": null
+      },
+      "validFrom": "2025-10-01",
+      "validTo": null,
+      "status": "in-force",
+      "evidence": [
+        "mic-furusato-press-2024",
+        "impress-points-ban",
+        "rakuten-points-notice"
+      ]
+    },
+    "furusato-cost-cap-2019": {
+      "title": "Fundraising cost cap 50% (2019–2026-09)",
+      "ruleKey": "furusato.fundraisingCostCap",
+      "value": {
+        "amount": 50,
+        "unit": "percent",
+        "qualifier": "maximum cost share"
+      },
+      "validFrom": "2019-06-01",
+      "validTo": "2026-09-30",
+      "status": "superseded",
+      "evidence": [
+        "credo-furusato-2026",
+        "mic-furusato-criteria-2026"
+      ]
+    },
+    "furusato-cost-cap-2026": {
+      "title": "Usable share 52.5% / cost cap 47.5% (2026-10–2027-09)",
+      "ruleKey": "furusato.fundraisingCostCap",
+      "value": {
+        "amount": 52.5,
+        "unit": "percent",
+        "qualifier": "minimum usable share (= cost cap 47.5%)"
+      },
+      "validFrom": "2026-10-01",
+      "validTo": "2027-09-30",
+      "status": "in-force",
+      "evidence": [
+        "mic-furusato-criteria-2026",
+        "geisei-furusato-2026",
+        "credo-furusato-2026",
+        "toolcalc-furusato-2026"
+      ]
+    },
+    "furusato-cost-cap-2027": {
+      "title": "Usable share 55.0% / cost cap 45.0% (2027-10–2028-09)",
+      "ruleKey": "furusato.fundraisingCostCap",
+      "value": {
+        "amount": 55,
+        "unit": "percent",
+        "qualifier": "minimum usable share (= cost cap 45.0%)"
+      },
+      "validFrom": "2027-10-01",
+      "validTo": "2028-09-30",
+      "status": "enacted-future",
+      "evidence": [
+        "mic-furusato-criteria-2026",
+        "ndl-law-r8-local-tax"
+      ]
+    },
+    "furusato-cost-cap-2028": {
+      "title": "Usable share 57.5% / cost cap 42.5% (2028-10–2029-09)",
+      "ruleKey": "furusato.fundraisingCostCap",
+      "value": {
+        "amount": 57.5,
+        "unit": "percent",
+        "qualifier": "minimum usable share (= cost cap 42.5%)"
+      },
+      "validFrom": "2028-10-01",
+      "validTo": "2029-09-30",
+      "status": "enacted-future",
+      "evidence": [
+        "mic-furusato-criteria-2026",
+        "ndl-law-r8-local-tax"
+      ]
+    },
+    "furusato-cost-cap-2029": {
+      "title": "Usable share 60.0% / cost cap 40.0% (2029-10–)",
+      "ruleKey": "furusato.fundraisingCostCap",
+      "value": {
+        "amount": 60,
+        "unit": "percent",
+        "qualifier": "minimum usable share (= cost cap 40.0%)"
+      },
+      "validFrom": "2029-10-01",
+      "validTo": null,
+      "status": "enacted-future",
+      "evidence": [
+        "mic-furusato-criteria-2026",
+        "ndl-law-r8-local-tax"
+      ]
+    },
+    "furusato-deduction-cap-2008": {
+      "title": "Special deduction capped at 10% of income levy (donations 2008–2014)",
+      "ruleKey": "furusato.specialDeductionCap",
+      "value": {
+        "amount": 10,
+        "unit": "percent",
+        "qualifier": "of residence-tax income levy (所得割額)"
+      },
+      "validFrom": "2008-01-01",
+      "validTo": "2014-12-31",
+      "status": "superseded",
+      "evidence": [
+        "mic-furusato-overview"
+      ]
+    },
+    "furusato-deduction-cap-2015": {
+      "title": "Special deduction capped at 20% of income levy (donations 2015–2026)",
+      "ruleKey": "furusato.specialDeductionCap",
+      "value": {
+        "amount": 20,
+        "unit": "percent",
+        "qualifier": "of residence-tax income levy (所得割額)"
+      },
+      "validFrom": "2015-01-01",
+      "validTo": "2026-12-31",
+      "status": "in-force",
+      "evidence": [
+        "mic-furusato-2015-reform",
+        "mic-furusato-overview"
+      ]
+    },
+    "furusato-deduction-cap-2027": {
+      "title": "¥1.93M cap on the special deduction (donations from 2027)",
+      "ruleKey": "furusato.specialDeductionCap",
+      "value": {
+        "amount": 1930000,
+        "unit": "JPY",
+        "qualifier": "cap on residence-tax special deduction (prefectural + municipal); 20% of income levy still applies"
+      },
+      "validFrom": "2027-01-01",
+      "validTo": null,
+      "status": "enacted-future",
+      "evidence": [
+        "okane-furusato-2026",
+        "geisei-furusato-2026",
+        "toolcalc-furusato-2026",
+        "mic-furusato-criteria-2026",
+        "ndl-law-r8-local-tax"
+      ]
+    }
+  }
+}
