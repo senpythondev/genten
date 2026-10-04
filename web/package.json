@@ -9,7 +9,9 @@
     "lint": "eslint",
     "build:sources": "tsx scripts/build-sources.ts",
     "smoke": "tsx scripts/smoke.ts",
-    "mcp-smoke": "tsx scripts/mcp-smoke.ts"
+    "mcp-smoke": "tsx scripts/mcp-smoke.ts",
+    "eval": "tsx ../eval/run.ts",
+    "typecheck:eval": "tsc -p ../eval/tsconfig.json"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^4.0.71",

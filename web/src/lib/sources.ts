@@ -1,6 +1,6 @@
 // Maps knowledge-base citations to source details, using src/data/sources.json
 // (generated from the seed by scripts/build-sources.ts).
-import data from '@/data/sources.json'
+import data from '../data/sources.json'
 import type {Citation, Rule, RuleValue} from './types'
 
 type SourceRecord = {
