@@ -43,17 +43,47 @@ It respects robots.txt, sends at most one request per second as `GentenSnapshot/
 
 A source's `role` and `curationNote` (the evaluation answer key) are never written to any file. `--update-sanity` sets only `capturedAt` and `snapshotSha256` on the published sources; the seed never writes those fields. `snapshots/` is gitignored because it holds third-party content.
 
-## Web app (agent and page)
+## The Genten app
 
-`web/` is a Next.js app. `src/lib/genten.ts` (`askGenten`) answers a question from the Sanity Context knowledge base, using Claude through the Vercel AI SDK. It cites the official sources and flags English guides that conflict with the rule. `POST /api/ask` serves the page.
+Genten answers a question about NISA or furusato nozei with the rule in force on a chosen date, its effective date, and the official Japanese source behind it. It also flags English-language guides that state an outdated or wrong rule. `web/` is a Next.js app:
+- `src/lib/genten.ts` (`askGenten`) runs Claude (Vercel AI SDK) over the Sanity Context knowledge base through MCP.
+- `POST /api/ask` serves the page. It allows 10 requests per 10 minutes per IP and has a kill switch.
+
+### Run locally
 
 ```sh
+ln -s ../.env web/.env.local   # once: the app reads SANITY_CONTEXT_TOKEN and ANTHROPIC_API_KEY from the root .env
 cd web
 npm install
-npm run mcp-smoke      # check the Context MCP endpoint: lists its tools, calls initial_context
-npm run build:sources  # regenerate src/data/sources.json from the seed (no role/curationNote)
-npm run smoke          # run the 6 example questions through askGenten (uses API credits)
-npm run dev            # http://localhost:3000
+npm run dev                    # http://localhost:3000
 ```
 
-The app reads `SANITY_CONTEXT_TOKEN` and `ANTHROPIC_API_KEY` from the root `.env`, through `web/.env.local`: a gitignored symlink you create with `ln -s ../.env web/.env.local`. Optional settings: `GENTEN_MODEL` (default `claude-sonnet-5-5`) and `GENTEN_DISABLED=true`, which makes `/api/ask` return 503.
+Useful scripts in `web/`:
+
+```sh
+npm run mcp-smoke              # check the Context MCP endpoint: list its tools, call initial_context
+npm run smoke                  # run the 6 example questions through askGenten (uses API credits)
+npm run build:sources          # regenerate src/data/sources.json from the seed (no role/curationNote)
+```
+
+### Deploy to Vercel
+
+1. Import the repository and set **Root Directory** to `web`. The build needs nothing outside `web/`, because `src/data/sources.json` is committed.
+2. Set these environment variables:
+
+   | Variable | Required | Purpose |
+   |---|---|---|
+   | `SANITY_CONTEXT_TOKEN` | yes | Organization token with the Context Viewer role, for the MCP endpoint |
+   | `ANTHROPIC_API_KEY` | yes | Claude API key |
+   | `GENTEN_MODEL` | no | Model id (default `claude-sonnet-5-5`) |
+   | `GENTEN_DISABLED` | no | `true` makes `/api/ask` return 503 (kill switch) |
+
+3. Deploy. The tokens are used only on the server.
+
+## Evaluation
+
+`eval/` scores Genten against closed-book and keyword-search baselines on 25 held-out questions, with a deterministic grader. The latest results are in [eval/REPORT.md](eval/REPORT.md). To re-run it (this uses API credits, and needs `snapshots/files` and `pdftotext`):
+
+```sh
+cd web && npm run eval
+```
