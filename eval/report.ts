@@ -118,15 +118,24 @@ export function renderReport(rows: ResultRow[], info: RunInfo): string {
 
   if (rows.some((r) => r.answer?.usage)) {
     lines.push('## Tokens per question (average)', '')
-    lines.push('| Configuration | Input (incl. cache) | Cache read | Cache write | Output |', '|---|---|---|---|---|')
+    lines.push(
+      '| Configuration | Questions measured | Input (incl. cache) | Cache read | Cache write | Output |',
+      '|---|---|---|---|---|---|',
+    )
     for (const config of configs) {
       const usages = byConfig(config).flatMap((r) => (r.answer?.usage ? [r.answer.usage] : []))
       if (!usages.length) continue
       const avg = (key: 'input' | 'cacheRead' | 'cacheWrite' | 'output') =>
         Math.round(usages.reduce((s, u) => s + u[key], 0) / usages.length).toLocaleString('en-US')
-      lines.push(`| ${config} | ${avg('input')} | ${avg('cacheRead')} | ${avg('cacheWrite')} | ${avg('output')} |`)
+      lines.push(
+        `| ${config} | ${usages.length} of ${byConfig(config).length} | ${avg('input')} | ${avg('cacheRead')} | ${avg('cacheWrite')} | ${avg('output')} |`,
+      )
     }
-    lines.push('')
+    lines.push(
+      '',
+      'Token usage is recorded only for calls made after token logging and prompt caching were added (2026-10-05). Questions without it are left out of the averages.',
+      '',
+    )
   }
 
   lines.push('## Failures', '')

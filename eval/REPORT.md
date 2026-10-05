@@ -1,6 +1,8 @@
 # Genten evaluation
 
-Run 2026-10-04T10:26:08.975Z · model `claude-sonnet-5-5` · default as-of 2026-10-04 · raw results: `eval/results/2026-10-04T10-26-08-975Z.json`
+Run 2026-10-04T10:26:08.975Z · model `claude-sonnet-5-5` · default as-of 2026-10-04 · raw results: `eval/results/2026-10-05T03-16-04-497Z.json`
+
+Failed calls re-run on 2026-10-05T03:16:04.497Z: genten Q24, genten Q25.
 
 ## Setup
 
@@ -25,10 +27,8 @@ Run 2026-10-04T10:26:08.975Z · model `claude-sonnet-5-5` · default as-of 2026-
 | future | 3 | 0/3 (0%) | 0/3 (0%) | 2/3 (67%) | 0/3 (0%) | 3/3 (100%) | 3/3 (100%) |
 | leaving | 3 | 2/3 (67%) | 0/3 (0%) | 2/3 (67%) | 0/3 (0%) | 3/3 (100%) | 3/3 (100%) |
 | abstain | 2 | 2/2 (100%) | 2/2 (100%) | 2/2 (100%) | 2/2 (100%) | 2/2 (100%) | 2/2 (100%) |
-| ja | 2 | 2/2 (100%) | 0/2 (0%) | 2/2 (100%) | 2/2 (100%) | 0/2 (0%) | 0/2 (0%) |
-| **All** | 25 | 19/25 (76%) | 2/25 (8%) | 18/25 (72%) | 5/25 (20%) | 23/25 (92%) | 23/25 (92%) |
-
-**genten: 2 question(s) got no answer because the API call failed** (AI_APICallError: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.). These count as failures in the table above. On the 23 questions it answered: CORRECT 23/23 (100%), CORRECT+OFFICIAL 23/23 (100%).
+| ja | 2 | 2/2 (100%) | 0/2 (0%) | 2/2 (100%) | 2/2 (100%) | 2/2 (100%) | 2/2 (100%) |
+| **All** | 25 | 19/25 (76%) | 2/25 (8%) | 18/25 (72%) | 5/25 (20%) | 25/25 (100%) | 25/25 (100%) |
 
 ## Latency
 
@@ -36,9 +36,17 @@ Run 2026-10-04T10:26:08.975Z · model `claude-sonnet-5-5` · default as-of 2026-
 |---|---|---|---|---|
 | closed-book | 3.2s | 3.1s | 7.0s | – |
 | keyword-search | 3.4s | 3.1s | 5.1s | – |
-| genten | 15.0s | 15.7s | 17.7s | 4.9 |
+| genten | 15.2s | 16.0s | 18.3s | 4.9 |
 
 Wall-clock time per answered question; failed API calls are excluded. The three configurations ran concurrently.
+
+## Tokens per question (average)
+
+| Configuration | Questions measured | Input (incl. cache) | Cache read | Cache write | Output |
+|---|---|---|---|---|---|
+| genten | 2 of 25 | 39,268 | 18,658 | 3,218 | 944 |
+
+Token usage is recorded only for calls made after token logging and prompt caching were added (2026-10-05). Questions without it are left out of the averages.
 
 ## Failures
 
@@ -111,8 +119,5 @@ Correct but no official citation (13):
 
 ### genten
 
-No answer, because the API call failed (2):
-
-- **Q24** [ja] ふるさと納税のワンストップ特例は何自治体まで使えますか？. AI_APICallError: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.
-- **Q25** [ja] 成長投資枠の生涯上限はいくらですか？. AI_APICallError: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.
+No failures.
 

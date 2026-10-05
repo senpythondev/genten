@@ -1,0 +1,4777 @@
+{
+  "info": {
+    "startedAt": "2026-10-04T10:26:08.975Z",
+    "model": "claude-sonnet-5-5",
+    "resultsFile": "results/2026-10-05T03-16-04-497Z.json",
+    "keyword": {
+      "files": 57,
+      "chunks": 530,
+      "skipped": []
+    },
+    "promptChangesAfterResults": "none.",
+    "partial": false,
+    "retriedAt": "2026-10-05T03:16:04.497Z",
+    "retried": [
+      "genten Q24",
+      "genten Q25"
+    ]
+  },
+  "rows": [
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 1,
+        "category": "current",
+        "question": "What is the annual limit of the NISA growth investment quota?",
+        "amounts": [
+          2400000
+        ]
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 3292,
+      "answer": {
+        "answer": "The annual limit for the NISA growth investment quota (成長投資枠) is ¥2,400,000 per person, under the new NISA in force since 1 January 2024. It combines with the tsumitate (accumulation) investment quota (¥1,200,000 per year), so the total annual limit is ¥3,600,000. The lifetime tax-free holding limit is ¥18,000,000, of which the growth quota can use up to ¥12,000,000. The pre-2024 figures (e.g. ¥1,200,000 under the old general NISA) no longer apply. This is information, not financial or tax advice.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 2,
+        "category": "current",
+        "question": "What is the maximum I can invest in NISA per year in total?",
+        "amounts": [
+          3600000
+        ]
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 3407,
+      "answer": {
+        "answer": "As of 2026-10-04, the annual NISA maximum is ¥3.6 million in total (new NISA, in force since 1 January 2024). That splits into the Growth investment frame (成長投資枠) up to ¥2.4 million and the Tsumitate investment frame (つみたて投資枠) up to ¥1.2 million per year. Both frames can be used together. The lifetime cap is ¥18 million (book-value basis), of which the Growth frame is at most ¥12 million. The pre-2024 limits (e.g. ¥1.2 million general NISA, ¥400,000 tsumitate NISA) no longer apply. This is information, not financial or tax advice. I am answering from my own knowledge, without cited documents.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 3,
+        "category": "current",
+        "question": "What is the NISA lifetime limit, and how much of it can the growth quota use?",
+        "amounts": [
+          18000000,
+          12000000
+        ]
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 2976,
+      "answer": {
+        "answer": "The NISA lifetime investment limit is ¥18 million (by acquisition cost, not market value), in effect since the new NISA began on 1 January 2024. Within that, the growth investment quota (成長投資枠) can use up to ¥12 million. The tsumitate (accumulation) quota can use the rest, up to the full ¥18 million. Annual limits are ¥1.2 million for tsumitate and ¥2.4 million for growth, so ¥3.6 million combined per year. Selling frees up the lifetime quota (by cost basis) from the following year. This is information, not financial or tax advice.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 4,
+        "category": "current",
+        "question": "How long can I keep NISA investments tax-free if I buy them now?",
+        "text": "indefinite|no time limit|unlimited|無期限"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 3171,
+      "answer": {
+        "answer": "Indefinitely. Under the new NISA (in force since 1 January 2024), the holding period is unlimited for both the Growth and Tsumitate (accumulation) investment frames. The old 5-year (general NISA) and 20-year (old Tsumitate NISA) limits no longer apply to purchases made now. Gains and dividends stay tax-free as long as you hold, within the lifetime cap of ¥18 million (growth frame up to ¥12 million). Note that dividends are tax-free only if you receive them through the securities account (shares-proportion method). This is general information, not financial or tax advice.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/indefinite|no time limit|unlimited|無期限/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 5,
+        "category": "current",
+        "question": "How much of my furusato nozei donations do I pay myself?",
+        "amounts": [
+          2000
+        ]
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 2747,
+      "answer": {
+        "answer": "You pay a flat ¥2,000 self-burden (自己負担額) per year, no matter how many donations you make. Donations up to your income-based limit are deductible/credited from income tax and resident tax except for that ¥2,000. Anything above your limit is not deductible, so you bear the excess in full. Also, the tax benefit is not a refund: you still pay the donation upfront, and any return gifts are extra. This is general information, not tax advice; check your limit using your annual income and family situation.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 6,
+        "category": "premise",
+        "question": "Tsumitate NISA is limited to ¥400,000 a year, right?",
+        "verdict": [
+          "no"
+        ],
+        "amounts": [
+          1200000
+        ]
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 2851,
+      "answer": {
+        "answer": "No — ¥400,000 was the old (pre-2024) limit under the former Tsumitate NISA. Since the new NISA began on 1 January 2024, the Tsumitate investment frame allows up to ¥1,200,000 per year (¥100,000/month equivalent ×12). Combined with the Growth frame (¥2,400,000/year), the annual total is up to ¥3,600,000. The lifetime cap is ¥18,000,000 (book value), of which Growth is at most ¥12,000,000. This is from my own knowledge, not a cited source, and is information, not financial or tax advice.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 7,
+        "category": "premise",
+        "question": "Is the tsumitate lifetime limit ¥6 million?",
+        "verdict": [
+          "no"
+        ],
+        "amounts": [
+          18000000
+        ]
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 3503,
+      "answer": {
+        "answer": "No — the tsumitate (accumulation) investment account's lifetime limit is ¥18 million, not ¥6 million. This has applied since the new NISA started on 2024-01-01. The annual limit is ¥1.2 million for tsumitate and ¥2.4 million for the growth investment account. The combined lifetime cap is ¥18 million, and the growth account has a sub-limit of ¥12 million within it. Sold holdings free up book-value allowance for reuse the following year. The ¥6 million figure doesn't match the current tsumitate rule; ¥6 million is a total that has no basis in the current rules. This is information, not tax advice, and it comes from my own knowledge, not a cited source.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 8,
+        "category": "premise",
+        "question": "I need to be 20 to open a NISA account, correct?",
+        "verdict": [
+          "no"
+        ],
+        "text": "\\b18\\b"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 2828,
+      "answer": {
+        "answer": "Yes, as of 2026-10-04 you must be 18 or older, not 20. The age was lowered from 20 to 18 when the adult age changed in April 2022, and the new NISA (from January 2024) keeps it at 18+. You must also be a resident of Japan for tax purposes and have a Japan address. The separate Junior NISA (for under-18s) ended in 2023. This is general information, not financial or tax advice; please confirm with your financial institution.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/\\b18\\b/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 9,
+        "category": "premise",
+        "question": "Can I still get Rakuten points for furusato nozei donations?",
+        "verdict": [
+          "no"
+        ],
+        "text": "2025"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 2850,
+      "answer": {
+        "answer": "No — not for donations made on or after 1 October 2025. Japan's Ministry of Internal Affairs and Communications banned furusato nozei portal sites from offering points to donors starting then, so Rakuten Furusato Nozei no longer gives points on new donations. Points earned or campaigns tied to donations before that date are a separate matter. The tax deduction itself is unchanged. I am answering from my own knowledge, with no documents to check, so please confirm on the portal or the MIC site. This is information, not financial or tax advice.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/2025/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 10,
+        "category": "premise",
+        "question": "I donated to 2 towns, 6 times in total. Can I still use the one-stop exception?",
+        "verdict": [
+          "yes",
+          "depends"
+        ],
+        "text": "municipalit|自治体"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 3068,
+      "answer": {
+        "answer": "The one-stop exception (ワンストップ特例) depends on the number of municipalities, not the number of donations. Donating to 2 towns qualifies, since the limit is 5 municipalities per calendar year. Several donations to the same town count as one municipality, but each town needs its own application. Requirements: you are a salaried employee who normally doesn't file a tax return, and you have no other reason to file one, such as medical expense deductions or a side-income return. Applications must reach each municipality by January 10 of the following year. If you file a tax return anyway, the one-stop exception is void and you must list all donations on the return. This is general information, not tax advice.",
+        "verdict": "yes",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=yes, allowed yes|depends"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/municipalit|自治体/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 11,
+        "category": "date",
+        "asOf": "2022-06-01",
+        "question": "What is the annual limit for tsumitate NISA?",
+        "amounts": [
+          400000
+        ]
+      },
+      "asOf": "2022-06-01",
+      "latencyMs": 3146,
+      "answer": {
+        "answer": "As of 2022-06-01, there is no \"tsumitate NISA\" yet. The new NISA (with its \"tsumitate investment frame\") is law but starts on 2024-01-01. On this date, the closest existing system is the Tsumitate NISA (accumulation NISA) introduced in 2018, with an annual limit of ¥400,000 (¥20 million total over 20 years, tax-free for up to 20 years). Under the 2024 reform, the tsumitate investment frame limit is ¥1.2 million per year. This is information, not financial or tax advice, and it is from my own knowledge, not a cited source.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 12,
+        "category": "date",
+        "asOf": "2015-06-01",
+        "question": "What is the annual limit for general NISA?",
+        "amounts": [
+          1000000
+        ]
+      },
+      "asOf": "2015-06-01",
+      "latencyMs": 2914,
+      "answer": {
+        "answer": "As of 2015-06-01, the general NISA annual contribution limit was ¥1,000,000 (raised from ¥1,000,000 for 2014 to ¥1,200,000 starting 2016). Correction: the limit in force on this date was ¥1,000,000 per year; the increase to ¥1,200,000 is law and applies from 2016. The tax-free holding period was 5 years, and the account was open to Japan residents aged 20+. The current (2024+) NISA with ¥1.2M growth/¥2.4M total limits did not exist then. This is information, not tax advice.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 13,
+        "category": "date",
+        "asOf": "2010-06-01",
+        "question": "What is the minimum amount I pay myself for furusato nozei donations this year?",
+        "amounts": [
+          5000
+        ]
+      },
+      "asOf": "2010-06-01",
+      "latencyMs": 3191,
+      "answer": {
+        "answer": "As of 2010-06-01, the self-pay portion (自己負担額) was ¥5,000. Furusato nozei started in 2008 (applied to 2008 donations onward), and the deduction applied to the amount exceeding ¥5,000. The ¥5,000 threshold was changed to ¥2,000 from donations made in 2011 (after the Great East Japan Earthquake-related tax reform), so the ¥2,000 figure you see in modern guides does not apply for 2010. Note that I'm answering from general knowledge without cited sources, so please confirm with the municipality or National Tax Agency. This is information, not tax advice.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 14,
+        "category": "date",
+        "asOf": "2027-03-01",
+        "question": "Can my 10-year-old open a NISA account?",
+        "verdict": [
+          "yes",
+          "depends"
+        ],
+        "amounts": [
+          600000
+        ]
+      },
+      "asOf": "2027-03-01",
+      "latencyMs": 3144,
+      "answer": {
+        "answer": "No — not under the rule in force as of 2027-03-01. NISA accounts require the holder to be a Japanese resident aged 18 or older (the account opening age is 18+ as of January 1 of the opening year). A 10-year-old cannot open one. Note: a \"Junior NISA\" for under-18s existed until the end of 2023, but it was abolished and no new contributions are allowed. I have no source here confirming any later change, so please check with the FSA or a brokerage. Parents can invest in their own NISA account instead. This is information, not financial or tax advice.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": false,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": false,
+            "detail": "verdict=no, allowed yes|depends"
+          },
+          {
+            "name": "amounts",
+            "pass": false,
+            "detail": "missing ¥600,000"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 15,
+        "category": "date",
+        "question": "Can my 10-year-old open a NISA account now?",
+        "verdict": [
+          "no"
+        ],
+        "text": "2027"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 3291,
+      "answer": {
+        "answer": "No — as of 2026-10-04, NISA accounts are only available to Japanese residents aged 18 or older (the account-opening age is 18 as of January 1 of the opening year). A 10-year-old cannot open one. A junior NISA (for under-18s) existed until the end of 2023 but was abolished; existing accounts could continue but no new contributions. A \"children's NISA\" (こども NISA) has been discussed in tax reform proposals, but I can't confirm it is enacted law with a start date, so I can't say it's available. A parent can instead invest in their own NISA account.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": false,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "text",
+            "pass": false,
+            "detail": "/2027/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 16,
+        "category": "future",
+        "question": "From October 2028, what share of donations must municipalities keep for local use?",
+        "text": "57\\.5"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 2918,
+      "answer": {
+        "answer": "I can't confirm this from my knowledge. As of 2026-10-04, I'm not aware of any enacted rule that requires municipalities to keep a specific share of furusato nozei donations for local use from October 2028. What I do know is that the Oct 2025 ban on donation-portal point rewards and the existing rule that costs (return gifts plus other expenses) must stay within 50% of the donation both apply. Your premise may refer to a proposal rather than law. Please check the Ministry of Internal Affairs and Communications (総務省) notices.",
+        "verdict": "abstain",
+        "abstained": true,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": false,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": false,
+            "detail": "abstained=true, expected false"
+          },
+          {
+            "name": "text",
+            "pass": false,
+            "detail": "/57\\.5/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 17,
+        "category": "future",
+        "question": "Does the ¥1.93 million cap on the furusato special deduction apply to my donations this year?",
+        "verdict": [
+          "no"
+        ],
+        "text": "2027"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 6971,
+      "answer": {
+        "answer": "I can't confirm a ¥1.93 million cap. I don't know of any fixed yen cap on the furusato nozei special deduction (特例控除額). As far as I know, the limit is tied to your own tax. The special deduction is capped at 20% of your resident-tax income-based portion (個人住民税所得割額), and the total depends on your income and family situation. I can't verify the rule version in force on 2026-10-04, so I can't say whether any new figure applies to your 2026 donations. Please check with the Ministry of Internal Affairs and Communications (総務省) furusato nozei page, your municipality, or the simulator on a donation site.",
+        "verdict": "abstain",
+        "abstained": true,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": false,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": false,
+            "detail": "abstained=true, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": false,
+            "detail": "verdict=abstain, allowed no"
+          },
+          {
+            "name": "text",
+            "pass": false,
+            "detail": "/2027/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 18,
+        "category": "future",
+        "question": "What is the furusato special deduction cap for donations made in 2027?",
+        "amounts": [
+          1930000
+        ],
+        "text": "20 ?%|2割"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 3280,
+      "answer": {
+        "answer": "There is no single fixed yen cap for 2027. The furusato nozei deduction limit depends on your income, family structure and other deductions, so it differs for each person. For the special (tax-credit) portion of the inc​ome-tax/resident-tax deduction, the general ceiling is 20% of your resident tax's income-based portion (所得割額), with the full effect available up to roughly 2,000 yen self-burden. I can't confirm from memory whether any 2027 rule changes apply to donations made in 2027, so please check your municipality's simulator or the Ministry of Internal Affairs and Communications (総務省) page. This is information, not tax advice.",
+        "verdict": "abstain",
+        "abstained": true,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": false,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": false,
+            "detail": "abstained=true, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": false,
+            "detail": "missing ¥1,930,000"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/20 ?%|2割/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 19,
+        "category": "leaving",
+        "question": "I'm moving abroad on my own to study. Can I keep my NISA?",
+        "verdict": [
+          "no"
+        ],
+        "text": "departure notice|出国届出書|taxable"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 3648,
+      "answer": {
+        "answer": "Generally, no, not in the usual sense. NISA can only be used by residents of Japan. If you become a non-resident, you must file a notice of departure (出国届出書) with your NISA financial institution before leaving. Then you can keep holding existing NISA assets, but you can't make new purchases or use the new-contribution frame while abroad. Dividends and gains stay tax-free. Under a temporary-absence exception (勤務先の海外転勤 up to 5 years) you can keep your account, but that applies to overseas job postings, not to studying abroad on your own. When you return, file a return notice (帰国届出書) to resume. I can't verify the current details against sources, so please confirm with your institution.",
+        "verdict": "depends",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": false,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": false,
+            "detail": "verdict=depends, allowed no"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/departure notice|出国届出書|taxable/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 20,
+        "category": "leaving",
+        "question": "My employer is transferring me overseas for 4 years. Can I keep buying in my NISA while abroad?",
+        "verdict": [
+          "no"
+        ],
+        "text": "continuation|継続適用"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 3359,
+      "answer": {
+        "answer": "No — you can't make new purchases in your NISA account while you are a non-resident of Japan. NISA is only for Japanese residents (aged 18+). Before departure, you can file a 'Notification of Overseas Transfer' (出国届出書) with your broker (a 'NISA continuation' application is possible in some cases for temporary postings of up to 5 years). This lets you keep holding existing NISA assets tax-free, but you cannot add new purchases while abroad. Without this filing, the NISA account may be closed upon departure. After returning to Japan, you can resume investing by filing a return notice. Note: I have no documents here, so confirm the details and your own circumstances with your broker or the National Tax Agency/FSA.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/continuation|継続適用/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 21,
+        "category": "leaving",
+        "question": "My company is sending me abroad for 7 years. Will my NISA stay tax-free the whole time?",
+        "verdict": [
+          "no",
+          "depends"
+        ],
+        "text": "\\b5\\b|five"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 3327,
+      "answer": {
+        "answer": "Not necessarily. NISA tax-free treatment generally requires Japanese residency. If you become a non-resident, you can't make new purchases, and you must file a 'notice of departure' (出国届出書) before leaving. With that filed, you can keep your existing NISA holdings for up to 5 years from the end of the year you leave, extended to the end of the year you return if you file a continuation application (継続適用届出書) for an overseas posting. A 7-year posting can therefore qualify if you file correctly; without filing, the account closes and holdings lose NISA status. I can't confirm details as of 2026-10-04 from loaded sources, so check with your broker or the FSA/NTA.",
+        "verdict": "depends",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=depends, allowed no|depends"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/\\b5\\b|five/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 22,
+        "category": "abstain",
+        "question": "What is the iDeCo contribution limit for company employees?",
+        "abstained": true
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 2288,
+      "answer": {
+        "answer": "iDeCo (individual-type defined contribution pension) is outside Genten's scope, which covers only Japanese NISA and furusato nozei. I have no verified rule version for iDeCo contribution limits as of 2026-10-04, and the limits depend on your employer's pension arrangements, so I won't guess. Please check the official iDeCo site (iDeCo公式サイト) or the National Pension Fund Association. I can help with NISA or furusato nozei questions. This is information, not financial or tax advice.",
+        "verdict": "abstain",
+        "abstained": true,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=true, expected true"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 23,
+        "category": "abstain",
+        "question": "What is the capital gains tax rate in Singapore?",
+        "abstained": true
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 1843,
+      "answer": {
+        "answer": "I can't answer this. Genten covers only Japanese NISA and furusato nozei rules, and Singapore's capital gains tax is outside that scope. If you have a question about NISA or furusato nozei in Japan, I'm happy to help. This is information, not financial or tax advice.",
+        "verdict": "abstain",
+        "abstained": true,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=true, expected true"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 24,
+        "category": "ja",
+        "question": "ふるさと納税のワンストップ特例は何自治体まで使えますか？",
+        "text": "5",
+        "japanese": true
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 3139,
+      "answer": {
+        "answer": "ワンストップ特例制度は、1年間（1月〜12月）の寄附先が**5自治体まで**の場合に使えます。6自治体以上に寄附した場合は使えず、確定申告が必要です。なお、同じ自治体への複数回の寄附は1自治体として数えます。申請書は寄附先ごとに、翌年1月10日必着で提出します。また、確定申告をする人（医療費控除など）は、ワンストップ特例は無効となり、確定申告で寄附金控除を申告する必要があります。※一般的な情報であり、税務上の助言ではありません。",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/5/i"
+          },
+          {
+            "name": "japanese",
+            "pass": true,
+            "detail": "answer mostly in Japanese"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "closed-book",
+      "question": {
+        "id": 25,
+        "category": "ja",
+        "question": "成長投資枠の生涯上限はいくらですか？",
+        "amounts": [
+          12000000
+        ],
+        "japanese": true
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 3192,
+      "answer": {
+        "answer": "成長投資枠の生涯非課税保有限度額（簿価残高ベース）は1,200万円です。年間投資枠は240万円で、つみたて投資枠と合わせた総枠の上限は1,800万円です。2024年1月1日施行の現行制度（新NISA）で、恒久化されており期限はありません。売却すると簿価分の枠が翌年以降に再利用できます。なお、制度の詳細は金融庁の公式情報でご確認ください。これは情報提供であり、税務・投資の助言ではありません。",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "japanese",
+            "pass": true,
+            "detail": "answer mostly in Japanese"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 1,
+        "category": "current",
+        "question": "What is the annual limit of the NISA growth investment quota?",
+        "amounts": [
+          2400000
+        ]
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 2949,
+      "answer": {
+        "answer": "The annual limit for the NISA growth investment quota is ¥2.4 million (as of 2026-10-04, under the new NISA in force since January 2024). The Tsumitate quota is separate at ¥1.2 million, so both together total ¥3.6 million per year. The growth quota also has a lifetime cap of ¥12 million within the overall ¥18 million. This is information, not financial or tax advice.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "fsa-en-accessfsa-2023.pdf",
+            "url": "https://www.fsa.go.jp/en/newsletter/accessfsa2023/234.pdf",
+            "authority": "primary"
+          },
+          {
+            "ref": "maymoney-nisa-en.md",
+            "url": "https://may-money.com/en/nisa-guide-en/",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "mailmate-new-nisa.md",
+            "url": "https://mailmate.jp/blog/new-nisa-program",
+            "authority": "secondary-institutional"
+          }
+        ],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "fsa-en-accessfsa-2023.pdf#11",
+        "maymoney-nisa-en.md#8",
+        "maymoney-nisa-en.md#9",
+        "mailmate-new-nisa.md#4",
+        "maymoney-nisa-en.md#7",
+        "mailmate-new-nisa.md#7"
+      ],
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 2,
+        "category": "current",
+        "question": "What is the maximum I can invest in NISA per year in total?",
+        "amounts": [
+          3600000
+        ]
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 4607,
+      "answer": {
+        "answer": "Under the NISA rules in force on 2026-10-04 (new NISA, effective 1 January 2024), the maximum is ¥3.6 million per year in total: ¥1.2 million in the Tsumitate frame plus ¥2.4 million in the Growth frame. You can use both in the same year. The lifetime cap is ¥18 million, of which at most ¥12 million can be Growth. Figures of ¥1.2M or ¥400,000 per year are from the pre-2024 system. Information only, not tax advice.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "mailmate-new-nisa.md",
+            "url": "https://mailmate.jp/blog/new-nisa-program",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "argentum-nisa.md",
+            "url": "https://argentumwealth.com/unlocking-nisa-the-essential-guide-for-expats-in-japan/",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "tyton-nisa-english.md",
+            "url": "https://www.tytoncapital.com/portfolio/can-i-get-a-japanese-nisa-retirement-account-in-english/",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "tyton-nisa-foreigners.md",
+            "url": "https://www.tytoncapital.com/portfolio/nisa-account-for-foreign-gaijin-japan-tokyo/",
+            "authority": "secondary-institutional"
+          }
+        ],
+        "conflicts": [
+          {
+            "source": "tyton-nisa-foreigners.md",
+            "kind": "outdated"
+          },
+          {
+            "source": "tyton-nisa-english.md",
+            "kind": "outdated"
+          }
+        ],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "tyton-nisa-foreigners.md#4",
+        "mailmate-new-nisa.md#7",
+        "tyton-nisa-english.md#3",
+        "argentum-nisa.md#4",
+        "mailmate-new-nisa.md#6",
+        "argentum-nisa.md#7"
+      ],
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 3,
+        "category": "current",
+        "question": "What is the NISA lifetime limit, and how much of it can the growth quota use?",
+        "amounts": [
+          18000000,
+          12000000
+        ]
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 3063,
+      "answer": {
+        "answer": "The NISA lifetime limit is ¥18 million (book-value basis), shared across both quotas. The growth quota can use at most ¥12 million of it; the tsumitate quota can use the full ¥18 million. Sold holdings free up their limit for reuse (from the following year). Annual limits: ¥1.2M tsumitate + ¥2.4M growth = ¥3.6M. This comes from English-language guides only; no official FSA or Genten dataset excerpt was provided, so please verify with the FSA.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "mailmate-new-nisa.md",
+            "url": "https://mailmate.jp/blog/new-nisa-program",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "maymoney-nisa-en.md",
+            "url": "https://may-money.com/en/nisa-guide-en/",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "mailmate-new-nisa.md#7",
+        "maymoney-nisa-en.md#8",
+        "mailmate-new-nisa.md#4",
+        "mailmate-new-nisa.md#2",
+        "maymoney-nisa-en.md#7",
+        "maymoney-nisa-en.md#9"
+      ],
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 4,
+        "category": "current",
+        "question": "How long can I keep NISA investments tax-free if I buy them now?",
+        "text": "indefinite|no time limit|unlimited|無期限"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 4809,
+      "answer": {
+        "answer": "Indefinitely. Under the NISA system in force from 2024, there is no time limit on the tax-free holding period for new purchases. The 5-year (General NISA) and 20-year (Tsumitate NISA) horizons were pre-2024 rules. Argentum states the time restrictions were removed from 2024. Note that the Tyton guide's 5-year and 20-year periods and 1.2M/0.4M yen limits are outdated. Your sources here are English-language guides only, with no official or Genten dataset excerpt, so please confirm with the FSA. This is information, not tax advice.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "argentum-nisa.md",
+            "url": "https://argentumwealth.com/unlocking-nisa-the-essential-guide-for-expats-in-japan/",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "tyton-nisa-foreigners.md",
+            "url": "https://www.tytoncapital.com/portfolio/nisa-account-for-foreign-gaijin-japan-tokyo/",
+            "authority": "secondary-institutional"
+          }
+        ],
+        "conflicts": [
+          {
+            "source": "tyton-nisa-foreigners.md",
+            "kind": "outdated"
+          },
+          {
+            "source": "retirejapan-forum-tsumitate.md",
+            "kind": "outdated"
+          }
+        ],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "argentum-nisa.md#20",
+        "argentum-nisa.md#10",
+        "tyton-nisa-foreigners.md#4",
+        "retirejapan-nisa.md#5",
+        "argentum-nisa.md#11",
+        "retirejapan-forum-tsumitate.md#1"
+      ],
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/indefinite|no time limit|unlimited|無期限/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 5,
+        "category": "current",
+        "question": "How much of my furusato nozei donations do I pay myself?",
+        "amounts": [
+          2000
+        ]
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 2924,
+      "answer": {
+        "answer": "You pay a flat ¥2,000 per year (not per donation), as long as your donations stay within your personal limit, which depends on your income and family situation. Anything above the limit is not deductible and comes out of your own pocket. Use a deduction simulator to find your cap. The sources are English-language guides only; no official rule version was provided, so this is general information, not tax advice.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "japanlifestart-furusato.md",
+            "url": "https://japanlifestart.com/en/money-cards/rakuten-furusato-nozei-guide",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "mailmate-furusato.md",
+            "url": "https://mailmate.jp/blog/furusato-nozei",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "expatjp-furusato.md",
+            "url": "https://expat.jp/furusato-nozei/",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "japanlifestart-furusato.md#13",
+        "japanlifestart-furusato.md#1",
+        "mailmate-furusato.md#20",
+        "japanlifestart-furusato.md#2",
+        "expatjp-furusato.md#0",
+        "mailmate-furusato.md#2"
+      ],
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 6,
+        "category": "premise",
+        "question": "Tsumitate NISA is limited to ¥400,000 a year, right?",
+        "verdict": [
+          "no"
+        ],
+        "amounts": [
+          1200000
+        ]
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 5063,
+      "answer": {
+        "answer": "No — ¥400,000 was the old (pre-2024) Tsumitate NISA limit. Since January 2024 it is the Tsumitate investment quota, with an annual limit of ¥1,200,000 (per the mailmate guide, which cites the FSA). No official or Genten dataset excerpt was provided, so this rests on a secondary source; please confirm on the FSA site. As of 2026-10-04, the ¥400,000 figure no longer applies.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "mailmate-new-nisa.md",
+            "url": "https://mailmate.jp/blog/new-nisa-program",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "argentum-nisa.md",
+            "url": "https://argentumwealth.com/unlocking-nisa-the-essential-guide-for-expats-in-japan/",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "tyton-nisa-english.md",
+            "url": "https://www.tytoncapital.com/portfolio/can-i-get-a-japanese-nisa-retirement-account-in-english/",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "tyton-nisa-foreigners.md",
+            "url": "https://www.tytoncapital.com/portfolio/nisa-account-for-foreign-gaijin-japan-tokyo/",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "retirejapan-forum-tsumitate.md",
+            "url": "https://retirejapan.com/forum/viewtopic.php?t=30",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [
+          {
+            "source": "argentum-nisa.md",
+            "kind": "outdated"
+          },
+          {
+            "source": "tyton-nisa-english.md",
+            "kind": "outdated"
+          },
+          {
+            "source": "tyton-nisa-foreigners.md",
+            "kind": "outdated"
+          },
+          {
+            "source": "retirejapan-forum-tsumitate.md",
+            "kind": "outdated"
+          }
+        ],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "argentum-nisa.md#4",
+        "mailmate-new-nisa.md#1",
+        "tyton-nisa-english.md#3",
+        "tyton-nisa-foreigners.md#4",
+        "retirejapan-forum-tsumitate.md#5",
+        "retirejapan-forum-tsumitate.md#0"
+      ],
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 7,
+        "category": "premise",
+        "question": "Is the tsumitate lifetime limit ¥6 million?",
+        "verdict": [
+          "no"
+        ],
+        "amounts": [
+          18000000
+        ]
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 3859,
+      "answer": {
+        "answer": "No. The ¥6 million figure is wrong for the tsumitate quota. Under the new NISA (from 2024, in force on 2026-10-04), the tsumitate quota has an annual limit of ¥1.2 million and no separate lifetime cap. It counts within the ¥18 million total lifetime limit, which can be reused after selling. ¥6 million was the old General NISA's total (¥1.2M × 5 years); the old Tsumitate NISA's was ¥8 million. These excerpts contain no official FSA or Genten rule text, so this rests on English-language guides only.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "maymoney-nisa-en.md",
+            "url": "https://may-money.com/en/nisa-guide-en/",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "mailmate-new-nisa.md",
+            "url": "https://mailmate.jp/blog/new-nisa-program",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "retirejapan-nisa.md",
+            "url": "https://www.retirejapan.com/nisa/",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [
+          {
+            "source": "retirejapan-nisa.md",
+            "kind": "incorrect"
+          }
+        ],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "retirejapan-nisa.md#2",
+        "retirejapan-nisa.md#3",
+        "maymoney-nisa-en.md#8",
+        "maymoney-nisa-en.md#9",
+        "mailmate-new-nisa.md#4",
+        "mailmate-new-nisa.md#2"
+      ],
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 8,
+        "category": "premise",
+        "question": "I need to be 20 to open a NISA account, correct?",
+        "verdict": [
+          "no"
+        ],
+        "text": "\\b18\\b"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 3326,
+      "answer": {
+        "answer": "No, not as of 2026-10-04. The excerpts show only an older guide (tyton-nisa-foreigners.md) saying you must be over 20, and it describes the pre-2024 Ordinary/Tsumitate NISA system. No official source or Genten rule version in the excerpts states the current minimum age, so I cannot confirm it. Check the current age requirement with the FSA or your broker. This is information, not financial or tax advice.",
+        "verdict": "abstain",
+        "abstained": true,
+        "citations": [
+          {
+            "ref": "tyton-nisa-foreigners.md",
+            "url": "https://www.tytoncapital.com/portfolio/nisa-account-for-foreign-gaijin-japan-tokyo/",
+            "authority": "secondary-institutional"
+          }
+        ],
+        "conflicts": [
+          {
+            "source": "tyton-nisa-foreigners.md",
+            "kind": "outdated"
+          }
+        ],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "mailmate-new-nisa.md#14",
+        "tyton-nisa-foreigners.md#3",
+        "tyton-nisa-foreigners.md#4",
+        "retirejapan-forum-fsa-guideline.md#1",
+        "maymoney-nisa-en.md#1",
+        "tyton-nisa-english.md#4"
+      ],
+      "grade": {
+        "correct": false,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": false,
+            "detail": "abstained=true, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": false,
+            "detail": "verdict=abstain, allowed no"
+          },
+          {
+            "name": "text",
+            "pass": false,
+            "detail": "/\\b18\\b/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 9,
+        "category": "premise",
+        "question": "Can I still get Rakuten points for furusato nozei donations?",
+        "verdict": [
+          "no"
+        ],
+        "text": "2025"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 4600,
+      "answer": {
+        "answer": "No, not the portal's bonus points. Since October 1, 2025, portal sites like Rakuten are banned from giving points for donations (per the guides here; no official or Dataset source was provided). Your Rakuten Card's normal payment points still apply, and your deduction and gift are unaffected. Rakuten points, including limited-time points, can reportedly be used to pay. Guides that promise 10% point-back on donations describe the pre-October 2025 situation.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "mailmate-furusato.md",
+            "url": "https://mailmate.jp/blog/furusato-nozei",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "maymoney-furusato-en.md",
+            "url": "https://may-money.com/en/furusato-nozei-guide-en/",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "ezeirishi-furusato.md",
+            "url": "https://e-zeirishi.com/en/furusato-nozei-guide-foreigners-japan/",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "japanlifestart-furusato.md",
+            "url": "https://japanlifestart.com/en/money-cards/rakuten-furusato-nozei-guide",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [
+          {
+            "source": "japanlifestart-furusato.md",
+            "kind": "outdated"
+          },
+          {
+            "source": "ezeirishi-furusato.md",
+            "kind": "same-rule-different-wording"
+          }
+        ],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "mailmate-furusato.md#20",
+        "maymoney-furusato-en.md#20",
+        "japanlifestart-furusato.md#13",
+        "ezeirishi-furusato.md#12",
+        "japanlifestart-furusato.md#5",
+        "maymoney-furusato-en.md#13"
+      ],
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/2025/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 10,
+        "category": "premise",
+        "question": "I donated to 2 towns, 6 times in total. Can I still use the one-stop exception?",
+        "verdict": [
+          "yes",
+          "depends"
+        ],
+        "text": "municipalit|自治体"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 4214,
+      "answer": {
+        "answer": "Yes, probably. The one-stop exception limit is 5 or fewer municipalities (towns) per calendar year, not 5 donations. You donated to 2 towns, so you are within the limit, even with 6 donations. You must still be a salaried employee who otherwise doesn't need to file a return. You must also send a separate application for each donation (6 forms), arriving by January 10 of next year. One guide (mailmate-furusato.md) says you can't use it with more than five donations, which is a misleading wording. Filing a tax return cancels the one-stop application. No Genten rule dataset was provided, so this rests on guides only.",
+        "verdict": "yes",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ezeirishi-furusato.md",
+            "url": "https://e-zeirishi.com/en/furusato-nozei-guide-foreigners-japan/",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "japanlifestart-furusato.md",
+            "url": "https://japanlifestart.com/en/money-cards/rakuten-furusato-nozei-guide",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "mailmate-furusato.md",
+            "url": "https://mailmate.jp/blog/furusato-nozei",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "expatjp-furusato.md",
+            "url": "https://expat.jp/furusato-nozei/",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [
+          {
+            "source": "mailmate-furusato.md",
+            "kind": "incorrect"
+          }
+        ],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "expatjp-furusato.md#13",
+        "ezeirishi-furusato.md#8",
+        "ezeirishi-furusato.md#10",
+        "japanlifestart-furusato.md#7",
+        "mailmate-furusato.md#17",
+        "mailmate-furusato.md#11"
+      ],
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=yes, allowed yes|depends"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/municipalit|自治体/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 11,
+        "category": "date",
+        "asOf": "2022-06-01",
+        "question": "What is the annual limit for tsumitate NISA?",
+        "amounts": [
+          400000
+        ]
+      },
+      "asOf": "2022-06-01",
+      "latencyMs": 3010,
+      "answer": {
+        "answer": "As of 2022-06-01, the annual limit for tsumitate NISA is ¥400,000 (up to ¥8 million over 20 years). The excerpts name no official or Dataset rule version, so this rests on English-language guides that agree with each other. The ¥1.2 million tsumitate figure and the ¥3.6 million combined limit belong to the new NISA, which starts in 2024. It is not in force on your date.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "maymoney-nisa-en.md",
+            "url": "https://may-money.com/en/nisa-guide-en/",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "retirejapan-forum-tsumitate.md",
+            "url": "https://retirejapan.com/forum/viewtopic.php?t=30",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "mailmate-new-nisa.md",
+            "url": "https://mailmate.jp/blog/new-nisa-program",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "retirejapan-nisa.md",
+            "url": "https://www.retirejapan.com/nisa/",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "maymoney-nisa-en.md#1",
+        "retirejapan-forum-tsumitate.md#5",
+        "mailmate-new-nisa.md#4",
+        "maymoney-nisa-en.md#8",
+        "mailmate-new-nisa.md#3",
+        "retirejapan-nisa.md#3"
+      ],
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 12,
+        "category": "date",
+        "asOf": "2015-06-01",
+        "question": "What is the annual limit for general NISA?",
+        "amounts": [
+          1000000
+        ]
+      },
+      "asOf": "2015-06-01",
+      "latencyMs": 2680,
+      "answer": {
+        "answer": "As of 2015-06-01, I can't confirm the general NISA annual limit from my sources. The excerpts only say that the old General NISA (valid until 2023) had a ¥1.2 million annual limit. That figure comes from English-language guides describing the pre-2024 system, and none of them describes the rule in force in 2015. The sources include no Genten rule version or official source covering that date. I can't state a verified limit for 2015-06-01. Check the rule version for that date.",
+        "verdict": "abstain",
+        "abstained": true,
+        "citations": [
+          {
+            "ref": "maymoney-nisa-en.md",
+            "url": "https://may-money.com/en/nisa-guide-en/",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "mailmate-new-nisa.md",
+            "url": "https://mailmate.jp/blog/new-nisa-program",
+            "authority": "secondary-institutional"
+          }
+        ],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "maymoney-nisa-en.md#8",
+        "mailmate-new-nisa.md#4",
+        "mailmate-new-nisa.md#3",
+        "fsa-en-accessfsa-2023.pdf#11",
+        "mailmate-new-nisa.md#9",
+        "mailmate-new-nisa.md#13"
+      ],
+      "grade": {
+        "correct": false,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": false,
+            "detail": "abstained=true, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": false,
+            "detail": "missing ¥1,000,000"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 13,
+        "category": "date",
+        "asOf": "2010-06-01",
+        "question": "What is the minimum amount I pay myself for furusato nozei donations this year?",
+        "amounts": [
+          5000
+        ]
+      },
+      "asOf": "2010-06-01",
+      "latencyMs": 2924,
+      "answer": {
+        "answer": "The excerpts say you pay ¥2,000 out of pocket (the self-pay amount), as long as you stay within your donation limit. Donations above your limit are not credited, so you pay full price for the excess. However, the as-of date is 2010-06-01, and none of the excerpts include a Genten rule version or official source for 2010. They are guides captured around 2026, so I cannot confirm the ¥2,000 figure applied in 2010 (I cannot verify it was the rule in force then).",
+        "verdict": "abstain",
+        "abstained": true,
+        "citations": [
+          {
+            "ref": "japanlifestart-furusato.md",
+            "url": "https://japanlifestart.com/en/money-cards/rakuten-furusato-nozei-guide",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "ezeirishi-furusato.md",
+            "url": "https://e-zeirishi.com/en/furusato-nozei-guide-foreigners-japan/",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "expatjp-furusato.md",
+            "url": "https://expat.jp/furusato-nozei/",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "japanlifestart-furusato.md#13",
+        "japanlifestart-furusato.md#12",
+        "ezeirishi-furusato.md#19",
+        "expatjp-furusato.md#0",
+        "japanlifestart-furusato.md#2",
+        "ezeirishi-furusato.md#1"
+      ],
+      "grade": {
+        "correct": false,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": false,
+            "detail": "abstained=true, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": false,
+            "detail": "missing ¥5,000"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 14,
+        "category": "date",
+        "asOf": "2027-03-01",
+        "question": "Can my 10-year-old open a NISA account?",
+        "verdict": [
+          "yes",
+          "depends"
+        ],
+        "amounts": [
+          600000
+        ]
+      },
+      "asOf": "2027-03-01",
+      "latencyMs": 2583,
+      "answer": {
+        "answer": "No. A NISA account requires the holder to be 18 or older (as of January 1 of the opening year), so a 10-year-old cannot open one. Eligibility rests on residency and age, not nationality. The excerpts describe the rule as the 2024 new NISA; none of them gives a separate, officially dated rule version for 2027-03-01, so please confirm with your financial institution. Note that a child could only qualify once they turn 18.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "maymoney-nisa-en.md",
+            "url": "https://may-money.com/en/nisa-guide-en/",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "argentum-nisa.md",
+            "url": "https://argentumwealth.com/unlocking-nisa-the-essential-guide-for-expats-in-japan/",
+            "authority": "secondary-institutional"
+          }
+        ],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "mailmate-new-nisa.md#14",
+        "maymoney-nisa-en.md#7",
+        "maymoney-nisa-en.md#0",
+        "argentum-nisa.md#17",
+        "retirejapan-forum-tsumitate.md#5",
+        "maymoney-nisa-en.md#3"
+      ],
+      "grade": {
+        "correct": false,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": false,
+            "detail": "verdict=no, allowed yes|depends"
+          },
+          {
+            "name": "amounts",
+            "pass": false,
+            "detail": "missing ¥600,000"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 15,
+        "category": "date",
+        "question": "Can my 10-year-old open a NISA account now?",
+        "verdict": [
+          "no"
+        ],
+        "text": "2027"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 3102,
+      "answer": {
+        "answer": "No. A 10-year-old cannot open a NISA account now. The excerpts say the new NISA (from January 2024) requires the holder to be 18 or older (as of January 1) and a Japan resident. These come from English-language guides (May Money, Argentum), not an official source or a Genten Dataset rule version, so please confirm with your broker or the FSA. The excerpts don't mention a junior NISA, so I can't say whether any child-specific option exists.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "maymoney-nisa-en.md",
+            "url": "https://may-money.com/en/nisa-guide-en/",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "argentum-nisa.md",
+            "url": "https://argentumwealth.com/unlocking-nisa-the-essential-guide-for-expats-in-japan/",
+            "authority": "secondary-institutional"
+          }
+        ],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "mailmate-new-nisa.md#14",
+        "retirejapan-forum-tsumitate.md#5",
+        "maymoney-nisa-en.md#7",
+        "maymoney-nisa-en.md#0",
+        "argentum-nisa.md#11",
+        "argentum-nisa.md#17"
+      ],
+      "grade": {
+        "correct": false,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "text",
+            "pass": false,
+            "detail": "/2027/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 16,
+        "category": "future",
+        "question": "From October 2028, what share of donations must municipalities keep for local use?",
+        "text": "57\\.5"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 2700,
+      "answer": {
+        "answer": "I can't answer this from the excerpts provided. None of them mention a rule starting in October 2028 or any minimum share of donations that municipalities must keep for local use. They only cover the One-Stop Exception, the October 2025 ban on portal-site points, and general mechanics. To answer, I would need an official source, such as the Ministry of Internal Affairs and Communications, or a Genten rule version covering the 2028 change.",
+        "verdict": "abstain",
+        "abstained": true,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "japanlifestart-furusato.md#12",
+        "mailmate-furusato.md#20",
+        "ezeirishi-furusato.md#16",
+        "maymoney-furusato-en.md#8",
+        "ezeirishi-furusato.md#10",
+        "ezeirishi-furusato.md#24"
+      ],
+      "grade": {
+        "correct": false,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": false,
+            "detail": "abstained=true, expected false"
+          },
+          {
+            "name": "text",
+            "pass": false,
+            "detail": "/57\\.5/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 17,
+        "category": "future",
+        "question": "Does the ¥1.93 million cap on the furusato special deduction apply to my donations this year?",
+        "verdict": [
+          "no"
+        ],
+        "text": "2027"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 2893,
+      "answer": {
+        "answer": "No — not for this year's donations. As of 2026-10-04, the ¥1.93 million absolute cap on the special resident-tax deduction is enacted law (FY2026 tax reform, enacted March 31, 2026) but applies only from the 2028 resident-tax year, i.e. donations made in 2027 onward. Donations in 2026 are still limited only by the existing rule: the special deduction is capped at 20% of your resident-tax income portion. The new cap only matters at roughly ¥100 million salary income. This is information, not tax advice.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "helloworldjapan-furusato.md",
+            "url": "https://helloworldjapan.com/en/articles/japan-furusato-nozei-foreigners-guide",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "helloworldjapan-furusato.md#12",
+        "japanlifestart-furusato.md#13",
+        "maymoney-furusato-en.md#17",
+        "mailmate-furusato.md#15",
+        "helloworldjapan-furusato.md#5",
+        "maymoney-furusato-en.md#12"
+      ],
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/2027/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 18,
+        "category": "future",
+        "question": "What is the furusato special deduction cap for donations made in 2027?",
+        "amounts": [
+          1930000
+        ],
+        "text": "20 ?%|2割"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 2881,
+      "answer": {
+        "answer": "For donations made in 2027 (2028 resident-tax year), the FY2026 tax reform (enacted March 31, 2026) sets an absolute cap of ¥1.93 million on the special resident-tax deduction. You would only reach it at roughly ¥100 million in annual salary income. Below that, the limit works as before (special deduction capped at 20% of your resident-tax income portion). Separately, from 2027 a minimum tax on very high incomes (standard income above ¥165 million) can offset the benefit. The only source is an English-language guide, not a verified rule version or official text, so please confirm with Soumu/MOF.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "helloworldjapan-furusato.md",
+            "url": "https://helloworldjapan.com/en/articles/japan-furusato-nozei-foreigners-guide",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "helloworldjapan-furusato.md#12",
+        "helloworldjapan-furusato.md#5",
+        "helloworldjapan-furusato.md#3",
+        "japanlifestart-furusato.md#13",
+        "maymoney-furusato-en.md#12",
+        "maymoney-furusato-en.md#6"
+      ],
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/20 ?%|2割/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 19,
+        "category": "leaving",
+        "question": "I'm moving abroad on my own to study. Can I keep my NISA?",
+        "verdict": [
+          "no"
+        ],
+        "text": "departure notice|出国届出書|taxable"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 4413,
+      "answer": {
+        "answer": "Generally no. The excerpts contain no official or Genten-dataset rule, only secondary sources, so this is not a verified answer. They say NISA is for Japan residents; when you leave, you file a leaving-Japan notification (出国届出書), and the account is closed with assets moved to a taxable account. A forum post mentions a temporary-overseas-posting exception (employer transfers), which would not obviously cover studying on your own. Some brokers may allow limited exceptions, so confirm with your broker before leaving.",
+        "verdict": "abstain",
+        "abstained": true,
+        "citations": [
+          {
+            "ref": "retirejapan-forum-fsa-guideline.md",
+            "url": "https://retirejapan.com/forum/viewtopic.php?p=7655",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "argentum-nisa.md",
+            "url": "https://argentumwealth.com/unlocking-nisa-the-essential-guide-for-expats-in-japan/",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "mailmate-new-nisa.md",
+            "url": "https://mailmate.jp/blog/new-nisa-program",
+            "authority": "secondary-institutional"
+          }
+        ],
+        "conflicts": [
+          {
+            "source": "mailmate-new-nisa.md",
+            "kind": "same-rule-different-wording"
+          }
+        ],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "retirejapan-forum-fsa-guideline.md#0",
+        "argentum-nisa.md#20",
+        "retirejapan-forum-fsa-guideline.md#1",
+        "retirejapan-forum-tsumitate.md#5",
+        "mailmate-new-nisa.md#10",
+        "maymoney-nisa-en.md#6"
+      ],
+      "grade": {
+        "correct": false,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": false,
+            "detail": "abstained=true, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": false,
+            "detail": "verdict=abstain, allowed no"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/departure notice|出国届出書|taxable/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 20,
+        "category": "leaving",
+        "question": "My employer is transferring me overseas for 4 years. Can I keep buying in my NISA while abroad?",
+        "verdict": [
+          "no"
+        ],
+        "text": "continuation|継続適用"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 4021,
+      "answer": {
+        "answer": "No. You can't make new purchases in your NISA while living abroad. Because your employer is transferring you, you can file a Continued Application Notification (継続適用届出書) before you leave. Holdings already in the account then stay tax-free, but no new contributions are allowed. File a Return Notification (帰国届出書) when you come back. If you haven't by December 31 of the year five years after filing, the account is closed. Your 4-year posting fits within that window. Not every broker handles this form, so check yours first. Without the form, a Departure Notification closes the account and moves holdings to a taxable account. Note that the sources are secondary and no official or Genten rule version was provided.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "maymoney-nisa-en.md",
+            "url": "https://may-money.com/en/nisa-guide-en/",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "retirejapan-forum-fsa-guideline.md",
+            "url": "https://retirejapan.com/forum/viewtopic.php?p=7655",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [
+          {
+            "source": "argentum-nisa.md",
+            "kind": "incorrect"
+          }
+        ],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "retirejapan-forum-fsa-guideline.md#1",
+        "retirejapan-forum-fsa-guideline.md#0",
+        "retirejapan-forum-fsa-guideline.md#2",
+        "maymoney-nisa-en.md#4",
+        "argentum-nisa.md#20",
+        "retirejapan-forum-tsumitate.md#4"
+      ],
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/continuation|継続適用/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 21,
+        "category": "leaving",
+        "question": "My company is sending me abroad for 7 years. Will my NISA stay tax-free the whole time?",
+        "verdict": [
+          "no",
+          "depends"
+        ],
+        "text": "\\b5\\b|five"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 2976,
+      "answer": {
+        "answer": "Probably not for all 7 years. According to the one excerpt that covers this (maymoney-nisa-en.md, a secondary guide), on a job transfer you file a Continued Application Notification (継続適用届出書) by the day before departure. Holdings stay tax-free but you can't buy new ones. If you haven't filed a Return Notification by December 31 of the year five years after filing, the account is closed. A 7-year stay exceeds that 5-year window unless you return early. No official or Dataset rule version was provided, so confirm with your broker. This is information, not tax advice.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "maymoney-nisa-en.md",
+            "url": "https://may-money.com/en/nisa-guide-en/",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "maymoney-nisa-en.md#4",
+        "mailmate-new-nisa.md#0",
+        "japanlifestart-furusato.md#1",
+        "tyton-nisa-foreigners.md#7",
+        "mailmate-furusato.md#15",
+        "retirejapan-forum-tsumitate.md#4"
+      ],
+      "grade": {
+        "correct": true,
+        "correctOfficial": false,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no|depends"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/\\b5\\b|five/i"
+          },
+          {
+            "name": "official",
+            "pass": false,
+            "detail": "no official source or verified rule cited"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 22,
+        "category": "abstain",
+        "question": "What is the iDeCo contribution limit for company employees?",
+        "abstained": true
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 2937,
+      "answer": {
+        "answer": "I can't give the iDeCo contribution limit for company employees from these excerpts. The only iDeCo source (fsa-en-presentation-2025.pdf) says a reform bill raising the ceiling by employee circumstances, and extending the eligible age from 65 to 70, was submitted to the Diet. It gives no figures and doesn't say whether the bill passed or when it starts. The other excerpts don't state any iDeCo limit. Please check the current figure with the iDeCo administrator or the official iDeCo site. This is information, not financial or tax advice.",
+        "verdict": "abstain",
+        "abstained": true,
+        "citations": [
+          {
+            "ref": "fsa-en-presentation-2025.pdf",
+            "url": "https://www.fsa.go.jp/common/conference/danwa/20250521.pdf",
+            "authority": "primary"
+          }
+        ],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "fsa-en-presentation-2025.pdf#14",
+        "mailmate-furusato.md#10",
+        "mailmate-furusato.md#0",
+        "mailmate-new-nisa.md#9",
+        "wikipedia-nisa.md#2",
+        "ezeirishi-furusato.md#5"
+      ],
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=true, expected true"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 23,
+        "category": "abstain",
+        "question": "What is the capital gains tax rate in Singapore?",
+        "abstained": true
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 2743,
+      "answer": {
+        "answer": "I can't answer this from my sources. The excerpts cover Japan's NISA and furusato nozei only, and none of them states Singapore's capital gains tax rate. For reference, the excerpts say ordinary Japanese taxable accounts pay about 20.315% on capital gains, but that is Japan's rate and not Singapore's. Please check Singapore's tax authority (IRAS) for Singapore rules.",
+        "verdict": "abstain",
+        "abstained": true,
+        "citations": [
+          {
+            "ref": "maymoney-nisa-en.md",
+            "url": "https://may-money.com/en/nisa-guide-en/",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "maymoney-nisa-en.md#6",
+        "argentum-nisa.md#18",
+        "argentum-nisa.md#9",
+        "argentum-nisa.md#11",
+        "retirejapan-nisa.md#0",
+        "tyton-nisa-foreigners.md#4"
+      ],
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=true, expected true"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 24,
+        "category": "ja",
+        "question": "ふるさと納税のワンストップ特例は何自治体まで使えますか？",
+        "text": "5",
+        "japanese": true
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 3128,
+      "answer": {
+        "answer": "**5団体（自治体）以内**です。ふるさと納税先が5団体を超えると、ワンストップ特例は使えず確定申告が必要です（総務省）。同じ自治体に何回寄附しても1団体として数えます。対象は確定申告が不要な給与所得者等に限られます。申請書は寄附先の自治体に提出する必要があり、受付期限は翌年1月10日必着です。2026年10月の改正はこの条件を変えていません。",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "mic-furusato-faq.md",
+            "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/faq/",
+            "authority": "primary"
+          },
+          {
+            "ref": "mic-furusato-about.md",
+            "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/about/",
+            "authority": "primary"
+          },
+          {
+            "ref": "mic-furusato-2015-reform.md",
+            "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/topics/20150401.html",
+            "authority": "primary"
+          },
+          {
+            "ref": "toolcalc-furusato-2026.md",
+            "url": "https://tool-calc.com/blog/furusato-2026-october/",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "mic-furusato-faq.md#2",
+        "mic-furusato-faq.md#0",
+        "mic-furusato-2015-reform.md#1",
+        "mic-furusato-faq.md#1",
+        "toolcalc-furusato-2026.md#0",
+        "mic-furusato-about.md#1"
+      ],
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/5/i"
+          },
+          {
+            "name": "japanese",
+            "pass": true,
+            "detail": "answer mostly in Japanese"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "keyword-search",
+      "question": {
+        "id": 25,
+        "category": "ja",
+        "question": "成長投資枠の生涯上限はいくらですか？",
+        "amounts": [
+          12000000
+        ],
+        "japanese": true
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 3314,
+      "answer": {
+        "answer": "成長投資枠の生涯上限（非課税保有限度額のうち成長投資枠の限度）は**1,200万円**です。総枠1,800万円の内数で、つみたて投資枠だけで1,800万円まで使うこともできます。年間では成長投資枠240万円（つみたて投資枠120万円、合計360万円）です。簿価（取得価額）で管理され、売却すると簿価分が翌年以降に復活します。2024年から有効なこの制度は、2026年10月4日時点でも変わっていません。",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "fsa-nisa-know.md",
+            "url": "https://www.fsa.go.jp/policy/nisa2/know/",
+            "authority": "primary"
+          },
+          {
+            "ref": "mof-chugoku-nisa.md",
+            "url": "https://lfb.mof.go.jp/chugoku/kinyusyouken/kin3/nisaseido.html",
+            "authority": "primary"
+          },
+          {
+            "ref": "nissay-nisa-glossary.md",
+            "url": "https://note.nam.co.jp/n/n827113e4189a",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "fptax-nisa-2027.md",
+            "url": "https://note.com/fp_tax_note/n/n76fede4e7a16",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [],
+        "toolCalls": 0
+      },
+      "retrieved": [
+        "fptax-nisa-2027.md#9",
+        "nissay-nisa-glossary.md#2",
+        "fsa-nisa-know.md#2",
+        "nissay-nisa-glossary.md#0",
+        "fsa-nisa-slides.pdf#11",
+        "mof-chugoku-nisa.md#0"
+      ],
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "japanese",
+            "pass": true,
+            "detail": "answer mostly in Japanese"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 1,
+        "category": "current",
+        "question": "What is the annual limit of the NISA growth investment quota?",
+        "amounts": [
+          2400000
+        ]
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 16438,
+      "answer": {
+        "answer": "The NISA growth investment quota (成長投資枠) annual limit is **¥2,400,000**, in force since 1 January 2024 and unchanged on 2026-10-04. It can be used alongside the tsumitate quota (¥1,200,000), for a combined ¥3,600,000 a year. Growth-quota holdings are also capped at ¥12,000,000 within the ¥18,000,000 lifetime limit, which is measured at purchase cost.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-growth-annual-limit-2024",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "fsa-nisa-know.md",
+            "url": "https://www.fsa.go.jp/policy/nisa2/know/",
+            "authority": "primary"
+          },
+          {
+            "ref": "mof-chugoku-nisa.md",
+            "url": "https://lfb.mof.go.jp/chugoku/kinyusyouken/kin3/nisaseido.html",
+            "authority": "primary"
+          },
+          {
+            "ref": "ruleVersion-nisa-combined-use-2024",
+            "url": null,
+            "authority": "verified"
+          }
+        ],
+        "conflicts": [],
+        "rule": {
+          "ruleKey": "nisa.growth.annualLimit",
+          "validFrom": "2024-01-01",
+          "validTo": null
+        },
+        "toolCalls": 5
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 2,
+        "category": "current",
+        "question": "What is the maximum I can invest in NISA per year in total?",
+        "amounts": [
+          3600000
+        ]
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 9274,
+      "answer": {
+        "answer": "The maximum is ¥3,600,000 per year. It is ¥1,200,000 in the tsumitate quota plus ¥2,400,000 in the growth quota, and you can use both in the same year. This is the new NISA rule in force since 1 January 2024 and it applies on 2026-10-04. Separately, the lifetime cap is ¥18,000,000 at purchase cost, and the growth quota is capped at ¥12,000,000 within it. Both quotas must be held at the same financial institution.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-combined-use-2024",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "fsa-nisa-know.md",
+            "url": "https://www.fsa.go.jp/policy/nisa2/know/",
+            "authority": "primary"
+          },
+          {
+            "ref": "fsa-nisa-slides.pdf",
+            "url": "https://www.fsa.go.jp/policy/nisa2/about/nisa2024/slide_202406.pdf",
+            "authority": "primary"
+          },
+          {
+            "ref": "mof-chugoku-nisa.md",
+            "url": "https://lfb.mof.go.jp/chugoku/kinyusyouken/kin3/nisaseido.html",
+            "authority": "primary"
+          },
+          {
+            "ref": "ruleVersion-nisa-tsumitate-annual-limit-2024",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "ruleVersion-nisa-growth-annual-limit-2024",
+            "url": null,
+            "authority": "verified"
+          }
+        ],
+        "conflicts": [],
+        "rule": {
+          "ruleKey": "nisa.quotas.combinedUse",
+          "validFrom": "2024-01-01",
+          "validTo": null
+        },
+        "toolCalls": 2
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 3,
+        "category": "current",
+        "question": "What is the NISA lifetime limit, and how much of it can the growth quota use?",
+        "amounts": [
+          18000000,
+          12000000
+        ]
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 17003,
+      "answer": {
+        "answer": "The NISA lifetime tax-exempt limit is **¥18,000,000**, counted at purchase cost (book value), not market value. This has applied since 1 January 2024 and is still in force on 2026-10-04. The growth quota (成長投資枠) can use at most **¥12,000,000** of it. The tsumitate quota has no sub-cap and can fill the whole ¥18,000,000. Selling frees the sold holdings' purchase cost from the following year.\n\nInformation only, not tax advice.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-lifetime-limit-2024",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "mof-chugoku-nisa.md",
+            "url": "https://lfb.mof.go.jp/chugoku/kinyusyouken/kin3/nisaseido.html",
+            "authority": "primary"
+          },
+          {
+            "ref": "fsa-nisa-slides.pdf",
+            "url": "https://www.fsa.go.jp/policy/nisa2/about/nisa2024/slide_202406.pdf",
+            "authority": "primary"
+          },
+          {
+            "ref": "ruleVersion-nisa-quota-reuse-2024",
+            "url": null,
+            "authority": "verified"
+          }
+        ],
+        "conflicts": [
+          {
+            "source": "retirejapan-nisa.md",
+            "kind": "incorrect"
+          }
+        ],
+        "rule": {
+          "ruleKey": "nisa.lifetimeLimit",
+          "validFrom": "2024-01-01",
+          "validTo": null
+        },
+        "toolCalls": 5
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 4,
+        "category": "current",
+        "question": "How long can I keep NISA investments tax-free if I buy them now?",
+        "text": "indefinite|no time limit|unlimited|無期限"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 12534,
+      "answer": {
+        "answer": "Indefinitely. Under the rule in force since 1 January 2024, NISA purchases made now have no time limit on tax-free holding. The old 5-year (general) and 20-year (tsumitate) windows were abolished for new purchases. The limit that applies is the ¥18,000,000 lifetime cap, measured at purchase cost. Gains and losses in NISA can't be offset against taxable accounts. If you leave Japan, separate rules apply (see the NISA-when-leaving-Japan entry).",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-holding-period-2024",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "fsa-nisa-know.md",
+            "url": "https://www.fsa.go.jp/policy/nisa2/know/",
+            "authority": "primary"
+          },
+          {
+            "ref": "ruleVersion-nisa-lifetime-limit-2024",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "wikipedia-nisa.md",
+            "url": "https://en.wikipedia.org/wiki/Nippon_individual_savings_account",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "tyton-nisa-english.md",
+            "url": "https://www.tytoncapital.com/portfolio/can-i-get-a-japanese-nisa-retirement-account-in-english/",
+            "authority": "secondary-institutional"
+          }
+        ],
+        "conflicts": [
+          {
+            "source": "wikipedia-nisa.md",
+            "kind": "outdated"
+          },
+          {
+            "source": "tyton-nisa-english.md",
+            "kind": "outdated"
+          }
+        ],
+        "rule": {
+          "ruleKey": "nisa.holdingPeriod",
+          "validFrom": "2024-01-01",
+          "validTo": null
+        },
+        "toolCalls": 3
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/indefinite|no time limit|unlimited|無期限/i"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 5,
+        "category": "current",
+        "question": "How much of my furusato nozei donations do I pay myself?",
+        "amounts": [
+          2000
+        ]
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 15957,
+      "answer": {
+        "answer": "**¥2,000 per calendar year**, as long as your donations stay within your personal deduction limit. The ¥2,000 applies once to your total donations for the year, not per donation. The rest (donation − ¥2,000) is deducted from income tax and residence tax. This rule has applied to donations since 2011. Any amount above your limit gets no deduction and is a pure cost to you. Foreign residents must be registered in Japan on January 1 of the following year, or the residence-tax credit is lost. This is information, not tax advice.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-furusato-self-burden",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "nta-1155.md",
+            "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1155.htm",
+            "authority": "primary"
+          },
+          {
+            "ref": "furusato_nozei/limit_calculation",
+            "url": null,
+            "authority": "unknown"
+          },
+          {
+            "ref": "maymoney-furusato-en.md",
+            "url": "https://may-money.com/en/furusato-nozei-guide-en/",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "expatjp-furusato.md",
+            "url": "https://expat.jp/furusato-nozei/",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [],
+        "rule": {
+          "ruleKey": "furusato.selfBurden",
+          "validFrom": "2011-01-01",
+          "validTo": null
+        },
+        "toolCalls": 5
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 6,
+        "category": "premise",
+        "question": "Tsumitate NISA is limited to ¥400,000 a year, right?",
+        "verdict": [
+          "no"
+        ],
+        "amounts": [
+          1200000
+        ]
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 16773,
+      "answer": {
+        "answer": "No — ¥400,000 was the pre-2024 limit. Tsumitate NISA (2018–2023) had a ¥400,000 annual limit and a 20-year tax-free period. Under the new NISA, in force since January 1, 2024, the tsumitate investment quota is ¥1,200,000 per year. It can be used alongside the growth quota (¥2,400,000), for a combined ¥3,600,000 a year. The lifetime limit is ¥18,000,000, and the tsumitate quota alone can fill all of it. The old figure still appears in some English-language guides.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-tsumitate-annual-limit-2024",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "fsa-nisa-know.md",
+            "url": "https://www.fsa.go.jp/policy/nisa2/know/",
+            "authority": "primary"
+          },
+          {
+            "ref": "fsa-tax-reform-h26.pdf",
+            "url": "https://www.fsa.go.jp/news/25/sonota/20131224-2/01.pdf",
+            "authority": "primary"
+          },
+          {
+            "ref": "ruleVersion-nisa-tsumitate-annual-limit-2018",
+            "url": null,
+            "authority": "verified"
+          }
+        ],
+        "conflicts": [
+          {
+            "source": "wikipedia-nisa.md",
+            "kind": "outdated"
+          }
+        ],
+        "rule": {
+          "ruleKey": "nisa.tsumitate.annualLimit",
+          "validFrom": "2024-01-01",
+          "validTo": null
+        },
+        "toolCalls": 6
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 7,
+        "category": "premise",
+        "question": "Is the tsumitate lifetime limit ¥6 million?",
+        "verdict": [
+          "no"
+        ],
+        "amounts": [
+          18000000
+        ]
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 15705,
+      "answer": {
+        "answer": "No. The ¥6 million figure is wrong for the tsumitate quota. Since 1 January 2024 the tsumitate quota has no separate lifetime cap. It can fill the whole ¥18,000,000 lifetime limit, which is counted at purchase cost. Only the growth quota is capped, at ¥12,000,000. The annual tsumitate limit is ¥1,200,000. ¥6 million was the old general NISA's total (¥1.2m × 5 years). The old tsumitate NISA's total was ¥8 million (¥400,000 × 20 years).",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-lifetime-limit-2024",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "mof-chugoku-nisa.md",
+            "url": "https://lfb.mof.go.jp/chugoku/kinyusyouken/kin3/nisaseido.html",
+            "authority": "primary"
+          },
+          {
+            "ref": "fsa-nisa-know.md",
+            "url": "https://www.fsa.go.jp/policy/nisa2/know/",
+            "authority": "primary"
+          }
+        ],
+        "conflicts": [
+          {
+            "source": "retirejapan-nisa.md",
+            "kind": "incorrect"
+          }
+        ],
+        "rule": {
+          "ruleKey": "nisa.lifetimeLimit",
+          "validFrom": "2024-01-01",
+          "validTo": null
+        },
+        "toolCalls": 6
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 8,
+        "category": "premise",
+        "question": "I need to be 20 to open a NISA account, correct?",
+        "verdict": [
+          "no"
+        ],
+        "text": "\\b18\\b"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 15247,
+      "answer": {
+        "answer": "No — 20 was the minimum age only from 2014 to 2022. Since January 1, 2023 the minimum is **18**, judged on January 1 of the year you open the account (not on your application date). On the as-of date (2026-10-04) the 18+ rule applies. You also need to be a resident of Japan (nationality doesn't matter) and provide a My Number. English guides written before 2023 that say 20 are outdated, but my sources don't name a specific guide that does. This is information, not tax advice.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-eligibility-age-2023",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "ruleVersion-nisa-eligibility-age-2014",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "fukushima-bank-age.pdf",
+            "url": "https://www.fukushimabank.co.jp/press/2021/img/20220401_seinen.pdf",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "rakuten-sec-age.md",
+            "url": "https://www.rakuten-sec.co.jp/web/info/info20220214-01.html",
+            "authority": "secondary-institutional"
+          }
+        ],
+        "conflicts": [],
+        "rule": {
+          "ruleKey": "nisa.eligibilityAge",
+          "validFrom": "2023-01-01",
+          "validTo": null
+        },
+        "toolCalls": 6
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/\\b18\\b/i"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 9,
+        "category": "premise",
+        "question": "Can I still get Rakuten points for furusato nozei donations?",
+        "verdict": [
+          "no"
+        ],
+        "text": "2025"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 14922,
+      "answer": {
+        "answer": "Mostly no. Since 1 October 2025 (the rule in force on 2026-10-04), municipalities may not accept furusato nozei donations through portal sites that give donors points or similar rewards. That covers point-site arrangements such as Rakuten points. Ordinary credit card points earned on the payment itself are not affected. One English guide, expatjp-furusato.md, says Rakuten base points still apply. That conflicts with the ban, which does not carve out a \"base point\" exception.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-furusato-portal-points-ban-2025",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "maymoney-furusato-en.md",
+            "url": "https://may-money.com/en/furusato-nozei-guide-en/",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "expatjp-furusato.md",
+            "url": "https://expat.jp/furusato-nozei/",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [
+          {
+            "source": "expatjp-furusato.md",
+            "kind": "incorrect"
+          }
+        ],
+        "rule": {
+          "ruleKey": "furusato.portalPoints",
+          "validFrom": "2025-10-01",
+          "validTo": null
+        },
+        "toolCalls": 5
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/2025/i"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 10,
+        "category": "premise",
+        "question": "I donated to 2 towns, 6 times in total. Can I still use the one-stop exception?",
+        "verdict": [
+          "yes",
+          "depends"
+        ],
+        "text": "municipalit|自治体"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 17040,
+      "answer": {
+        "answer": "Yes, probably. The one-stop limit counts **different municipalities**, not the number of donations. Six donations to 2 towns count as 2, well under the limit of 5. Repeat donations to the same town count as one.\n\nYou still need to meet these conditions:\n- You are a salaried employee who files no tax return (確定申告) for any other reason, such as overseas dependents, medical deductions or investment income.\n- Each town receives your application by **January 10** of next year. A postmark is not enough.\n\nIf you file a tax return, all one-stop applications are voided. In that case, declare every donation on the return. The knowledge base does not give an effective date for this rule.",
+        "verdict": "yes",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-furusato-one-stop",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "mic-furusato-2015-reform.md",
+            "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/topics/20150401.html",
+            "authority": "primary"
+          }
+        ],
+        "conflicts": [],
+        "rule": {
+          "ruleKey": "furusato.oneStop",
+          "validFrom": "2015-04-01",
+          "validTo": null
+        },
+        "toolCalls": 6
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=yes, allowed yes|depends"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/municipalit|自治体/i"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 11,
+        "category": "date",
+        "asOf": "2022-06-01",
+        "question": "What is the annual limit for tsumitate NISA?",
+        "amounts": [
+          400000
+        ]
+      },
+      "asOf": "2022-06-01",
+      "latencyMs": 15189,
+      "answer": {
+        "answer": "As of 1 June 2022, the annual limit for tsumitate NISA (つみたてNISA) is ¥400,000 per year. This rule has been in force since January 2018. The tax-free period is 20 years, and the maximum over 20 years is ¥8,000,000. You cannot use it in the same calendar year as general NISA. The system ends for new purchases after 2023. The ¥1,200,000 tsumitate quota is a separate 2024+ rule, not yet in force on this date. This is information only, not tax advice.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-tsumitate-annual-limit-2018",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "ruleVersion-nisa-combined-use-2018",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "fsa-tax-reform-h26.pdf",
+            "url": "https://www.fsa.go.jp/news/25/sonota/20131224-2/01.pdf",
+            "authority": "primary"
+          }
+        ],
+        "conflicts": [],
+        "rule": {
+          "ruleKey": "nisa.tsumitate.annualLimit",
+          "validFrom": "2018-01-01",
+          "validTo": "2023-12-31"
+        },
+        "toolCalls": 5
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 12,
+        "category": "date",
+        "asOf": "2015-06-01",
+        "question": "What is the annual limit for general NISA?",
+        "amounts": [
+          1000000
+        ]
+      },
+      "asOf": "2015-06-01",
+      "latencyMs": 15185,
+      "answer": {
+        "answer": "On 2015-06-01, the general NISA annual limit was ¥1,000,000 per person. This rule applied from January 2014 to December 2015, with a 5-year tax-free period. It rose to ¥1,200,000 from January 2016. Figures you may see for the current system (¥1.2M tsumitate + ¥2.4M growth quotas) only start in 2024.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-general-annual-limit-2014",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "fsa-supervision-nisa-2015.md",
+            "url": "https://www.fsa.go.jp/news/27/syouken/20151030-2.html",
+            "authority": "primary"
+          },
+          {
+            "ref": "fsa-en-accessfsa-2023.pdf § overview",
+            "url": null,
+            "authority": "unknown"
+          }
+        ],
+        "conflicts": [],
+        "rule": {
+          "ruleKey": "nisa.growth.annualLimit",
+          "validFrom": "2014-01-01",
+          "validTo": "2015-12-31"
+        },
+        "toolCalls": 5
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 13,
+        "category": "date",
+        "asOf": "2010-06-01",
+        "question": "What is the minimum amount I pay myself for furusato nozei donations this year?",
+        "amounts": [
+          5000
+        ]
+      },
+      "asOf": "2010-06-01",
+      "latencyMs": 9290,
+      "answer": {
+        "answer": "As of 2010-06-01 the minimum self-burden is ¥5,000. This is the rule for donations made in 2008–2010. The ¥2,000 figure applies only to donations from 2011 onwards, so it does not apply to this year's donations. The rule is a ¥5,000 residence-tax minimum. My sources don't give an exact effective date beyond \"2008–2010\". Informational only, not tax advice.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-furusato-self-burden-2008",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "ruleVersion-furusato-self-burden",
+            "url": null,
+            "authority": "verified"
+          }
+        ],
+        "conflicts": [],
+        "rule": {
+          "ruleKey": "furusato.selfBurden",
+          "validFrom": "2008-01-01",
+          "validTo": "2010-12-31"
+        },
+        "toolCalls": 1
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 14,
+        "category": "date",
+        "asOf": "2027-03-01",
+        "question": "Can my 10-year-old open a NISA account?",
+        "verdict": [
+          "yes",
+          "depends"
+        ],
+        "amounts": [
+          600000
+        ]
+      },
+      "asOf": "2027-03-01",
+      "latencyMs": 17161,
+      "answer": {
+        "answer": "Yes — as of 2027-03-01. Children's NISA (こどもNISA) took effect on 1 January 2027 for residents of Japan aged 0–17 on 1 January of the year. Before 2027, minors had no NISA option, because adult NISA needs age 18 or older. The limits are ¥600,000 a year and ¥6,000,000 in total, for tsumitate-type investment trusts only. Withdrawals are blocked before age 12 except in unavoidable circumstances. From age 12 a guardian can withdraw only for the child's benefit, with the child's consent and a formal application. At 18 the account converts automatically to the adult tsumitate quota. Gifts to the child can trigger gift tax. Note that the knowledge base text still calls the 2027 start 'not yet in force'; I applied the stated 1 January 2027 start date to your as-of date.",
+        "verdict": "yes",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-minors-2027",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "ruleVersion-nisa-minors-gap-2024",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "nisa/eligibility_and_age",
+            "url": null,
+            "authority": "unknown"
+          },
+          {
+            "ref": "nomura-kodomo-nisa.md",
+            "url": "https://www.nomura.co.jp/fin-wing/column/new-nisa4/",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "fptax-nisa-2027.md",
+            "url": "https://note.com/fp_tax_note/n/n76fede4e7a16",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [],
+        "rule": {
+          "ruleKey": "nisa.minors",
+          "validFrom": "2027-01-01",
+          "validTo": null
+        },
+        "toolCalls": 6
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=yes, allowed yes|depends"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 15,
+        "category": "date",
+        "question": "Can my 10-year-old open a NISA account now?",
+        "verdict": [
+          "no"
+        ],
+        "text": "2027"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 9665,
+      "answer": {
+        "answer": "No. As of 2026-10-04 there is no NISA option for a 10-year-old. Adult NISA requires age 18 or older on January 1. Junior NISA is closed to new investment, and no minor NISA exists for 2024–2026.\n\nChildren's NISA (こどもNISA) is enacted law but not yet in force. It starts on January 1, 2027, for residents aged 0–17. Its limits are ¥600,000 a year and ¥6,000,000 in total, and it covers tsumitate-type investment trusts only. Withdrawals are blocked under age 12. Which institutions will offer it, and how to open an account, are still to be announced.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-minors-gap-2024",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "ruleVersion-nisa-minors-2027",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "ruleVersion-nisa-eligibility-age-2023",
+            "url": null,
+            "authority": "verified"
+          }
+        ],
+        "conflicts": [],
+        "rule": {
+          "ruleKey": "nisa.minors",
+          "validFrom": "2024-01-01",
+          "validTo": "2026-12-31"
+        },
+        "toolCalls": 3
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/2027/i"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 16,
+        "category": "future",
+        "question": "From October 2028, what share of donations must municipalities keep for local use?",
+        "text": "57\\.5"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 16022,
+      "answer": {
+        "answer": "From October 1, 2028 (designation year 2028-10 to 2029-09), municipalities must keep at least **57.5%** of donations for local use. That means fundraising costs may be at most 42.5%. As of 2026-10-04 this is law but not yet in force. Today's step is 52.5% (since 2026-10-01). It rises to 55% in October 2027 and 60% in October 2029. The 30% return-gift cap is unchanged. This rule applies to municipalities, so your deduction is unaffected. Information only, not tax advice.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-furusato-cost-cap-2028",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "mic-furusato-criteria-2026.pdf",
+            "url": "https://www.soumu.go.jp/main_content/001070694.pdf",
+            "authority": "primary"
+          },
+          {
+            "ref": "mic-furusato-press-2024.md",
+            "url": "https://www.soumu.go.jp/menu_news/s-news/01zeimu04_02000126.html",
+            "authority": "primary"
+          }
+        ],
+        "conflicts": [],
+        "rule": {
+          "ruleKey": "furusato.fundraisingCostCap",
+          "validFrom": "2026-10-01",
+          "validTo": "2027-09-30"
+        },
+        "toolCalls": 6
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/57\\.5/i"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 17,
+        "category": "future",
+        "question": "Does the ¥1.93 million cap on the furusato special deduction apply to my donations this year?",
+        "verdict": [
+          "no"
+        ],
+        "text": "2027"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 17682,
+      "answer": {
+        "answer": "No, not for donations made this year (2026). The ¥1.93 million cap applies only to donations made from January 1, 2027. It is law (令和8年法律第2号, passed March 31, 2026) but not yet in force. For 2026 donations the residence-tax special deduction is capped at 20% of your residence-tax income levy (所得割額), the rule for 2015–2026. From 2027 the cap will be the lower of 20% of the levy and ¥1.93M. It affects only very high earners, with salaries of roughly ¥20–30 million or more, and first shows up in FY2028 residence tax.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-furusato-deduction-cap-2015",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "ruleVersion-furusato-deduction-cap-2027",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "okane-furusato-2026.md",
+            "url": "https://www.okane-n4vi.com/blog/furusato-2026-october-reform",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "mic-furusato-faq.md",
+            "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/faq/",
+            "authority": "primary"
+          },
+          {
+            "ref": "mic-furusato-overview.pdf",
+            "url": "https://www.soumu.go.jp/main_content/000448758.pdf",
+            "authority": "primary"
+          }
+        ],
+        "conflicts": [],
+        "rule": {
+          "ruleKey": "furusato.specialDeductionCap",
+          "validFrom": "2015-01-01",
+          "validTo": "2026-12-31"
+        },
+        "toolCalls": 6
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/2027/i"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 18,
+        "category": "future",
+        "question": "What is the furusato special deduction cap for donations made in 2027?",
+        "amounts": [
+          1930000
+        ],
+        "text": "20 ?%|2割"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 14622,
+      "answer": {
+        "answer": "For donations made from January 1, 2027, the residence-tax special deduction (特例控除額) is capped at the **lower of** 20% of your residence-tax income levy (所得割額) **or ¥1,930,000** (prefectural + municipal combined). The 20% cap continues alongside it. In practice only very high earners (roughly ¥100 million salary) are affected; salaries up to about ¥20–30 million are not. Donations above the cap are still allowed, and the ~10% basic deduction still applies. It is law (令和8年法律第2号, passed March 31, 2026), not yet in force as of 2026-10-04, and first affects FY2028 residence tax. Informational only, not tax advice.",
+        "verdict": "info",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-furusato-deduction-cap-2027",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "mic-furusato-faq.md",
+            "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/faq/",
+            "authority": "primary"
+          },
+          {
+            "ref": "okane-furusato-2026.md",
+            "url": "https://www.okane-n4vi.com/blog/furusato-2026-october-reform",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "furusato_nozei/designation_and_reform",
+            "url": null,
+            "authority": "unknown"
+          }
+        ],
+        "conflicts": [],
+        "rule": {
+          "ruleKey": "furusato.specialDeductionCap",
+          "validFrom": "2015-01-01",
+          "validTo": "2026-12-31"
+        },
+        "toolCalls": 5
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/20 ?%|2割/i"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 19,
+        "category": "leaving",
+        "question": "I'm moving abroad on my own to study. Can I keep my NISA?",
+        "verdict": [
+          "no"
+        ],
+        "text": "departure notice|出国届出書|taxable"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 17103,
+      "answer": {
+        "answer": "**No, not as a self-initiated move.** The continuation notice (継続適用届出書), which lets you keep existing NISA holdings tax-free abroad, covers only employer transfer orders (or similarly unavoidable reasons) and accompanying spouses. Voluntary study abroad is explicitly excluded. Instead, file a departure notice (出国届出書). Your NISA account is then closed and holdings move to a taxable account. No tax is triggered at transfer, but later gains and dividends are taxable, and you cannot make new NISA purchases. Brokers' deadlines vary, so confirm with yours before leaving. The sources give no effective date for this rule. Informational only, not tax advice.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-leaving-japan",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "expatfinance-nisa-leaving.md",
+            "url": "https://note.com/expat_finance/n/n4e5d577b5546",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "mufg-faq-leaving.md",
+            "url": "https://faq01.bk.mufg.jp/faq/show/5958?site_domain=default",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "mizuho-faq-leaving.md",
+            "url": "https://www.faq.mizuhobank.co.jp/faq/show/8370?category_id=62&site_domain=default",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "tyton-nisa-foreigners.md",
+            "url": "https://www.tytoncapital.com/portfolio/nisa-account-for-foreign-gaijin-japan-tokyo/",
+            "authority": "secondary-institutional"
+          }
+        ],
+        "conflicts": [],
+        "rule": {
+          "ruleKey": "nisa.leavingJapan",
+          "validFrom": "2019-04-01",
+          "validTo": null
+        },
+        "toolCalls": 5
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/departure notice|出国届出書|taxable/i"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 20,
+        "category": "leaving",
+        "question": "My employer is transferring me overseas for 4 years. Can I keep buying in my NISA while abroad?",
+        "verdict": [
+          "no"
+        ],
+        "text": "continuation|継続適用"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 16273,
+      "answer": {
+        "answer": "No — you can't buy new units while abroad. As an employer-ordered transferee you can file a continuation notice (継続適用届出書) by the day before departure; your brokers may set earlier deadlines. Existing holdings stay tax-exempt and you can sell them. New purchases, including dividend reinvestment, are not allowed. The exemption lasts until Dec 31 of the year five years after the notice. A 4-year posting fits inside that, but you must file a return notice (帰国届出書) on coming home. Purchases resume from the day you file it. If your broker doesn't support continuation, the account must be closed before you leave.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-leaving-japan",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "expatfinance-nisa-leaving.md",
+            "url": "https://note.com/expat_finance/n/n4e5d577b5546",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "mufg-faq-leaving.md",
+            "url": "https://faq01.bk.mufg.jp/faq/show/5958?site_domain=default",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "mizuho-faq-leaving.md",
+            "url": "https://www.faq.mizuhobank.co.jp/faq/show/8370?category_id=62&site_domain=default",
+            "authority": "secondary-institutional"
+          }
+        ],
+        "conflicts": [],
+        "rule": {
+          "ruleKey": "nisa.leavingJapan",
+          "validFrom": "2019-04-01",
+          "validTo": null
+        },
+        "toolCalls": 5
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/continuation|継続適用/i"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 21,
+        "category": "leaving",
+        "question": "My company is sending me abroad for 7 years. Will my NISA stay tax-free the whole time?",
+        "verdict": [
+          "no",
+          "depends"
+        ],
+        "text": "\\b5\\b|five"
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 16467,
+      "answer": {
+        "answer": "**Probably not for the full 7 years.** If your employer's transfer order qualifies, you can file a continuation notice (継続適用届出書) by the day before departure (brokers often set earlier deadlines). Your existing holdings then stay tax-exempt until Dec 31 of the year in which 5 years have passed since the notice. A notice filed in 2027 would run to 2032-12-31. If you have not filed the return notice (帰国届出書) by then, the account is deemed closed and holdings move to a taxable account. No new purchases are allowed while abroad. My sources give no way to extend beyond 5 years. The effective date of this rule version is not stated in my sources. Exit-tax subjects are excluded, and some brokers do not support continuation at all. Check your broker.",
+        "verdict": "no",
+        "abstained": false,
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-leaving-japan",
+            "url": null,
+            "authority": "verified"
+          },
+          {
+            "ref": "expatfinance-nisa-leaving.md",
+            "url": "https://note.com/expat_finance/n/n4e5d577b5546",
+            "authority": "secondary-independent"
+          },
+          {
+            "ref": "mufg-faq-leaving.md",
+            "url": "https://faq01.bk.mufg.jp/faq/show/5958?site_domain=default",
+            "authority": "secondary-institutional"
+          },
+          {
+            "ref": "mizuho-faq-leaving.md",
+            "url": "https://www.faq.mizuhobank.co.jp/faq/show/8370?category_id=62&site_domain=default",
+            "authority": "secondary-institutional"
+          }
+        ],
+        "conflicts": [],
+        "rule": {
+          "ruleKey": "nisa.leavingJapan",
+          "validFrom": "2019-04-01",
+          "validTo": null
+        },
+        "toolCalls": 6
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "verdict",
+            "pass": true,
+            "detail": "verdict=no, allowed no|depends"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/\\b5\\b|five/i"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 22,
+        "category": "abstain",
+        "question": "What is the iDeCo contribution limit for company employees?",
+        "abstained": true
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 14328,
+      "answer": {
+        "answer": "I can't give the current iDeCo contribution limit for company employees. My sources don't state it. They only say that a reform bill was submitted in May 2025 to raise iDeCo ceilings depending on employment circumstances and to extend the eligible age from 65 to 70, and that it was not yet enacted as of May 2025. I have no information on whether it has since passed or taken effect by 2026-10-04. Please check the official iDeCo or MHLW sources.",
+        "verdict": "abstain",
+        "abstained": true,
+        "citations": [
+          {
+            "ref": "rangsit-nisa-expat.md",
+            "url": "https://rangsit.net/2026/07/10/nisa-ideco-expat/",
+            "authority": "secondary-independent"
+          }
+        ],
+        "conflicts": [],
+        "toolCalls": 5
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=true, expected true"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 23,
+        "category": "abstain",
+        "question": "What is the capital gains tax rate in Singapore?",
+        "abstained": true
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 14105,
+      "answer": {
+        "answer": "I can't answer this. My knowledge base covers only Japanese NISA and furusato nozei rules, and has nothing on Singapore's tax system. For reference, Japan's rate on listed-stock capital gains in a taxable account is 20.315%, but that is not a Singapore figure. Please check Singapore's official tax authority (IRAS).",
+        "verdict": "abstain",
+        "abstained": true,
+        "citations": [],
+        "conflicts": [],
+        "toolCalls": 5
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=true, expected true"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 24,
+        "category": "ja",
+        "question": "ふるさと納税のワンストップ特例は何自治体まで使えますか？",
+        "text": "5",
+        "japanese": true
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 18337,
+      "answer": {
+        "usage": {
+          "input": 39746,
+          "cacheRead": 15440,
+          "cacheWrite": 6436,
+          "output": 850
+        },
+        "answer": "**5自治体まで**です。1年間（暦年）の寄附先が5つ以下の自治体で、確定申告が不要な給与所得者などが対象です。同じ自治体への複数回の寄附は1自治体として数えます。6自治体以上に寄附した場合、または他の理由で確定申告をする場合は、ワンストップ特例は使えず、確定申告で控除を受ける必要があります。申請書は各自治体に翌年1月10日までに必着です。確定申告をすると、提出済みのワンストップ申請はすべて無効になります。参考情報であり、税務アドバイスではありません。",
+        "verdict": "info",
+        "rule": {
+          "ruleKey": "furusato.oneStop",
+          "title": "One-stop exception conditions",
+          "value": {
+            "amount": 5,
+            "unit": "count",
+            "qualifier": "municipalities, not donations"
+          },
+          "validFrom": "2015-04-01",
+          "validTo": null,
+          "status": "in-force"
+        },
+        "asOf": "2026-10-04",
+        "citations": [
+          {
+            "ref": "ruleVersion-furusato-one-stop",
+            "title": "Genten verified rule: One-stop exception conditions",
+            "url": null,
+            "publisher": "Genten",
+            "authority": "verified",
+            "language": "en",
+            "evidence": [
+              {
+                "ref": "mic-furusato-faq",
+                "title": "ふるさと納税 よくある質問",
+                "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/faq/",
+                "publisher": "総務省 Ministry of Internal Affairs and Communications",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "mic-furusato-2015-reform",
+                "title": "ふるさと納税トピックス：制度改正について（2015年4月1日）",
+                "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/topics/20150401.html",
+                "publisher": "総務省 Ministry of Internal Affairs and Communications",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "nta-1155",
+                "title": "No.1155 ふるさと納税(寄附金控除)",
+                "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1155.htm",
+                "publisher": "国税庁 National Tax Agency",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "toolcalc-furusato-2026",
+                "title": "ふるさと納税 2026年10月改正｜何が変わり、何が変わらないか",
+                "url": "https://tool-calc.com/blog/furusato-2026-october/",
+                "publisher": "tool-calc.com (blog)",
+                "authority": "secondary-independent",
+                "language": "ja"
+              },
+              {
+                "ref": "helloworldjapan-furusato",
+                "title": "Furusato Nozei for Foreigners: Cut Your Japan Resident Tax",
+                "url": "https://helloworldjapan.com/en/articles/japan-furusato-nozei-foreigners-guide",
+                "publisher": "Hello World Japan",
+                "authority": "secondary-independent",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "ref": "mic-furusato-2015-reform.md",
+            "title": "ふるさと納税トピックス：制度改正について（2015年4月1日）",
+            "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/topics/20150401.html",
+            "publisher": "総務省 Ministry of Internal Affairs and Communications",
+            "authority": "primary",
+            "language": "ja"
+          },
+          {
+            "ref": "maymoney-furusato-en.md",
+            "title": "Japan Furusato Nozei Complete Guide",
+            "url": "https://may-money.com/en/furusato-nozei-guide-en/",
+            "publisher": "May Money",
+            "authority": "secondary-independent",
+            "language": "en"
+          }
+        ],
+        "conflicts": [],
+        "abstained": false,
+        "trace": [
+          {
+            "tool": "initial_context",
+            "inputSummary": "outline loaded into the system prompt"
+          },
+          {
+            "tool": "knowledge_base_read",
+            "inputSummary": "paths: furusato_nozei/one_stop_exception"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: one-stop 5 municipalities"
+          },
+          {
+            "tool": "knowledge_base_read",
+            "inputSummary": "paths: furusato_nozei/rules_and_mechanics"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: ワンストップ 5団体 10団体 one-stop municipalities limit raised; limit: 3"
+          },
+          {
+            "tool": "knowledge_base_read",
+            "inputSummary": "paths: tax_context/general"
+          }
+        ],
+        "toolCalls": 5
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "text",
+            "pass": true,
+            "detail": "/5/i"
+          },
+          {
+            "name": "japanese",
+            "pass": true,
+            "detail": "answer mostly in Japanese"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    },
+    {
+      "config": "genten",
+      "question": {
+        "id": 25,
+        "category": "ja",
+        "question": "成長投資枠の生涯上限はいくらですか？",
+        "amounts": [
+          12000000
+        ],
+        "japanese": true
+      },
+      "asOf": "2026-10-04",
+      "latencyMs": 16640,
+      "answer": {
+        "usage": {
+          "input": 38790,
+          "cacheRead": 21876,
+          "cacheWrite": 0,
+          "output": 1037
+        },
+        "answer": "成長投資枠の生涯上限は**1,200万円**です。2024年1月1日施行の新NISAの規則で、購入額（簿価）ベースで数えます。NISA全体の生涯上限1,800万円の内数で、つみたて投資枠には内数の上限がなく、単独で1,800万円まで使えます。成長投資枠の年間上限は240万円です。売却すると、売却した商品の簿価分の枠が翌年に復活します。なお、英語ガイドの中にはつみたて投資枠の生涯上限を600万円とするものがありますが誤りです。情報提供であり、税務上の助言ではありません。",
+        "verdict": "info",
+        "rule": {
+          "ruleKey": "nisa.lifetimeLimit",
+          "title": "Lifetime tax-exempt holding limit (2024–)",
+          "value": {
+            "amount": 18000000,
+            "unit": "JPY",
+            "qualifier": "book value; growth quota at most ¥12,000,000"
+          },
+          "validFrom": "2024-01-01",
+          "validTo": null,
+          "status": "in-force"
+        },
+        "asOf": "2026-10-04",
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-lifetime-limit-2024",
+            "title": "Genten verified rule: Lifetime tax-exempt holding limit (2024–)",
+            "url": null,
+            "publisher": "Genten",
+            "authority": "verified",
+            "language": "en",
+            "evidence": [
+              {
+                "ref": "fsa-nisa-know",
+                "title": "NISAを知る（NISA特設ウェブサイト）",
+                "url": "https://www.fsa.go.jp/policy/nisa2/know/",
+                "publisher": "金融庁 Financial Services Agency",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "fsa-nisa-slides",
+                "title": "NISAを利用する皆さまへ（令和6年6月・令和7年9月改訂）",
+                "url": "https://www.fsa.go.jp/policy/nisa2/about/nisa2024/slide_202406.pdf",
+                "publisher": "金融庁 Financial Services Agency",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "mof-chugoku-nisa",
+                "title": "賢く使おう「NISA」制度",
+                "url": "https://lfb.mof.go.jp/chugoku/kinyusyouken/kin3/nisaseido.html",
+                "publisher": "財務省中国財務局 Chugoku Local Finance Bureau (Ministry of Finance)",
+                "authority": "primary",
+                "language": "ja"
+              }
+            ]
+          },
+          {
+            "ref": "mof-chugoku-nisa.md",
+            "title": "賢く使おう「NISA」制度",
+            "url": "https://lfb.mof.go.jp/chugoku/kinyusyouken/kin3/nisaseido.html",
+            "publisher": "財務省中国財務局 Chugoku Local Finance Bureau (Ministry of Finance)",
+            "authority": "primary",
+            "language": "ja"
+          },
+          {
+            "ref": "fsa-nisa-know.md",
+            "title": "NISAを知る（NISA特設ウェブサイト）",
+            "url": "https://www.fsa.go.jp/policy/nisa2/know/",
+            "publisher": "金融庁 Financial Services Agency",
+            "authority": "primary",
+            "language": "ja"
+          },
+          {
+            "ref": "fsa-nisa-slides.pdf",
+            "title": "NISAを利用する皆さまへ（令和6年6月・令和7年9月改訂）",
+            "url": "https://www.fsa.go.jp/policy/nisa2/about/nisa2024/slide_202406.pdf",
+            "publisher": "金融庁 Financial Services Agency",
+            "authority": "primary",
+            "language": "ja"
+          },
+          {
+            "ref": "retirejapan-nisa.md",
+            "title": "NISA Accounts in Japan: A Beginner's Guide",
+            "url": "https://www.retirejapan.com/nisa/",
+            "publisher": "RetireJapan",
+            "authority": "secondary-independent",
+            "language": "en"
+          }
+        ],
+        "conflicts": [
+          {
+            "claim": "つみたて投資枠の生涯上限は600万円",
+            "source": "retirejapan-nisa.md",
+            "kind": "incorrect",
+            "note": "600万円は2024年以前の一般NISAの総枠で、2024年以降はつみたて投資枠だけで1,800万円まで使えます。",
+            "sourceTitle": "NISA Accounts in Japan: A Beginner's Guide",
+            "url": "https://www.retirejapan.com/nisa/"
+          }
+        ],
+        "abstained": false,
+        "trace": [
+          {
+            "tool": "initial_context",
+            "inputSummary": "outline loaded into the system prompt"
+          },
+          {
+            "tool": "knowledge_base_read",
+            "inputSummary": "paths: nisa/account_rules"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: 成長投資枠 生涯 12,000,000 lifetime growth"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: Growth investment quota lifetime"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: ¥6,000,000 tsumitate lifetime limit guide"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: 成長投資枠 1,200万円"
+          }
+        ],
+        "toolCalls": 5
+      },
+      "grade": {
+        "correct": true,
+        "correctOfficial": true,
+        "checks": [
+          {
+            "name": "abstained",
+            "pass": true,
+            "detail": "abstained=false, expected false"
+          },
+          {
+            "name": "amounts",
+            "pass": true,
+            "detail": "all present"
+          },
+          {
+            "name": "japanese",
+            "pass": true,
+            "detail": "answer mostly in Japanese"
+          },
+          {
+            "name": "official",
+            "pass": true,
+            "detail": "cites an official source or verified rule"
+          }
+        ]
+      }
+    }
+  ]
+}

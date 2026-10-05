@@ -1,0 +1,982 @@
+{
+  "generatedAt": "2026-10-05T03:20:17.286Z",
+  "model": "claude-sonnet-5-5",
+  "asOf": "2026-10-05",
+  "answers": [
+    {
+      "question": "Is the tsumitate lifetime limit ¥6 million?",
+      "answer": {
+        "usage": {
+          "input": 48740,
+          "cacheRead": 21876,
+          "cacheWrite": 0,
+          "output": 1152
+        },
+        "answer": "No. The tsumitate quota has no separate ¥6 million lifetime limit. Under the new NISA (in force since 1 January 2024) the total lifetime limit is ¥18,000,000, measured at purchase cost. Only the growth quota has a sub-cap (¥12,000,000). The tsumitate quota can fill the whole ¥18,000,000 by itself. Its annual limit is ¥1,200,000. ¥6,000,000 was the old general NISA total (¥1.2M × 5 years). The old tsumitate NISA limit was ¥8,000,000 (¥400,000 × 20 years).",
+        "verdict": "no",
+        "rule": {
+          "ruleKey": "nisa.lifetimeLimit",
+          "title": "Lifetime tax-exempt holding limit (2024–)",
+          "value": {
+            "amount": 18000000,
+            "unit": "JPY",
+            "qualifier": "book value; growth quota at most ¥12,000,000"
+          },
+          "validFrom": "2024-01-01",
+          "validTo": null,
+          "status": "in-force"
+        },
+        "asOf": "2026-10-05",
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-lifetime-limit-2024",
+            "title": "Genten verified rule: Lifetime tax-exempt holding limit (2024–)",
+            "url": null,
+            "publisher": "Genten",
+            "authority": "verified",
+            "language": "en",
+            "evidence": [
+              {
+                "ref": "fsa-nisa-know",
+                "title": "NISAを知る（NISA特設ウェブサイト）",
+                "url": "https://www.fsa.go.jp/policy/nisa2/know/",
+                "publisher": "金融庁 Financial Services Agency",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "fsa-nisa-slides",
+                "title": "NISAを利用する皆さまへ（令和6年6月・令和7年9月改訂）",
+                "url": "https://www.fsa.go.jp/policy/nisa2/about/nisa2024/slide_202406.pdf",
+                "publisher": "金融庁 Financial Services Agency",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "mof-chugoku-nisa",
+                "title": "賢く使おう「NISA」制度",
+                "url": "https://lfb.mof.go.jp/chugoku/kinyusyouken/kin3/nisaseido.html",
+                "publisher": "財務省中国財務局 Chugoku Local Finance Bureau (Ministry of Finance)",
+                "authority": "primary",
+                "language": "ja"
+              }
+            ]
+          },
+          {
+            "ref": "fsa-nisa-know.md",
+            "title": "NISAを知る（NISA特設ウェブサイト）",
+            "url": "https://www.fsa.go.jp/policy/nisa2/know/",
+            "publisher": "金融庁 Financial Services Agency",
+            "authority": "primary",
+            "language": "ja"
+          },
+          {
+            "ref": "mof-chugoku-nisa.md",
+            "title": "賢く使おう「NISA」制度",
+            "url": "https://lfb.mof.go.jp/chugoku/kinyusyouken/kin3/nisaseido.html",
+            "publisher": "財務省中国財務局 Chugoku Local Finance Bureau (Ministry of Finance)",
+            "authority": "primary",
+            "language": "ja"
+          },
+          {
+            "ref": "ruleVersion-nisa-tsumitate-annual-limit-2024",
+            "title": "Genten verified rule: Tsumitate investment quota annual limit (2024–)",
+            "url": null,
+            "publisher": "Genten",
+            "authority": "verified",
+            "language": "en",
+            "evidence": [
+              {
+                "ref": "fsa-nisa-know",
+                "title": "NISAを知る（NISA特設ウェブサイト）",
+                "url": "https://www.fsa.go.jp/policy/nisa2/know/",
+                "publisher": "金融庁 Financial Services Agency",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "fsa-nisa-slides",
+                "title": "NISAを利用する皆さまへ（令和6年6月・令和7年9月改訂）",
+                "url": "https://www.fsa.go.jp/policy/nisa2/about/nisa2024/slide_202406.pdf",
+                "publisher": "金融庁 Financial Services Agency",
+                "authority": "primary",
+                "language": "ja"
+              }
+            ]
+          },
+          {
+            "ref": "retirejapan-nisa.md",
+            "title": "NISA Accounts in Japan: A Beginner's Guide",
+            "url": "https://www.retirejapan.com/nisa/",
+            "publisher": "RetireJapan",
+            "authority": "secondary-independent",
+            "language": "en"
+          }
+        ],
+        "conflicts": [
+          {
+            "claim": "The tsumitate quota has a lifetime limit of ¥6,000,000.",
+            "source": "retirejapan-nisa.md",
+            "kind": "incorrect",
+            "note": "¥6M was the pre-2024 general NISA total, never a tsumitate limit; the tsumitate quota can use the full ¥18M lifetime limit.",
+            "sourceTitle": "NISA Accounts in Japan: A Beginner's Guide",
+            "url": "https://www.retirejapan.com/nisa/"
+          }
+        ],
+        "abstained": false,
+        "trace": [
+          {
+            "tool": "initial_context",
+            "inputSummary": "outline loaded into the system prompt"
+          },
+          {
+            "tool": "knowledge_base_read",
+            "inputSummary": "paths: nisa/account_rules, nisa/reform_history"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: tsumitate lifetime limit ¥6 million"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: retirejapan-nisa.md"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: retirejapan"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: RetireJapan"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: Lifetime tax-exempt holding limit"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Tsumitate NISA is limited to ¥400,000 a year, right?",
+      "answer": {
+        "usage": {
+          "input": 14890,
+          "cacheRead": 7720,
+          "cacheWrite": 0,
+          "output": 900
+        },
+        "answer": "No. ¥400,000 was the pre-2024 tsumitate NISA limit (2018–2023). Under the new NISA, in force since 1 January 2024 and still current on 2026-10-05, the tsumitate investment quota is ¥1,200,000 a year. You can use it together with the growth quota (¥2,400,000), for a combined ¥3,600,000 a year. The lifetime limit is ¥18,000,000. Older English guides that give ¥400,000 describe the old system.",
+        "verdict": "no",
+        "rule": {
+          "ruleKey": "nisa.tsumitate.annualLimit",
+          "title": "Tsumitate investment quota annual limit (2024–)",
+          "value": {
+            "amount": 1200000,
+            "unit": "JPY/year",
+            "qualifier": "tsumitate investment quota (つみたて投資枠)"
+          },
+          "validFrom": "2024-01-01",
+          "validTo": null,
+          "status": "in-force"
+        },
+        "asOf": "2026-10-05",
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-tsumitate-annual-limit-2024",
+            "title": "Genten verified rule: Tsumitate investment quota annual limit (2024–)",
+            "url": null,
+            "publisher": "Genten",
+            "authority": "verified",
+            "language": "en",
+            "evidence": [
+              {
+                "ref": "fsa-nisa-know",
+                "title": "NISAを知る（NISA特設ウェブサイト）",
+                "url": "https://www.fsa.go.jp/policy/nisa2/know/",
+                "publisher": "金融庁 Financial Services Agency",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "fsa-nisa-slides",
+                "title": "NISAを利用する皆さまへ（令和6年6月・令和7年9月改訂）",
+                "url": "https://www.fsa.go.jp/policy/nisa2/about/nisa2024/slide_202406.pdf",
+                "publisher": "金融庁 Financial Services Agency",
+                "authority": "primary",
+                "language": "ja"
+              }
+            ]
+          },
+          {
+            "ref": "ruleVersion-nisa-tsumitate-annual-limit-2018",
+            "title": "Genten verified rule: Tsumitate NISA annual limit (2018–2023)",
+            "url": null,
+            "publisher": "Genten",
+            "authority": "verified",
+            "language": "en",
+            "evidence": [
+              {
+                "ref": "fsa-nisa-know",
+                "title": "NISAを知る（NISA特設ウェブサイト）",
+                "url": "https://www.fsa.go.jp/policy/nisa2/know/",
+                "publisher": "金融庁 Financial Services Agency",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "fsa-nisa-pre2024",
+                "title": "2023年までのNISA（NISA特設ウェブサイト）",
+                "url": "https://www.fsa.go.jp/policy/nisa2/about/nisa/index.html",
+                "publisher": "金融庁 Financial Services Agency",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "kindai-tsumitate-2017",
+                "title": "ここがこう変わる！平成29年度税制改正大綱の要点解説",
+                "url": "https://www.kindai-sales.co.jp/images/upload/files/FA03P08-09.pdf",
+                "publisher": "近代セールス社 Kindai Sales",
+                "authority": "secondary-institutional",
+                "language": "ja"
+              }
+            ]
+          },
+          {
+            "ref": "fsa-nisa-know.md",
+            "title": "NISAを知る（NISA特設ウェブサイト）",
+            "url": "https://www.fsa.go.jp/policy/nisa2/know/",
+            "publisher": "金融庁 Financial Services Agency",
+            "authority": "primary",
+            "language": "ja"
+          },
+          {
+            "ref": "fsa-tax-reform-h26.pdf",
+            "title": "平成26年度税制改正について－税制改正大綱における金融庁関係の主要項目－",
+            "url": "https://www.fsa.go.jp/news/25/sonota/20131224-2/01.pdf",
+            "publisher": "金融庁 Financial Services Agency",
+            "authority": "primary",
+            "language": "ja"
+          },
+          {
+            "ref": "wikipedia-nisa.md",
+            "title": "Nippon individual savings account",
+            "url": "https://en.wikipedia.org/wiki/Nippon_individual_savings_account",
+            "publisher": "Wikipedia",
+            "authority": "secondary-independent",
+            "language": "en"
+          },
+          {
+            "ref": "tyton-nisa-english.md",
+            "title": "Can I Get a Japanese NISA Retirement Account in English?",
+            "url": "https://www.tytoncapital.com/portfolio/can-i-get-a-japanese-nisa-retirement-account-in-english/",
+            "publisher": "Tyton Capital",
+            "authority": "secondary-institutional",
+            "language": "en"
+          }
+        ],
+        "conflicts": [
+          {
+            "claim": "Tsumitate NISA is ¥400,000/year with a 20-year tax-free period",
+            "source": "wikipedia-nisa.md",
+            "kind": "outdated",
+            "note": "This was correct for 2018–2023; from 2024 the tsumitate quota is ¥1,200,000/year with an indefinite holding period.",
+            "sourceTitle": "Nippon individual savings account",
+            "url": "https://en.wikipedia.org/wiki/Nippon_individual_savings_account"
+          },
+          {
+            "claim": "Describes only pre-2024 NISA rules (including tsumitate ¥400,000/year)",
+            "source": "tyton-nisa-english.md",
+            "kind": "outdated",
+            "note": "Published in 2022, it does not reflect the 2024 reform.",
+            "sourceTitle": "Can I Get a Japanese NISA Retirement Account in English?",
+            "url": "https://www.tytoncapital.com/portfolio/can-i-get-a-japanese-nisa-retirement-account-in-english/"
+          }
+        ],
+        "abstained": false,
+        "trace": [
+          {
+            "tool": "initial_context",
+            "inputSummary": "outline loaded into the system prompt"
+          },
+          {
+            "tool": "knowledge_base_read",
+            "inputSummary": "paths: nisa/account_rules, nisa/reform_history, nisa/pre2024_legacy"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: 400,000 tsumitate"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Can my 10-year-old open a NISA account now?",
+      "answer": {
+        "usage": {
+          "input": 54357,
+          "cacheRead": 21876,
+          "cacheWrite": 0,
+          "output": 1135
+        },
+        "answer": "**No, not yet.** As of 2026-10-05, a 10-year-old cannot open a NISA account. From 2024 to 2026 there is no NISA option for minors. Junior NISA is closed to new investment, and adult NISA requires age 18 or older on January 1.\n\nChildren's NISA (こどもNISA) is enacted law (令和8年法律第12号) but not yet in force. It starts **January 1, 2027** for residents aged 0–17. Limits are ¥600,000 a year and ¥6,000,000 lifetime, and it is tsumitate-type investment trusts only. Withdrawals are blocked under age 12. Your child would be eligible then, if aged 17 or under on January 1, 2027. Institutions and opening procedures are still to be announced by the FSA.",
+        "verdict": "no",
+        "rule": {
+          "ruleKey": "nisa.minors",
+          "title": "No NISA option for minors (2024–2026)",
+          "value": {
+            "amount": 0,
+            "unit": "JPY/year",
+            "qualifier": "no minors' account available"
+          },
+          "validFrom": "2024-01-01",
+          "validTo": "2026-12-31",
+          "status": "in-force"
+        },
+        "asOf": "2026-10-05",
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-minors-gap-2024",
+            "title": "Genten verified rule: No NISA option for minors (2024–2026)",
+            "url": null,
+            "publisher": "Genten",
+            "authority": "verified",
+            "language": "en",
+            "evidence": [
+              {
+                "ref": "fsa-nisa-pre2024",
+                "title": "2023年までのNISA（NISA特設ウェブサイト）",
+                "url": "https://www.fsa.go.jp/policy/nisa2/about/nisa/index.html",
+                "publisher": "金融庁 Financial Services Agency",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "fsa-accessfsa-202602",
+                "title": "アクセスFSA 2026年2月号：令和8年度税制改正大綱における金融庁関係の主要項目について",
+                "url": "https://www.fsa.go.jp/access/r7/270/270_03.pdf",
+                "publisher": "金融庁 Financial Services Agency",
+                "authority": "primary",
+                "language": "ja"
+              }
+            ]
+          },
+          {
+            "ref": "ruleVersion-nisa-minors-2027",
+            "title": "Genten verified rule: NISA for ages 0–17 (from January 2027)",
+            "url": null,
+            "publisher": "Genten",
+            "authority": "verified",
+            "language": "en",
+            "evidence": [
+              {
+                "ref": "fsa-tax-reform-r8",
+                "title": "令和8（2026）年度税制改正について－税制改正大綱における金融庁関係の主要項目－",
+                "url": "https://www.fsa.go.jp/news/r7/sonota/20251226-2/01.pdf",
+                "publisher": "金融庁 Financial Services Agency",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "fsa-accessfsa-202602",
+                "title": "アクセスFSA 2026年2月号：令和8年度税制改正大綱における金融庁関係の主要項目について",
+                "url": "https://www.fsa.go.jp/access/r7/270/270_03.pdf",
+                "publisher": "金融庁 Financial Services Agency",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "nta-tax-reform-r8-securities",
+                "title": "個人の方が株式等や土地・建物等を譲渡した場合の令和8年度税制改正のあらまし",
+                "url": "https://www.nta.go.jp/publication/pamph/joto-sanrin/r08aramashi.pdf",
+                "publisher": "国税庁 National Tax Agency",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "bank77-kodomo-nisa",
+                "title": "2027年開始！こども支援NISAとは？",
+                "url": "https://www.77bank.co.jp/financial-column/article93.html",
+                "publisher": "七十七銀行 The 77 Bank",
+                "authority": "secondary-institutional",
+                "language": "ja"
+              },
+              {
+                "ref": "fptax-nisa-2027",
+                "title": "2027年NISA改正をわかりやすく解説",
+                "url": "https://note.com/fp_tax_note/n/n76fede4e7a16",
+                "publisher": "税と資産の知恵袋 (note)",
+                "authority": "secondary-independent",
+                "language": "ja"
+              }
+            ]
+          },
+          {
+            "ref": "ruleVersion-nisa-eligibility-age-2023",
+            "title": "Genten verified rule: NISA minimum age 18 (2023–)",
+            "url": null,
+            "publisher": "Genten",
+            "authority": "verified",
+            "language": "en",
+            "evidence": [
+              {
+                "ref": "fsa-accessfsa-202602",
+                "title": "アクセスFSA 2026年2月号：令和8年度税制改正大綱における金融庁関係の主要項目について",
+                "url": "https://www.fsa.go.jp/access/r7/270/270_03.pdf",
+                "publisher": "金融庁 Financial Services Agency",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "nta-nisa-qa-2019",
+                "title": "ＮＩＳＡ及びつみたてＮＩＳＡの手続に関するＱ＆Ａ（令和元年７月）",
+                "url": "https://www.nta.go.jp/publication/pamph/pdf/nisa_qa01.pdf",
+                "publisher": "国税庁 National Tax Agency",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "fukushima-bank-age",
+                "title": "成年年齢引き下げに伴う対応について",
+                "url": "https://www.fukushimabank.co.jp/press/2021/img/20220401_seinen.pdf",
+                "publisher": "福島銀行 The Fukushima Bank",
+                "authority": "secondary-institutional",
+                "language": "ja"
+              },
+              {
+                "ref": "rakuten-sec-age",
+                "title": "【重要】成年年齢の引下げに伴う当社の対応について",
+                "url": "https://www.rakuten-sec.co.jp/web/info/info20220214-01.html",
+                "publisher": "楽天証券 Rakuten Securities",
+                "authority": "secondary-institutional",
+                "language": "ja"
+              },
+              {
+                "ref": "maymoney-nisa-en",
+                "title": "New NISA Complete Guide",
+                "url": "https://may-money.com/en/nisa-guide-en/",
+                "publisher": "May Money",
+                "authority": "secondary-independent",
+                "language": "en"
+              }
+            ]
+          }
+        ],
+        "conflicts": [],
+        "abstained": false,
+        "trace": [
+          {
+            "tool": "initial_context",
+            "inputSummary": "outline loaded into the system prompt"
+          },
+          {
+            "tool": "knowledge_base_read",
+            "inputSummary": "paths: nisa/child_nisa_2027, nisa/eligibility_and_age"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: child NISA under 18 junior NISA age"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: minor NISA 2024-2026 no option; limit: 1"
+          },
+          {
+            "tool": "knowledge_base_read",
+            "inputSummary": "paths: nisa/pre2024_legacy"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: No NISA option for minors; limit: 3"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: children NISA 2027 start under 18 conflicting guide; return: entries; limit: 1"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Can I still get Rakuten points for furusato nozei donations?",
+      "answer": {
+        "usage": {
+          "input": 26052,
+          "cacheRead": 11580,
+          "cacheWrite": 0,
+          "output": 790
+        },
+        "answer": "No. Since 1 October 2025, municipalities may not accept donations through portal sites that give donors points or similar rewards, and Rakuten points are among those. This applies on 2026-10-05. Ordinary credit card points from your card issuer on the payment itself are not affected. The tax deduction and return gifts are unchanged. One guide says Rakuten base points still apply. That conflicts with the portal-point ban.",
+        "verdict": "no",
+        "rule": {
+          "ruleKey": "furusato.portalPoints",
+          "title": "Portal points banned (2025-10-01–)",
+          "value": {
+            "amount": null,
+            "unit": "none",
+            "qualifier": null
+          },
+          "validFrom": "2025-10-01",
+          "validTo": null,
+          "status": "in-force"
+        },
+        "asOf": "2026-10-05",
+        "citations": [
+          {
+            "ref": "ruleVersion-furusato-portal-points-ban-2025",
+            "title": "Genten verified rule: Portal points banned (2025-10-01–)",
+            "url": null,
+            "publisher": "Genten",
+            "authority": "verified",
+            "language": "en",
+            "evidence": [
+              {
+                "ref": "mic-furusato-press-2024",
+                "title": "ふるさと納税の指定基準の見直し等（報道資料）",
+                "url": "https://www.soumu.go.jp/menu_news/s-news/01zeimu04_02000126.html",
+                "publisher": "総務省 Ministry of Internal Affairs and Communications",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "rakuten-points-notice",
+                "title": "楽天ふるさと納税におけるポイント付与ルール変更のおしらせ",
+                "url": "https://event.rakuten.co.jp/furusato/notice/20250901/",
+                "publisher": "楽天グループ Rakuten",
+                "authority": "secondary-institutional",
+                "language": "ja"
+              },
+              {
+                "ref": "impress-points-ban",
+                "title": "ふるさと納税、2025年10月からポイント付与伴う寄付禁止",
+                "url": "https://netshop.impress.co.jp/node/12499",
+                "publisher": "ネットショップ担当者フォーラム (Impress)",
+                "authority": "secondary-independent",
+                "language": "ja"
+              }
+            ]
+          },
+          {
+            "ref": "maymoney-furusato-en.md",
+            "title": "Japan Furusato Nozei Complete Guide",
+            "url": "https://may-money.com/en/furusato-nozei-guide-en/",
+            "publisher": "May Money",
+            "authority": "secondary-independent",
+            "language": "en"
+          },
+          {
+            "ref": "expatjp-furusato.md",
+            "title": "Furusato Nozei in Japan: A Foreign Resident's Complete Guide (2026)",
+            "url": "https://expat.jp/furusato-nozei/",
+            "publisher": "expat.jp",
+            "authority": "secondary-independent",
+            "language": "en"
+          }
+        ],
+        "conflicts": [
+          {
+            "claim": "Rakuten Points on furusato nozei donations still apply (as base points, not banned bonus points).",
+            "source": "expatjp-furusato.md",
+            "kind": "outdated",
+            "note": "Since 2025-10-01, portal sites may not give points on donations; only the card issuer's ordinary points on the payment remain.",
+            "sourceTitle": "Furusato Nozei in Japan: A Foreign Resident's Complete Guide (2026)",
+            "url": "https://expat.jp/furusato-nozei/"
+          }
+        ],
+        "abstained": false,
+        "trace": [
+          {
+            "tool": "initial_context",
+            "inputSummary": "outline loaded into the system prompt"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: Rakuten points furusato nozei portal points ban; return: entries; limit: 3"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: Rakuten points still apply conflict guide; limit: 5"
+          }
+        ]
+      }
+    },
+    {
+      "question": "My employer is transferring me overseas for 4 years. Can I keep buying in my NISA while abroad?",
+      "answer": {
+        "usage": {
+          "input": 56335,
+          "cacheRead": 21876,
+          "cacheWrite": 0,
+          "output": 1048
+        },
+        "answer": "**No.** Buying new units is not allowed while you are abroad. Because your employer is transferring you, you can file a continuation notice (継続適用届出書) with your broker by the day before departure. Your existing holdings then stay tax-free, and you can still sell them. New purchases, including dividend reinvestment, are not allowed. Your 4 years fits inside the window, which runs to 31 December of the year five years after the notice. File a return notice (帰国届出書) when you come back, and purchases can resume from that day. Brokers set earlier internal deadlines, and some do not support the continuation notice at all. Exit-tax subjects (about ¥100 million or more in assets) are excluded. Check with your broker now. This is general information, not tax advice.",
+        "verdict": "no",
+        "rule": {
+          "ruleKey": "nisa.leavingJapan",
+          "title": "Keeping NISA when leaving Japan",
+          "value": {
+            "amount": 5,
+            "unit": "years",
+            "qualifier": "until Dec 31 of the year 5 years after the notice"
+          },
+          "validFrom": "2019-04-01",
+          "validTo": null,
+          "status": "in-force"
+        },
+        "asOf": "2026-10-05",
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-leaving-japan",
+            "title": "Genten verified rule: Keeping NISA when leaving Japan",
+            "url": null,
+            "publisher": "Genten",
+            "authority": "verified",
+            "language": "en",
+            "evidence": [
+              {
+                "ref": "mizuho-faq-leaving",
+                "title": "海外へ転居します。NISAの取引はどうなりますか。",
+                "url": "https://www.faq.mizuhobank.co.jp/faq/show/8370?category_id=62&site_domain=default",
+                "publisher": "みずほ銀行 Mizuho Bank",
+                "authority": "secondary-institutional",
+                "language": "ja"
+              },
+              {
+                "ref": "mufg-faq-leaving",
+                "title": "海外赴任（非居住者）となった場合も、NISAの利用を継続したい。",
+                "url": "https://faq01.bk.mufg.jp/faq/show/5958?site_domain=default",
+                "publisher": "三菱UFJ銀行 MUFG Bank",
+                "authority": "secondary-institutional",
+                "language": "ja"
+              },
+              {
+                "ref": "yamada-h31-nisa",
+                "title": "NISAの利便性向上等",
+                "url": "https://www.yamada-partners.jp/reform/h31/i03-improving-the-convenience-of-nisa",
+                "publisher": "山田＆パートナーズ Yamada & Partners",
+                "authority": "secondary-institutional",
+                "language": "ja"
+              },
+              {
+                "ref": "rangsit-nisa-expat",
+                "title": "海外赴任とNISA・iDeCo【2026年版】",
+                "url": "https://rangsit.net/2026/07/10/nisa-ideco-expat/",
+                "publisher": "rangsit.net (blog)",
+                "authority": "secondary-independent",
+                "language": "ja"
+              },
+              {
+                "ref": "retirejapan-forum-fsa-guideline",
+                "title": "Continuing NISA contributions from abroad",
+                "url": "https://retirejapan.com/forum/viewtopic.php?p=7655",
+                "publisher": "RetireJapan forum",
+                "authority": "secondary-independent",
+                "language": "ja"
+              }
+            ]
+          },
+          {
+            "ref": "expatfinance-nisa-leaving.md",
+            "title": "NISAは駐在中どうなる？海外赴任前に必ず知っておくべき「5年間継続特例」の完全解説",
+            "url": "https://note.com/expat_finance/n/n4e5d577b5546",
+            "publisher": "海外駐在投資研究会 (note)",
+            "authority": "secondary-independent",
+            "language": "ja"
+          },
+          {
+            "ref": "mufg-faq-leaving.md",
+            "title": "海外赴任（非居住者）となった場合も、NISAの利用を継続したい。",
+            "url": "https://faq01.bk.mufg.jp/faq/show/5958?site_domain=default",
+            "publisher": "三菱UFJ銀行 MUFG Bank",
+            "authority": "secondary-institutional",
+            "language": "ja"
+          },
+          {
+            "ref": "mizuho-faq-leaving.md",
+            "title": "海外へ転居します。NISAの取引はどうなりますか。",
+            "url": "https://www.faq.mizuhobank.co.jp/faq/show/8370?category_id=62&site_domain=default",
+            "publisher": "みずほ銀行 Mizuho Bank",
+            "authority": "secondary-institutional",
+            "language": "ja"
+          }
+        ],
+        "conflicts": [],
+        "abstained": false,
+        "trace": [
+          {
+            "tool": "initial_context",
+            "inputSummary": "outline loaded into the system prompt"
+          },
+          {
+            "tool": "knowledge_base_read",
+            "inputSummary": "paths: nisa/non_resident_continuation, nisa/eligibility_and_age, nisa/foreign_resident_practical"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: continue buying NISA while overseas"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: continuation notice 5 years return notice; limit: 3"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: NISA overseas transfer can still buy contribute abroad; return: entries; limit: 1"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: rangsit retirejapan forum NISA abroad claim; return: paths; limit: 3"
+          }
+        ]
+      }
+    },
+    {
+      "question": "Does the ¥1.93 million cap on the furusato special deduction apply to my donations this year?",
+      "answer": {
+        "usage": {
+          "input": 75685,
+          "cacheRead": 21876,
+          "cacheWrite": 0,
+          "output": 1322
+        },
+        "answer": "No. The ¥1.93 million cap does not apply to donations made in 2026. It is law (令和8年法律第2号, passed 31 March 2026) but starts with donations made from 1 January 2027. For 2026 donations, the residence-tax special deduction is capped only at 20% of your residence-tax income levy (所得割額). When the cap starts, it will be the lower of that 20% and ¥1,930,000. It is aimed at very high earners, roughly ¥100 million in salary. The basic deduction still applies above the cap. This is information, not tax advice.",
+        "verdict": "no",
+        "rule": {
+          "ruleKey": "furusato.specialDeductionCap",
+          "title": "Special deduction capped at 20% of income levy (donations 2015–2026)",
+          "value": {
+            "amount": 20,
+            "unit": "percent",
+            "qualifier": "of residence-tax income levy (所得割額)"
+          },
+          "validFrom": "2015-01-01",
+          "validTo": "2026-12-31",
+          "status": "in-force"
+        },
+        "asOf": "2026-10-05",
+        "citations": [
+          {
+            "ref": "ruleVersion-furusato-deduction-cap-2015",
+            "title": "Genten verified rule: Special deduction capped at 20% of income levy (donations 2015–2026)",
+            "url": null,
+            "publisher": "Genten",
+            "authority": "verified",
+            "language": "en",
+            "evidence": [
+              {
+                "ref": "mic-furusato-2015-reform",
+                "title": "ふるさと納税トピックス：制度改正について（2015年4月1日）",
+                "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/topics/20150401.html",
+                "publisher": "総務省 Ministry of Internal Affairs and Communications",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "mic-furusato-overview",
+                "title": "ふるさと納税の概要について",
+                "url": "https://www.soumu.go.jp/main_content/000448758.pdf",
+                "publisher": "総務省 Ministry of Internal Affairs and Communications",
+                "authority": "primary",
+                "language": "ja"
+              }
+            ]
+          },
+          {
+            "ref": "ruleVersion-furusato-deduction-cap-2027",
+            "title": "Genten verified rule: ¥1.93M cap on the special deduction (donations from 2027)",
+            "url": null,
+            "publisher": "Genten",
+            "authority": "verified",
+            "language": "en",
+            "evidence": [
+              {
+                "ref": "mic-furusato-criteria-2026",
+                "title": "ふるさと納税について（指定基準に係る告示改正）令和8年3月24日",
+                "url": "https://www.soumu.go.jp/main_content/001070694.pdf",
+                "publisher": "総務省 Ministry of Internal Affairs and Communications",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "ndl-law-r8-local-tax",
+                "title": "地方税法等の一部を改正する法律（令和8年3月31日法律第2号）",
+                "url": "https://hourei.ndl.go.jp/simple/detail?lawId=0000169958&current=-1",
+                "publisher": "国立国会図書館 日本法令索引 National Diet Library",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "okane-furusato-2026",
+                "title": "ふるさと納税、2026年10月から何が変わる？自治体側の規制強化と2027年寄付分の「193万円上限」",
+                "url": "https://www.okane-n4vi.com/blog/furusato-2026-october-reform",
+                "publisher": "okane-n4vi.com (blog)",
+                "authority": "secondary-independent",
+                "language": "ja"
+              },
+              {
+                "ref": "geisei-furusato-2026",
+                "title": "「ふるさと納税」2026年度改正で激変へ",
+                "url": "https://furusato-geisei.jp/feature/753/",
+                "publisher": "げいせいつうしん",
+                "authority": "secondary-independent",
+                "language": "ja"
+              },
+              {
+                "ref": "toolcalc-furusato-2026",
+                "title": "ふるさと納税 2026年10月改正｜何が変わり、何が変わらないか",
+                "url": "https://tool-calc.com/blog/furusato-2026-october/",
+                "publisher": "tool-calc.com (blog)",
+                "authority": "secondary-independent",
+                "language": "ja"
+              }
+            ]
+          },
+          {
+            "ref": "mic-furusato-overview.pdf",
+            "title": "ふるさと納税の概要について",
+            "url": "https://www.soumu.go.jp/main_content/000448758.pdf",
+            "publisher": "総務省 Ministry of Internal Affairs and Communications",
+            "authority": "primary",
+            "language": "ja"
+          },
+          {
+            "ref": "okane-furusato-2026.md",
+            "title": "ふるさと納税、2026年10月から何が変わる？自治体側の規制強化と2027年寄付分の「193万円上限」",
+            "url": "https://www.okane-n4vi.com/blog/furusato-2026-october-reform",
+            "publisher": "okane-n4vi.com (blog)",
+            "authority": "secondary-independent",
+            "language": "ja"
+          }
+        ],
+        "conflicts": [],
+        "abstained": false,
+        "trace": [
+          {
+            "tool": "initial_context",
+            "inputSummary": "outline loaded into the system prompt"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: 1.93 million cap special deduction; return: paths"
+          },
+          {
+            "tool": "knowledge_base_read",
+            "inputSummary": "paths: furusato_nozei/designation_and_reform, furusato_nozei/limit_calculation, furusato_nozei/rules_and_mechanics"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: ¥1.93M cap on the special deduction conflicting English guide; return: entries; limit: 2"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: special deduction capped 20% of income levy 2015–2026; return: paths; limit: 3"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: okane-furusato-2026 geisei-furusato-2026 conflict outdated 1.93; return: paths; limit: 3"
+          },
+          {
+            "tool": "knowledge_base_read",
+            "inputSummary": "paths: furusato_nozei/foreign_residents"
+          }
+        ]
+      }
+    },
+    {
+      "question": "つみたて投資枠の年間上限はいくらですか？",
+      "answer": {
+        "usage": {
+          "input": 44596,
+          "cacheRead": 21876,
+          "cacheWrite": 0,
+          "output": 952
+        },
+        "answer": "つみたて投資枠の年間上限は **120万円** です（2024年1月1日施行の新NISAのルール）。成長投資枠(240万円)と併用でき、年間合計は最大360万円です。生涯の非課税保有限度額は1,800万円（簿価ベース）で、つみたて投資枠だけでこの全額を使えます。なお、2027年開始のこども NISA(0〜17歳)の年間上限は60万円で、成人向けとは別枠です。参考情報であり、税務アドバイスではありません。",
+        "verdict": "info",
+        "rule": {
+          "ruleKey": "nisa.tsumitate.annualLimit",
+          "title": "Tsumitate investment quota annual limit (2024–)",
+          "value": {
+            "amount": 1200000,
+            "unit": "JPY/year",
+            "qualifier": "tsumitate investment quota (つみたて投資枠)"
+          },
+          "validFrom": "2024-01-01",
+          "validTo": null,
+          "status": "in-force"
+        },
+        "asOf": "2026-10-05",
+        "citations": [
+          {
+            "ref": "ruleVersion-nisa-tsumitate-annual-limit-2024",
+            "title": "Genten verified rule: Tsumitate investment quota annual limit (2024–)",
+            "url": null,
+            "publisher": "Genten",
+            "authority": "verified",
+            "language": "en",
+            "evidence": [
+              {
+                "ref": "fsa-nisa-know",
+                "title": "NISAを知る（NISA特設ウェブサイト）",
+                "url": "https://www.fsa.go.jp/policy/nisa2/know/",
+                "publisher": "金融庁 Financial Services Agency",
+                "authority": "primary",
+                "language": "ja"
+              },
+              {
+                "ref": "fsa-nisa-slides",
+                "title": "NISAを利用する皆さまへ（令和6年6月・令和7年9月改訂）",
+                "url": "https://www.fsa.go.jp/policy/nisa2/about/nisa2024/slide_202406.pdf",
+                "publisher": "金融庁 Financial Services Agency",
+                "authority": "primary",
+                "language": "ja"
+              }
+            ]
+          },
+          {
+            "ref": "fsa-nisa-know.md",
+            "title": "NISAを知る（NISA特設ウェブサイト）",
+            "url": "https://www.fsa.go.jp/policy/nisa2/know/",
+            "publisher": "金融庁 Financial Services Agency",
+            "authority": "primary",
+            "language": "ja"
+          },
+          {
+            "ref": "fsa-nisa-slides.pdf",
+            "title": "NISAを利用する皆さまへ（令和6年6月・令和7年9月改訂）",
+            "url": "https://www.fsa.go.jp/policy/nisa2/about/nisa2024/slide_202406.pdf",
+            "publisher": "金融庁 Financial Services Agency",
+            "authority": "primary",
+            "language": "ja"
+          }
+        ],
+        "conflicts": [],
+        "abstained": false,
+        "trace": [
+          {
+            "tool": "initial_context",
+            "inputSummary": "outline loaded into the system prompt"
+          },
+          {
+            "tool": "knowledge_base_read",
+            "inputSummary": "paths: nisa/account_rules"
+          },
+          {
+            "tool": "knowledge_base_read",
+            "inputSummary": "paths: nisa/child_nisa_2027"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: tsumitate annual limit 1,200,000 ¥400,000"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: つみたて投資枠 年間 上限 conflicts English guide; limit: 3"
+          },
+          {
+            "tool": "knowledge_base_search",
+            "inputSummary": "query: tsumitate quota annual limit 2024 Dataset; limit: 3"
+          }
+        ]
+      }
+    }
+  ]
+}

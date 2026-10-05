@@ -2,6 +2,7 @@
 
 import {useState, useSyncExternalStore, type FormEvent} from 'react'
 import Markdown from 'react-markdown'
+import exampleAnswers from '@/data/example-answers.json'
 import {dayAfter, todayInTokyo} from '@/lib/dates'
 import {EXAMPLE_QUESTIONS} from '@/lib/examples'
 import type {Citation, ConflictKind, GentenAnswer, Rule, Verdict} from '@/lib/types'
@@ -9,6 +10,14 @@ import type {Citation, ConflictKind, GentenAnswer, Rule, Verdict} from '@/lib/ty
 // "Today" is only known in the browser; the server snapshot is empty so the
 // statically rendered page never shows a stale build date.
 const noSubscribe = () => () => {}
+
+// Recorded answers for the example chips (npm run precompute-examples), shown without an API call.
+const RECORDED = exampleAnswers as unknown as {
+  generatedAt: string
+  answers: {question: string; answer: GentenAnswer}[]
+}
+const RECORDED_ON = new Intl.DateTimeFormat('en-CA', {timeZone: 'Asia/Tokyo'}).format(new Date(RECORDED.generatedAt))
+const recordedAnswer = (question: string) => RECORDED.answers.find((a) => a.question === question)?.answer
 
 const VERDICT_STYLES: Record<Verdict, {label: string; className: string}> = {
   yes: {label: 'Yes', className: 'bg-emerald-100 text-emerald-900 dark:bg-emerald-900/40 dark:text-emerald-200'},
@@ -86,10 +95,32 @@ function SourceLink({citation}: {citation: Citation}) {
   )
 }
 
-function AnswerView({result}: {result: GentenAnswer}) {
+function AnswerView({
+  result,
+  recorded,
+  onRunLive,
+}: {
+  result: GentenAnswer
+  recorded: boolean
+  onRunLive: () => void
+}) {
   const verdict = VERDICT_STYLES[result.verdict]
   return (
     <div className="space-y-6" aria-live="polite">
+      {recorded && (
+        <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-900 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-200">
+          <span>
+            Recorded on {RECORDED_ON} (as of {result.asOf}). Ask your own question for a live answer.
+          </span>
+          <button
+            type="button"
+            onClick={onRunLive}
+            className="rounded-lg border border-amber-400 px-3 py-1 font-medium hover:bg-amber-100 dark:border-amber-700 dark:hover:bg-amber-900"
+          >
+            Run live
+          </button>
+        </div>
+      )}
       <section className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
         <div className="mb-3 flex flex-wrap items-center gap-2">
           <Badge {...verdict} />
@@ -177,7 +208,20 @@ export function GentenApp() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [result, setResult] = useState<GentenAnswer | null>(null)
+  const [recorded, setRecorded] = useState(false)
+  const [shownQuestion, setShownQuestion] = useState('')
   const asOf = pickedDate ?? today
+
+  // Example chips show their recorded answer; "Run live" asks the same question live.
+  function showExample(example: string) {
+    setQuestion(example)
+    const answer = recordedAnswer(example)
+    if (!answer) return void ask(example)
+    setError(null)
+    setResult(answer)
+    setRecorded(true)
+    setShownQuestion(example)
+  }
 
   async function ask(text: string) {
     if (!text.trim() || loading) return
@@ -192,6 +236,8 @@ export function GentenApp() {
       const data = await response.json().catch(() => null)
       if (!response.ok) throw new Error(data?.error ?? 'Something went wrong. Please try again.')
       setResult(data as GentenAnswer)
+      setRecorded(false)
+      setShownQuestion(text)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
     } finally {
@@ -258,10 +304,7 @@ export function GentenApp() {
             key={example}
             type="button"
             disabled={loading}
-            onClick={() => {
-              setQuestion(example)
-              void ask(example)
-            }}
+            onClick={() => showExample(example)}
             className="rounded-full border border-zinc-300 px-3 py-1 text-sm text-zinc-700 hover:border-zinc-900 hover:text-zinc-900 disabled:opacity-40 dark:border-zinc-700 dark:text-zinc-300 dark:hover:border-zinc-300 dark:hover:text-zinc-100"
           >
             {example}
@@ -280,7 +323,9 @@ export function GentenApp() {
             {error}
           </p>
         )}
-        {result && !loading && <AnswerView result={result} />}
+        {result && !loading && (
+          <AnswerView result={result} recorded={recorded} onRunLive={() => void ask(shownQuestion)} />
+        )}
       </main>
 
       <footer className="mt-12 border-t border-zinc-200 pt-4 text-xs text-zinc-500 dark:border-zinc-800">
